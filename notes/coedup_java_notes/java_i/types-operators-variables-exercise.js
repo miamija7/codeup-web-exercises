@@ -58,4 +58,54 @@ sample += " Students";                  // 'Hello Codeup Students'
 sample.replace('Students', 'Class');    // 'Hello Codeup Class'
 sample.indexOf('c');                    // -1 (not found)
 sample.indexOf('C');                    // 6
+sample.substring(sample.indexOf('C'), sample.indexOf(' S'));  //'Codeup'
 
+
+//EXERCISE 3
+let rentals = [
+    {
+        title: "Little Mermaid",
+        daysRented: 3
+    },
+    {
+        title: "Brother Bear",
+        daysRented: 5
+    },
+    {
+        title: "Hercules",
+        daysRented: 1
+    }
+]
+let rate = 3.00;
+let bill = 0;
+for (let movie of rentals){
+    bill += (rate * movie.daysRented)
+}
+console.log(`$${bill}`);                // $27
+
+
+let google = 400 * 6;
+let amazon = 380 * 4;
+let facebook = 350 * 10;          
+console.log(`$${google+amazon+facebook}`); // $7420
+
+
+let isClassFull = false;
+let isScheduleConflict = false;
+let enroll = (!isClassFull && !isScheduleConflict); // true
+
+ 
+let cart = 2;
+let isOfferExpired = false;
+let applyDiscount = (!isOfferExpired && cart >= 2); // true
+
+
+
+//EXERCISE 4
+let username = 'codeup';
+let password = 'notastrongpassword';
+
+let isPwdLong = (password.length >= 5);     // true
+let isPwdUniq = (username !== password);    // true
+let isUsrLong = (username.length <= 20);     // true      
+let isTrimmed = (password === password.trim() && username === username.trim()); // true

@@ -22,13 +22,13 @@ node hello-world.js
 GITHUB:
 repositories -> create -> name: codeup-web-exercises
 create repository
-copy ssh url: [copy link]
+copy ssh url: [copy link: git@github.com:miamija7/codeup-web-exercises.git]
 
 Z SHELL: 
 cd IdeaProjects/codeup-web-exercises
 git init
 git branch -m main	
-git remote add origin [insert your copied link]
+git remote add origin [paste copied link: git@github.com:miamija7/codeup-web-exercises.git]
 
 	NOTE: 
 	Add, commit, push
@@ -50,9 +50,13 @@ Are you sure you want to continue connecting(yes/no)? yes
 
 ============= 27 July ============
 
-VS CODE:
-git config --global user.email "54636763+miamija7@users.noreply.github.com"
-git config --global user.email
+GITHUB:
+codeup-web-exercises -> code -> ssh -> [copy link: git@github.com:miamija7/codeup-web-exercises.git]
+settings -> emails -> [x] Keep my email address private -> [copy email: 54636763+miamija7@users.noreply.github.com]
+
+Z SHELL:
+git config --global user.email "[paste copied email: 54636763+miamija7@users.noreply.github.com]"
+git config --global user.name "Mia Evans"
 
 
 
