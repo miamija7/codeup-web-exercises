@@ -1,0 +1,127 @@
+*** JAVASCRIPT I - INTRO  NOTES ***
+
+
+PRIMITIVE TYPES:
+boolean		true/false
+number		10, 3.14, -0.0045
+string			“Hello CodeUp”
+undefined		unassigned value/type
+null			lack of value	keyword
+NaN			not a numeric value
+
+
+
+ESCAPE CHARACTER:
+\	escape
+
+
+
+ARITHMETIC:
++	addition
+-	subtraction
+*	multiplication
+/	division
+%	modulus (remainder)
+
+
+
+CONCATINENATION:
+“Hello, ” + “World!” 		“Hello, World!”
+
+
+
+LOGICAL BOOLEAN:
+&&	AND	true if both operands are true, false otherwise
+||	OR	true if wither operand is true, false otherwise
+!	NOT	the opposite
+
+
+
+TRUTH TABLES:
+&&
+true && true		true
+true && false		false
+false && true		false
+false && false	false
+
+||
+true || true		true
+true || false		true
+false || true		true
+false || false		false
+
+!
+!true			false
+!false			true
+
+
+
+COMPARISON:
+==	equal value (loose)
+===	equal type & value (strict)
+!=	not equal value
+!==	not equal type or/and value
+>	greater than
+>=	greater than or equal to
+<	less than
+<= 	less than or equal to
+
+
+
+VARIABLES: 
+var name = value;				define a variable
+name;						print variable value
+var name = value, name2 = value2;	define multiple variables
+var name;					undefined
+
+
+
+CONSTANTS:
+const name = value;		define a read only variable
+
+
+
+ASSIGNMENT OPERATOR:
+lvalue = rvalue		assign rvalue to lvalue
+
+
+
+SHORTHAND ASSIGNMENT OPERATORS:
++=	var = var + __
+-=	var = var - __
+*=	var = var * __
+/=	var = var / __
+%=	var = var % __
+
+
+
+UNARY OPERATORS:
++	plus
+-	negation
+++	increment
+- -	decrement
+
+
+
+STRING & NUMBER CONVERSION
+.toString();			convert number to string
+.parseInt();			convert string to number
+.parseFloat();			convert string to float
+Number(string);		convert string to number
+.toFixed(number);		specify decimal precision
+isNaN(string);		determine if string can convert to number
+
+
+
+STRING FUNCTIONS:
+.length;			returns number of chars in string	
+.indexOf(char);		returns index of first occurance
+.replace(from, to);		returns a copy w/ substitutions
+.substring(from, to);		returns a subset from indexes
+.toUpperCase();		returns a copy in uppercase
+.toLowerCase();		returns a copy in lowercase
+.trim();				returns a copy w/out beginning/ending whitespace 
+
+
+
+

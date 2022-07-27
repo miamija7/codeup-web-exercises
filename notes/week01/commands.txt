@@ -1,0 +1,41 @@
+
+MAC SHORTCUTS:
+cmd+shift+r			clear cash refresh in browser
+ctrl+tab				scroll through tabs (+shift goes backward)
+cmd+space				spotlight search
+
+
+
+Z-SHELL COMMANDS:
+pwd 					print working directory
+ls					list directories
+mkdir				make directory
+touch 				make file
+echo “string” >> file	echo new line into file
+mv src/path dest/path	move directory
+mv file dest/path 		copy a file 
+mv file new_name		rename a file
+rm file				remove files
+rmdir path			removes directory
+rm -rf path	 		remove forced recursion (dir+files)
+vi file				file editor
+   i		insert
+   esc 	exit insert mode
+   :q! 	quit
+   :wq! 	save & quit
+
+chsh -s /bin/bash		change to bash shell
+cat etc/shells 		list available shells
+cat file.ext | pbcopy 	copy file content to clipboard
+history				view command line history
+nano	file				text editor
+stat file				list info of file
+node file.js			runtime JavaScript in cmd line
+whoami				logged-in user
+lsof -i :80			list open files (-i :port)
+
+
+
+CHROME:
+cmd+option+i			development tools
+-> Network cmd+r		view network requests

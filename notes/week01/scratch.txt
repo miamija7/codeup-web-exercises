@@ -1,0 +1,60 @@
+IN-CLASS CODE ALONG
+
+============= 25 July ============
+
+Z SHELL:
+bash -c "$(curl -sS https://raw.githubusercontent.com/gocodeup/codeup-setup-script/master/install.sh)"
+
+
+============= 26 July ============
+
+Z SHELL:
+mkdir IdeaProjects/codeup-web-exercises/js
+cd IdeaProjects/codeup-web-exercises/js
+echo “console.log(‘hello world’);” >> hello-world.js
+node --version
+node hello-world.js
+
+	NOTE:
+	Remote Repo is a central cloud repo (github)
+	Local Repo/Branch is a local copy of remote repo
+
+GITHUB:
+repositories -> create -> name: codeup-web-exercises
+create repository
+copy ssh url: [copy link]
+
+Z SHELL: 
+cd IdeaProjects/codeup-web-exercises
+git init
+git branch -m main	
+git remote add origin [insert your copied link]
+
+	NOTE: 
+	Add, commit, push
+
+git status
+git add .
+git commit -m “initial commit”
+git status
+git push origin main 
+Are you sure you want to continue connecting(yes/no)? yes
+
+	NOTE: How to GitHub
+	1. cd to project root
+	2. git status
+	3. git add .
+	4. git commit -m
+	5. git push origin main
+
+
+
+
+
+
+
+
+
+
+
+
