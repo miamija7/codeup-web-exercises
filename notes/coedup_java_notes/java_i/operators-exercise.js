@@ -1,4 +1,4 @@
-//OPERATORS EXCERCISE:
+//OPERATORS EXCERCISE
 
 '1' + 2;			                                //’12’
 typeof '1' + 2;			                            //‘string2’

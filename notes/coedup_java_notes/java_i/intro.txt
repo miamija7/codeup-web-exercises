@@ -2,12 +2,12 @@
 
 
 PRIMITIVE TYPES:
-boolean		true/false
-number		10, 3.14, -0.0045
+boolean		    true/false
+number		    1   0, 3.14, -0.0045
 string			“Hello CodeUp”
 undefined		unassigned value/type
 null			lack of value	keyword
-NaN			not a numeric value
+NaN			    not a numeric value
 
 
 
@@ -69,10 +69,10 @@ COMPARISON:
 
 
 VARIABLES: 
-var name = value;				define a variable
-name;						print variable value
+var name = value;				    define a variable
+name;						        print variable value
 var name = value, name2 = value2;	define multiple variables
-var name;					undefined
+var name;					        undefined
 
 
 
@@ -82,7 +82,7 @@ const name = value;		define a read only variable
 
 
 ASSIGNMENT OPERATOR:
-lvalue = rvalue		assign rvalue to lvalue
+lvalue = rvalue		    assign rvalue to lvalue
 
 
 
@@ -107,19 +107,19 @@ STRING & NUMBER CONVERSION
 .toString();			convert number to string
 .parseInt();			convert string to number
 .parseFloat();			convert string to float
-Number(string);		convert string to number
+Number(string);		    convert string to number
 .toFixed(number);		specify decimal precision
-isNaN(string);		determine if string can convert to number
+isNaN(string);		    determine if string can convert to number
 
 
 
 STRING FUNCTIONS:
-.length;			returns number of chars in string	
-.indexOf(char);		returns index of first occurance
+.length;			    returns number of chars in string	
+.indexOf(char);		    returns index of first occurance
 .replace(from, to);		returns a copy w/ substitutions
-.substring(from, to);		returns a subset from indexes
-.toUpperCase();		returns a copy in uppercase
-.toLowerCase();		returns a copy in lowercase
+.substring(from, to);	returns a subset from indexes
+.toUpperCase();		    returns a copy in uppercase
+.toLowerCase();		    returns a copy in lowercase
 .trim();				returns a copy w/out beginning/ending whitespace 
 
 
