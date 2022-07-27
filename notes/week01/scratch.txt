@@ -60,6 +60,24 @@ git config --global user.name "Mia Evans"
 
 
 
+INTELLIJ:
+git status                      // view current modifications
+git stash                       // delete all existing changes, restore to last push
+git branch                      // view current branch
+git checkout -b "newbranch"     // create a new branch
+
+// INITIALIZE DIRECTORY TO NEW REPOSITORY
+git init
+git branch -m main
+git remote add origin [paste copied link: git@github.com:miamija7/codeup-web-exercises.git]
+
+// PUSH TO REPO
+git add .
+git commit -m "my message"
+git push origin main
+
+
+
 
 
 
