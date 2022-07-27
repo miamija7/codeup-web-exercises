@@ -51,8 +51,8 @@ Are you sure you want to continue connecting(yes/no)? yes
 ============= 27 July ============
 
 VS CODE:
-git config --global user.email "[email@address]"
-git config --global user.name "[First Last]"
+git config --global user.email "54636763+miamija7@users.noreply.github.com"
+git config --global user.email
 
 
 
