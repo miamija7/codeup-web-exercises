@@ -1,0 +1,66 @@
+*** JAVASCRIPT WITH HTML ***
+
+
+HTML INLINE JS:
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Inline JS</title>
+    </head>
+    <body>
+        <script>
+            // JavaScript code goes here
+        </script>
+    </body>
+    </html>
+
+
+
+HTML EXTERNAL JS:
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>External JS</title>
+    </head>
+    <body>
+        <script src="js/external.js"></script>
+    </body>
+    </html>
+
+
+
+JS USE STRICT:
+    "use strict";   //reliablity and easier to debug
+
+
+
+HTML INLINE STRICT JS:
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Use Strict</title>
+    </head>
+    <body>
+        <script>
+            "use strict";
+            myAge = 25;
+        </script>
+    </body>
+    </html>
+
+
+
+
+JS CONSOLE LOG:
+    console.log('Hello from JS!');
+
+JS ALERT:
+    alert("Message goes here.");
+
+JS CONFIRM:
+    var confirmed = confirm('Are you sure you want to do XYZ?');
+    console.log(confirmed); // will be either true or false
+
+JS PROMPT:
+    var userInput = prompt('Please type something:');
+    console.log('The user entered: ' + userInput);

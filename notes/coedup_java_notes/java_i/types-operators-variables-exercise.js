@@ -58,7 +58,7 @@ sample += " Students";                  // 'Hello Codeup Students'
 sample.replace('Students', 'Class');    // 'Hello Codeup Class'
 sample.indexOf('c');                    // -1 (not found)
 sample.indexOf('C');                    // 6
-sample.substring(sample.indexOf('C'), sample.indexOf(' S'));  //'Codeup'
+sample.substring(sample.indexOf('C'), sample.indexOf('p')+1);  //'Codeup'
 
 
 //EXERCISE 3
@@ -94,7 +94,7 @@ let isClassFull = false;
 let isScheduleConflict = false;
 let enroll = (!isClassFull && !isScheduleConflict); // true
 
- 
+
 let cart = 2;
 let isOfferExpired = false;
 let applyDiscount = (!isOfferExpired && cart >= 2); // true
@@ -105,7 +105,7 @@ let applyDiscount = (!isOfferExpired && cart >= 2); // true
 let username = 'codeup';
 let password = 'notastrongpassword';
 
-let isPwdLong = (password.length >= 5);     // true
-let isPwdUniq = (username !== password);    // true
-let isUsrLong = (username.length <= 20);     // true      
+let isPwdLgth = (password.length >= 5);                 // true
+let isPwdUniq = (password.indexOf(username) === -1);    // true
+let isUsrLgth = (username.length <= 20);                // true      
 let isTrimmed = (password === password.trim() && username === username.trim()); // true
