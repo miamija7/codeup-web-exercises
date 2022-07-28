@@ -10,9 +10,10 @@ alert(`Great, ${usrFavColor} is my favorite color too!`);
 
 //EXERCISE 3
 
-/*
- *  Function: movies()
- *  Description: Insert the days per rental to get your bill!
+/*   ---------------------------------------------------------------
+ *  |                   Function: movies()                          |
+ *  | Description: Insert the days per rental to get your bill!     |
+ *   ---------------------------------------------------------------
 */
 
 let rentals = [
@@ -47,11 +48,10 @@ const movies = (e) => {
 }
 
 
-
-
-/*
- *  Function: payday()
- *  Description: Clock your hours and see what your paycheck will be!
+/*   ---------------------------------------------------------------
+ *  |                   Function: payday()                          |
+ *  | Description: Clock your hours to see your paycheck!           |
+ *   ---------------------------------------------------------------
 */
 
 let myJobs = [
@@ -84,10 +84,10 @@ const payday = (e) => {
 
 
 
-
-/*
- *  Function: enroll()
- *  Description: Enroll a new student into the Full Stack Web Development Course.
+/*   ---------------------------------------------------------------
+ *  |                   Function: enroll()                          |
+ *  | Description: Enroll a new student into class!                 |
+ *   ---------------------------------------------------------------
 */
 
 const course = {
@@ -116,20 +116,20 @@ const enroll = (e) => {
     }
 }
 
-    const createStudent = () => {
-        let student = {};
-        while (!student.fullName) {
-            student.fullName = prompt("Enter student name:");
-        }
-        return student;
+const createStudent = () => {
+    let student = {};
+    while (!student.fullName) {
+        student.fullName = prompt("Enter student name:");
     }
+    return student;
+}
 
 
 
-
-/*
-*  Function: checkout()
-*  Description: See if you're getting a discount at checkout!
+/*   ---------------------------------------------------------------
+ *  |                   Function: checkout()                        |
+ *  | Description: See if you're getting a discount at checkout!    |
+ *   ---------------------------------------------------------------
 */
 
 const cart = {
@@ -166,13 +166,20 @@ const checkout = () => {
 
 
 
-//STYLIZE BUTTONS
+//STYLIZE BUTTONS W/OUT .css file
 let buttons = document.querySelectorAll('button');
 for (let btn of buttons){
-    btn.style.padding = '10px';
-    btn.style.margin = '20px';
+    btn.style.padding = '10px 20px';
+    btn.style.margin = '10px';
     btn.style.backgroundColor = '#8ecae6';
     btn.style.borderRadius = '15px';
+    btn.style.border = 'none';
+    btn.addEventListener('mouseover', event => {
+        btn.style.backgroundColor = 'lightgray';
+    });
+    btn.addEventListener('mouseout', event => {
+        btn.style.backgroundColor = '#8ecae6';
+    });
 }
 
 
