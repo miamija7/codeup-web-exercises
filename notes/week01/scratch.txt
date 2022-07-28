@@ -77,8 +77,57 @@ git commit -m "my message"
 git push origin main
 
 
+============= 28 July ============
 
 
+///MAKING NEW PROJECTS///
+INTELLIJ:
+Projects -> New Project -> Web...
+
+Z SHELL:
+cd IdeaProjects
+mkdir intellij-web-exercises
+cd intellij-web-exercises
+
+GITHUB:
+Profile -> Your Repositories -> New
+Owner: [Your Name]
+Repo Name: [intellij-web-exercises]
+->Create Repository
+[copy directory setup commands]
+
+INTELLIJ:
+Open -> /IdeaProjects/intellij-web-exercises
+-> Terminal
+[paste commands] + [enter]
+git branch
+
+
+///DELETING PROJECTS///
+FINDER:
+IdeaProjects -> click and drag intellij-web-exercises to trash
+
+GITHUB:
+Open repo -> Settings -> delete this repository
+
+
+///CLONING PROJECTS///
+GITHUB:
+Open repo -> Code -> [copy ssh link]
+
+INTELLIJ:
+New Project -> Get from Version Control
+URL: [paste ssh url]
+Directory: /IdeaProjects/intellij-web-exercises
+
+
+///PULLING///
+GITHUB:
+Make a change and commit
+
+INTELLIJ or TERMINAL:
+git status
+git pull origin main
 
 
 
