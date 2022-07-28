@@ -100,20 +100,13 @@ const course = {
     }
 
 const enroll = (e) => {
-    let newStudent = {};
-    while(!newStudent.firstName){
-        newStudent.firstName = prompt("Enter First Name:");
-    }
-    while(!newStudent.lastName){
-        newStudent.lastName = prompt("Enter Last Name:");
-    }
-    newStudent.fullName = `${newStudent.firstName} ${newStudent.lastName}`;
+    let newStudent = createStudent();
 
     if (course.seatsAvailable <= 0) {
         alert('Unsuccessful enrollment, class is full.');
     } else {
-        let isGoodSchedule = confirm(`${course.name} is from ${course.startTime} - ${course.endTime} on ${course.days}.\n\nThere are ${course.seatsAvailable} seats left.\n\nDo you agree with this schedule?`)
-        if (!isGoodSchedule) {
+        let isClearSchedule = confirm(`There are ${course.seatsAvailable} seats left in ${course.name}.\n\nThis class goes from ${course.startTime} - ${course.endTime} on ${course.days}.\n\nDo you agree with this schedule?`)
+        if (!isClearSchedule) {
             alert('Unsuccessful enrollment due to schedule conflict.')
         } else {
             alert(`Successfully enrolled ${newStudent.fullName} in ${course.name}!`)
@@ -122,6 +115,14 @@ const enroll = (e) => {
         }
     }
 }
+
+    const createStudent = () => {
+        let student = {};
+        while (!student.fullName) {
+            student.fullName = prompt("Enter student name:");
+        }
+        return student;
+    }
 
 
 
@@ -178,7 +179,7 @@ for (let btn of buttons){
 //ADD CLICK EVENTS
 document.querySelector('#movies').addEventListener('click', event => {
     event.preventDefault();
-    movies()
+    movies();
 });
 document.querySelector('#enroll').addEventListener('click', event => {
     event.preventDefault();
