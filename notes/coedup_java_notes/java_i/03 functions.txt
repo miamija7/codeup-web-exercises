@@ -1,0 +1,58 @@
+*** JAVASCRIPT FUNCTIONS ***
+
+
+
+CALLING FUNCTIONS:
+    function();
+    function("string");
+    function(1234);
+    function("string", 1234);
+
+
+
+STORING VALUE FROM FUNCTION:
+    let value = function();
+    console.log(value);
+
+
+
+CONVERT VALUE FROM FUNCTION TO A NUMBER:
+    let number = parseInt(function());
+
+
+
+DEFINE A FUNCTIONS (function declaration):
+    function myFunction(parameter) {
+        return output;
+    }
+
+
+
+DEFINE ANONYMOUS FUNCTIONS (function expression):
+    let myVariable = function(parameter) {
+        return output;
+    }
+
+
+
+SCOPE VARIABLES:
+    let globalVar = "Look, I'm Global";
+
+    function scope() {
+        let localVar = "Look, I'm a local!"
+        alert(globalVar);   // prints
+        alert(localVar);    // prints
+    }
+    scope();
+    alert(localVar);        // doesn't work
+
+
+
+IMMEDIATELY-INVOKED FUNCTION EXPRESSION (IIFE):
+function () {
+    var iffeVar = "I'm local to the IIFE.";
+})();
+
+alert(iffeVar); // undefined
+
+
