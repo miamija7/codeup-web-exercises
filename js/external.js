@@ -162,6 +162,20 @@ const checkout = () => {
 
 
 
+
+
+
+//STYLIZE BUTTONS
+let buttons = document.querySelectorAll('button');
+for (let btn of buttons){
+    btn.style.padding = '10px';
+    btn.style.margin = '20px';
+    btn.style.backgroundColor = '#8ecae6';
+    btn.style.borderRadius = '15px';
+}
+
+
+//ADD CLICK EVENTS
 document.querySelector('#movies').addEventListener('click', event => {
     event.preventDefault();
     movies()

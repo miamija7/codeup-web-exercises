@@ -130,6 +130,11 @@ git status
 git pull origin main
 
 
+///IGNORE///
+create file -> Name: .gitignore
+/.idea
+
+
 
 
 
