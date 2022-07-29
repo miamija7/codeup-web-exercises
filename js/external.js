@@ -1,3 +1,5 @@
+"use strict";
+
 console.log("Hello from external JavaScript");
 
 //EXERCISE 1
@@ -200,4 +202,6 @@ document.querySelector('#checkout').addEventListener('click', event => {
     event.preventDefault();
     checkout();
 });
+
+
 
