@@ -1,0 +1,29 @@
+
+*** JAVASCRIPT LOOPS ***
+
+
+WHILE LOOP:
+// execute as long as a certain condition is true
+    while (condition) {
+      statement
+    }
+
+
+DO WHILE LOOP:
+// execute at least once before evaluating if a certain condition is true
+    do {
+       statement
+    } while (condition);
+
+
+FOR LOOP:
+// use when how many times the loop needs to run is known
+    for (initialization; condition; increment) {
+        statement
+    };
+
+
+KEYWORDS:
+BREAK -> this keyword allows you to exit the loop at any time
+CONTINUE -> skip to the next loop iteration without completing the entire loop code block
+
