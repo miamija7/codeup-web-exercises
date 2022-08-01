@@ -1,7 +1,17 @@
 
 ============= 1 Aug ============
 
+GITHUB:
 Navigate to: https://github.com/gocodeup/intro-to-testing-js
 -> fork repo
--> add repo
-->
+-> add
+
+
+NODE:
+- An alternate means to run JS!
+- you won't see all that you can see in a document
+
+
+INTELLIJ:
+command + d = duplicate line
+command + shift + down = moves lines

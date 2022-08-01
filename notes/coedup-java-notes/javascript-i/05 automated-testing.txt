@@ -1,9 +1,65 @@
+
 *** AUTOMATED TESTING ***
 
+
 UNIT TESTS:
-Functions that test the expected vs. actual output of functions when provided various inputs.
-Writing unit tests is a way of authoring automated tests where you have code that checks to make sure that your implementation code works as intended.
+- Functions that test the expected vs. actual output of functions when provided various inputs.
+- Writing unit tests is a way of authoring automated tests.
+- It checks to make sure that your implementation code works as intended.
 
 
 FORK:
-Fork adds a copy to your own GitHub account.
+- Forks add a copy to your own GitHub account.
+
+
+AUTOMATED TESTING:
+- Provide immediate feedback on the code you write to solve a problem, add a feature, or fix a bug.
+
+
+TESTS:
+- Functions that test, or exercise, OTHER functions.
+- Compares the results of actual output vs. expected output.
+- Green is a passing test.
+- Red is a failing test.
+
+
+UNIT:
+An individual piece of functionality which is single, whole, and complete
+but which also forms an individual component of a larger or more complex whole.
+- The smallest possible block of functionality.
+- Single user-defined function.
+
+
+UNIT TESTS:
+- Type of test.
+- Test application code from the inside-out.
+- Automated tests that test the accuracy, reliability, and appropriateness
+- Unit tests compare the expected vs. actual outputs for user-defined functions when provided various inputs.
+
+
+END-TO-END TESTS:
+- Test the entire application from the outside-in
+
+
+TEST DRIVEN DEVELOPMENT (TDD):
+- Process/workflow where we author tests to assert expected vs. actual results
+- Before authoring the code that produces those results
+- The practice of writing tests for functionality before writing the implementation of that functionality.
+- Feedback before and while the developer authors their implementation.
+- TDD practice of writing tests first, and writing the code to pass unit tests.
+
+
+ IMPLEMENTATION:
+ The code that a developer authors to realize the sequence of steps that the code runs to solve a problem (called an algorithm).
+
+
+ REFACTOR:
+ - Re-write an implementation.
+ - [Refactoring](https://martinfowler.com/bliki/DefinitionOfRefactoring.html)
+ - Aims to increase the code quality without changing its observable behavior.
+ - Developers refactor code to:
+        ~ increase readability
+        ~ increase flexibility
+        ~ add a fix for edge-case bugs
+        ~ reduce duplication
+        ~ make the code more accessible for yourself and other developers moving forward.
