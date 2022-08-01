@@ -1,0 +1,7 @@
+
+============= 1 Aug ============
+
+Navigate to: https://github.com/gocodeup/intro-to-testing-js
+-> fork repo
+-> add repo
+->

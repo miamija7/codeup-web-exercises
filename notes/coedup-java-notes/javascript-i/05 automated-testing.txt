@@ -1,0 +1,9 @@
+*** AUTOMATED TESTING ***
+
+UNIT TESTS:
+Functions that test the expected vs. actual output of functions when provided various inputs.
+Writing unit tests is a way of authoring automated tests where you have code that checks to make sure that your implementation code works as intended.
+
+
+FORK:
+Fork adds a copy to your own GitHub account.
