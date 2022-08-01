@@ -17,5 +17,11 @@ NODE NOTES:
 - you won't see all that you can see in a document
 
 INTELLIJ SHORTCUTS:
-command + d = duplicate line
-command + shift + down = moves lines
+command + d                 duplicate line
+command + shift + down      moves lines
+
+GITHUB:
+git remove -v               see what repo you are connected to
+git branch -r               see remote branch names
+git branch -a               see all remote and local branches
+git branch -vva             see detailed information (local or remote branches in use, commit ids, and commit messages)

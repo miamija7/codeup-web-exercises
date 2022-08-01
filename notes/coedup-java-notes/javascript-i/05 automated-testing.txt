@@ -49,15 +49,15 @@ TEST DRIVEN DEVELOPMENT (TDD):
 - TDD practice of writing tests first, and writing the code to pass unit tests.
 
 
- IMPLEMENTATION:
- The code that a developer authors to realize the sequence of steps that the code runs to solve a problem (called an algorithm).
+IMPLEMENTATION:
+The code that a developer authors to realize the sequence of steps that the code runs to solve a problem (called an algorithm).
 
 
- REFACTOR:
- - Re-write an implementation.
- - [Refactoring](https://martinfowler.com/bliki/DefinitionOfRefactoring.html)
- - Aims to increase the code quality without changing its observable behavior.
- - Developers refactor code to:
+REFACTOR:
+- Re-write an implementation.
+- [Refactoring](https://martinfowler.com/bliki/DefinitionOfRefactoring.html)
+- Aims to increase the code quality without changing its observable behavior.
+- Developers refactor code to:
         ~ increase readability
         ~ increase flexibility
         ~ add a fix for edge-case bugs
