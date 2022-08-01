@@ -55,4 +55,6 @@ function () {
 
 alert(iffeVar); // undefined
 
+* TIP: Use IFFEs to wrap any variable declarations to keep them hidden from the browser! *
+
 
