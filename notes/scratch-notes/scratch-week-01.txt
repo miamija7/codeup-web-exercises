@@ -1,12 +1,14 @@
-IN-CLASS CODE ALONG
+
 
 ============= 25 July ============
+
 
 Z SHELL:
 bash -c "$(curl -sS https://raw.githubusercontent.com/gocodeup/codeup-setup-script/master/install.sh)"
 
 
 ============= 26 July ============
+
 
 Z SHELL:
 mkdir IdeaProjects/codeup-web-exercises/js
@@ -22,13 +24,13 @@ node hello-world.js
 GITHUB:
 repositories -> create -> name: codeup-web-exercises
 create repository
-copy ssh url: [copy link: git@github.com:miamija7/codeup-web-exercises.git]
+copy ssh url: [copy SSH link]
 
 Z SHELL: 
 cd IdeaProjects/codeup-web-exercises
 git init
 git branch -m main	
-git remote add origin [paste copied link: git@github.com:miamija7/codeup-web-exercises.git]
+git remote add origin [paste SSH link]
 
 	NOTE: 
 	Add, commit, push
@@ -50,26 +52,27 @@ Are you sure you want to continue connecting(yes/no)? yes
 
 ============= 27 July ============
 
+
 GITHUB:
-codeup-web-exercises -> code -> ssh -> [copy link: git@github.com:miamija7/codeup-web-exercises.git]
-settings -> emails -> [x] Keep my email address private -> [copy email: 54636763+miamija7@users.noreply.github.com]
+codeup-web-exercises -> code -> ssh -> [copy SSH link]
+settings -> emails -> [x] Keep my email address private -> [copy private email]
 
 Z SHELL:
-git config --global user.email "[paste copied email: 54636763+miamija7@users.noreply.github.com]"
+git config --global user.email "[paste private email]"
 git config --global user.name "Mia Evans"
 
-
-
 INTELLIJ:
-git status                      // view current modifications
+git status                      // view current modifications'
 git stash                       // delete all existing changes, restore to last push
 git branch                      // view current branch
 git checkout -b "newbranch"     // create a new branch
 
+
 // INITIALIZE DIRECTORY TO NEW REPOSITORY
 git init
 git branch -m main
-git remote add origin [paste copied link: git@github.com:miamija7/codeup-web-exercises.git]
+git remote add origin [paste SSH link]
+
 
 // PUSH TO REPO
 git add .

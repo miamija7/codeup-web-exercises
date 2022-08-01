@@ -1,17 +1,21 @@
 
+
 ============= 1 Aug ============
 
+
+// FORKING A REPO
 GITHUB:
-Navigate to: https://github.com/gocodeup/intro-to-testing-js
--> fork repo
--> add
+Open repo -> Fork -> Add
+Navigate to repo -> Code -> [Copy SSH link]
+
+INTELLIJ:
+File -> New -> Project from Version Control
 
 
-NODE:
+NODE NOTES:
 - An alternate means to run JS!
 - you won't see all that you can see in a document
 
-
-INTELLIJ:
+INTELLIJ SHORTCUTS:
 command + d = duplicate line
 command + shift + down = moves lines
