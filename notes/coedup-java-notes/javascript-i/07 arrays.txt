@@ -1,0 +1,31 @@
+
+*** JAVASCRIPT ARRAYS ***
+
+
+EMPTY ARRAY:
+    []
+
+ARRAY OF NUMBER TYPES:
+    [1, 2, 3, 4, 5]
+
+ARRAY OF VARIOUS DATA TYPES:
+    ["one", 42, [8, 9, 10]]
+
+ARRAY STORED IN VARIABLE:
+    var shapes = ['square', 'rectangle', 'circle', 'triangle'];
+
+COUNT ARRAY ITEMS:
+    shapes.length       returns 4
+
+ACCESS ARRAY ITEMS:
+    shapes[0]           returns 'square'
+    shapes[1]           returns 'rectangle'
+    shapes[2]           returns 'circle'
+    shapes[3]           returns 'triangle'
+
+ITERATING OVER ARRAYS:
+    Solution #1:
+        for (let i = 0; i < shapes.length; i++) { ...}
+    Solution #2:
+        shapes.forEach(function(element, index, array) { ... })
+        NOTE: 3 parameters provide access to the array element, the corresponding index, and the array itself
