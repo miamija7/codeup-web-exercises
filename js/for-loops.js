@@ -22,7 +22,7 @@ for (let i = 0; i < 10; i++) {
 }
 
 function newRandom() {
-    return Math.floor(Math.random() * 200) + 20;
+    return Math.floor(Math.random() * 181) + 20;    //random number from 20-200
 }
 
 function isEven(number){
