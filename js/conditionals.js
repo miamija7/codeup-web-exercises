@@ -105,20 +105,33 @@ console.log(analyzeColor(usrInputColor))
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+
+// function calculateTotalExample(luckyNum, total) {
+//     switch (luckyNum) {
+//         case 0: return total;
+//         case 1: return total - (total * 0.10)
+//         case 2: return total - (total * 0.25)
+//         case 3: return total - (total * 0.35)
+//         case 4: return total - (total * 0.50)
+//         case 5: return `FREE!!!`;
+//     }
+// }
+
 function calculateTotal(luckyNum, total) {
-    if (luckyNum == 1)
-        return `$${(total - (total * 0.10)).toFixed(2)}`;
-    else if (luckyNum == 2)
+    if (luckyNum === 1)
+        return `$${(total - (total * 0.10)).toFixed(2)}`; // $70.00 (we **should format elsewhere)
+    else if (luckyNum === 2)
         return `$${(total - (total * 0.25)).toFixed(2)}`;
-    else if (luckyNum == 3)
+    else if (luckyNum === 3)
         return `$${(total - (total * 0.35)).toFixed(2)}`;
-    else if (luckyNum == 4)
+    else if (luckyNum === 4)
         return `$${(total - (total * 0.50)).toFixed(2)}`;
-    else if (luckyNum == 5)
+    else if (luckyNum === 5)
         return `$${(total - (total * 1.00)).toFixed(2)}`;
     else
         return `$${total.toFixed(2)}`;
 }
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 5.
