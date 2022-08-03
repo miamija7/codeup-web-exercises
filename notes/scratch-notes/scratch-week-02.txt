@@ -33,3 +33,6 @@ git branch -vva             see detailed information (local or remote branches i
 
 INTELLIJ:
 ! + tab                     HTML boilerplate shortcut :)
+
+MAC:
+command + option + esc      Force Quit Application
