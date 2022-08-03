@@ -39,19 +39,19 @@ FOREACH:
 
 ------- MANIPULATING ARRAYS -------
 
-ADDING METHODS:
+ADD METHODS:
     .unshift(value)         add element to beginning
     .push(value)            add element to end
     // push & unshift will modify the original array
     // push & unshift will return a number (the new length)
 
-REMOVING METHODS:
+REMOVE METHODS:
     .shift()                remove first element
     .pop()                  remove last element
     // pop & shift will modify the original array
     // pop & shift will return the removed element
 
-LOCATING METHODS:
+LOCATE METHODS:
     .indexOf(value)         searches from the beginning of an array
     .lastIndexOf(value)     searches backward from the end of an array
     // indexOf & lastIndexOf will return a number of the first found element's index
