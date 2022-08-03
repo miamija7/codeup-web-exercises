@@ -1,0 +1,81 @@
+
+*** JAVASCRIPT OBJECTS ***
+
+
+------- INTRO TO OBJECTS -------
+
+Objects: a group of data and functionality
+Properties: data contained in an object
+Methods: functions on an object
+
+OBJECT CONSTRUCTOR:
+    Object();
+
+CREATE NEW OBJECT:
+    let o = new Object();
+    let o = new Object(undefined);
+    let o = new Object(null);
+    let o = {};
+
+ADD OBJECT PROPERTIES:
+    o.key = 'value';
+    o.['key'] = 'value';
+    o['k e y'] = 'value';
+
+CREATE OBJECT WITH PROPERTIES:
+    let o = {
+        key: 'value',
+        'k e y': 'value',
+        key: 'value',
+        key: 'value'
+    };
+
+ACCESS OBJECT PROPERTIES:
+    o['key'];
+    o.key;
+
+NESTED VALUES:
+    let objects = [
+        {
+            key: "value",
+            key: "value",
+            key: ["value", "value", "value"],
+            key: {
+                keykey: "value",
+                keykey: value
+            }
+        },
+        {
+            key: "value",
+            key: "value",
+            key: ["value", "value", "value"],
+            key: {
+                keykey: "value",
+                keykey: value
+            }
+        }
+    ];
+    objects[0].key;
+    objects[1].key;
+    objects[1].key.keykey;
+    objects.forEach(function(obj) {
+        obj.key.forEach(function(key) {
+            console.log(key);
+        });
+    });
+
+OBJECT FUNCTIONALITY:
+    o.action = function () {
+        ...
+    };
+    o.action();
+
+THIS KEYWORD:
+    o.printKey = function () {
+        console.log(this.key);
+    }
+    o.printKey();
+
+
+
+
