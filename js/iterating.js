@@ -68,5 +68,4 @@
     console.log(`first(names): ${first(names)}`);
     console.log(`second(names): ${second(names)}`);
     console.log(`last(names): ${last(names)}`);
-
 })();
