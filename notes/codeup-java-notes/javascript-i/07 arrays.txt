@@ -2,6 +2,8 @@
 *** JAVASCRIPT ARRAYS ***
 
 
+------- INTRO TO ARRAYS -------
+
 EMPTY ARRAY:
     []
 
@@ -23,10 +25,51 @@ ACCESS ARRAY ITEMS:
     shapes[2]           returns 'circle'
     shapes[3]           returns 'triangle'
 
-ITERATING OVER ARRAYS:
-    Solution #1:
-        for (let i = 0; i < shapes.length; i++) { ...}
-    Solution #2:
-        shapes.forEach(function(element, index, array) { ... })
-        NOTE: forEach method takes 3 parameters; the array element, the corresponding index, and the array itself
-              forEach is a callback function
+
+------- ITERATING OVER ARRAYS -------
+
+FOR LOOP:
+    for (let i = 0; i < shapes.length; i++) { ...}
+
+FOREACH:
+    shapes.forEach(function(element, index, array) { ... })
+    // forEach method takes 3 parameters; the array element, the corresponding index, and the array itself
+    // forEach is a callback function
+
+
+------- MANIPULATING ARRAYS -------
+
+ADDING METHODS:
+    .unshift(value)         add element to beginning
+    .push(value)            add element to end
+    // push & unshift will modify the original array
+    // push & unshift will return a number (the new length)
+
+REMOVING METHODS:
+    .shift()                remove first element
+    .pop()                  remove last element
+    // pop & shift will modify the original array
+    // pop & shift will return the removed element
+
+LOCATING METHODS:
+    .indexOf(value)         searches from the beginning of an array
+    .lastIndexOf(value)     searches backward from the end of an array
+    // indexOf & lastIndexOf will return a number of the first found element's index
+
+COPY METHOD:
+    .slice(start)           copies start index to end of array
+    .slice(start, stop)     copies start index to (but not to include) stop index
+    .slice()                copies entire array
+    // slice will not modify the original array
+    // slice will return an array copy
+
+REVERSE METHOD:
+    .reverse()              reverses entire array
+    // reverse will reverse the original array
+    // reverse will return the reversed array
+
+SORTING METHOD:
+
+
+
+
