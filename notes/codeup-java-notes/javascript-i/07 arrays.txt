@@ -69,6 +69,20 @@ REVERSE METHOD:
     // reverse will return the reversed array
 
 SORTING METHOD:
+    .sort()                 by default, orders by their string equivalent value
+    // sort will sort the original array
+    // sort will return the sorted array
+
+CONVERTING STRINGS & ARRAYS:
+    string.split(", ")      converts a string into an array using delimiter
+    array.join(", ")        converts an array to a string using delimiter
+    // split & join can save results in a variable
+
+
+
+
+
+
 
 
 
