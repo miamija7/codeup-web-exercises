@@ -10,6 +10,7 @@ Navigate to repo -> Code -> [Copy SSH link]
 
 INTELLIJ:
 File -> New -> Project from Version Control
+//
 
 
 NODE NOTES:
@@ -25,3 +26,10 @@ git remove -v               see what repo you are connected to
 git branch -r               see remote branch names
 git branch -a               see all remote and local branches
 git branch -vva             see detailed information (local or remote branches in use, commit ids, and commit messages)
+
+
+============= 3 Aug ============
+
+
+INTELLIJ:
+! + tab                     HTML boilerplate shortcut :)

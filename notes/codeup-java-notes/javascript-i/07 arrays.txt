@@ -28,4 +28,5 @@ ITERATING OVER ARRAYS:
         for (let i = 0; i < shapes.length; i++) { ...}
     Solution #2:
         shapes.forEach(function(element, index, array) { ... })
-        NOTE: 3 parameters provide access to the array element, the corresponding index, and the array itself
+        NOTE: forEach method takes 3 parameters; the array element, the corresponding index, and the array itself
+              forEach is a callback function
