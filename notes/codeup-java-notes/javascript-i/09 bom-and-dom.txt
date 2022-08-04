@@ -214,6 +214,88 @@ Adding HTML5 data-* Attributes
     - doing so can help provide organized access to element metadata via JavaScript
 
 
+------- DOM EVENTS -------
+
+Event Model:
+    - provided by DOM
+    - tying code to a specific event on a specified target
+
+Registering Event Listener:
+    - events can be registered on the window, document, or on an element
+    - target: object that an event listener is registered on
+    - type: the type of event that is being listened for
+    - listener: the function that is called when an event type occurs on target
+
+        target.addEventListener(type, listener);
+        target.removeEventListener(type, listener);
+
+Event Types:
+    keyup           key is released
+    click           mouse is clicked
+    change          input loses focus after it has been modified
+    submit          form is submitted
+    & More->        https://developer.mozilla.org/en-US/docs/Web/Events
+
+
+Add Event Listener:
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <button id="btn1">Click Me!</button>
+        <script>
+            'use strict';
+
+            // create a handler function
+            var listener = function (event) {
+                alert('You clicked the button!');
+            }
+
+            // register the listener to handle clicks on btn1
+            document.getElementById('btn1').addEventListener('click', listener);
+
+        </script>
+    </body>
+    </html>
+
+
+ Remove Event Listener:
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <button id="btn1">Click Me!</button>
+        <button id="btn2">Remove Event Listener</button>
+        <script>
+            'use strict';
+
+            var listener = function (event) {
+                alert('You clicked the button!');
+            }
+
+            // add event listener to btn1
+            var btn1 = document.getElementById('btn1');
+            btn1.addEventListener('click', listener);
+
+            var remover = function (event) {
+                // remove event listener from btn1
+                btn1.removeEventListener('click', listener);
+                console.log('Event listener removed.');
+            }
+
+            // add event listener to btn2
+            var btn2 = document.getElementById('btn2');
+            btn2.addEventListener('click', remover);
+
+        </script>
+    </body>
+    </html>
+
+
 
 
 
