@@ -15,96 +15,206 @@ Both are used to write JavaScript that modifies HTML/CSS and respond to events t
 Allows JavaScript to interact with the web browser.
 
 Window Object:
-- the core of the Browser Object Model
-- represents an instance of the web browser
-- controls the browsers size and position
-- open pop-up windows
-- display system dialogs
-- run interval based processing
-- represents the JavaScript Global object
-- any variables or functions in the global scope become part of the window object
+    - the core of the Browser Object Model
+    - represents an instance of the web browser
+    - controls the browsers size and position
+    - open pop-up windows
+    - display system dialogs
+    - run interval based processing
+    - represents the JavaScript Global object
+    - any variables or functions in the global scope become part of the window object
 
 System Dialogs:
-- alert(), confirm(), and prompt()
-- these dialogs are provided by the browser
-- made available through the window object
-- window object represents the global JavaScript object so...
-  the methods can be called directly without mentioning the window object
+    - alert(), confirm(), and prompt()
+    - these dialogs are provided by the browser
+    - made available through the window object
+    - window object represents the global JavaScript object so...
+      the methods can be called directly without mentioning the window object
 
 Intervals and Timeouts:
-- execute code at a set interval of time
-- execute code after a certain time interval has passed
-- window object provides two methods:
-    ~ setInterval(): code will continue executing at a specified time interval, until clearInterval() is called.
-        setInterval(code)
-        setInterval(code, delay)
+    - execute code at a set interval of time
+    - execute code after a certain time interval has passed
+    - window object provides two methods:
+        ~ setInterval(): code will continue executing at a specified time interval, until clearInterval() is called.
+            setInterval(code)
+            setInterval(code, delay)
 
-        setInterval(func)
-        setInterval(func, delay)
-        setInterval(func, delay, arg0)
-        setInterval(func, delay, arg0, arg1)
-        setInterval(func, delay, arg0, arg1, /* … ,*/ argN)
-
-
-        // this code will produce a console log every second
-        // when count >= max, the interval is cancelled, and the logging will stop
-
-        var count = 0;
-        var max = 10;
-        var interval = 1000; // interval time in milliseconds
-
-        var intervalId = setInterval(function () {
-            if (count >= max) {
-                clearInterval(intervalId);
-                console.log('All done');
-            } else {
-                count++;
-                console.log('Repeating this line ' + count);
-            }
-        }, interval);
-
-        // takes in a function and an interval (in ms)
-        // returns intervalId
-        // will continue to execute at interval until clearInterval() is called with the correct interval id
+            setInterval(func)
+            setInterval(func, delay)
+            setInterval(func, delay, arg0)
+            setInterval(func, delay, arg0, arg1)
+            setInterval(func, delay, arg0, arg1, /* … ,*/ argN)
 
 
-    ~ setTimeout(): code will execute after specified time interval has passed, executed only once
-        setTimeout(code)
-        setTimeout(code, delay)
+            // this code will produce a console log every second
+            // when count >= max, the interval is cancelled, and the logging will stop
 
-        setTimeout(functionRef)
-        setTimeout(functionRef, delay)
-        setTimeout(functionRef, delay, param1)
-        setTimeout(functionRef, delay, param1, param2)
-        setTimeout(functionRef, delay, param1, param2, /* … ,*/ paramN)
+                var count = 0;
+                var max = 10;
+                var interval = 1000; // interval time in milliseconds
 
+                var intervalId = setInterval(function () {
+                    if (count >= max) {
+                        clearInterval(intervalId);
+                        console.log('All done');
+                    } else {
+                        count++;
+                        console.log('Repeating this line ' + count);
+                    }
+                }, interval);
 
-        // this code will produce 1 alert after 5 seconds
-        // to cancel the timeout, you can call
-        // clearTimeout(timeoutId);
-        // prior to the delay expiring
-
-        var delay = 5000; // delay time in milliseconds
-
-        var timeoutId = setTimeout(function () {
-            alert('Here is a delayed hello!');
-        }, delay);
-
-        // takes in a function and an interval (in ms)
-        // will execute one time at the end of the delay time
-        // will execute unless clearTimeout(timeoutId); is returned by the setTimeout() method
+            // takes in a function and an interval (in ms)
+            // returns intervalId
+            // will continue to execute at interval until clearInterval() is called with the correct interval id
 
 
-Location:
-- accessible though both the window object, and also the document object
-- location object is aware of the currently loaded document
-- provides detailed url information
-- used to redirect the browser to a new location
-- Actions:
-    ~ location object       window.location = 'http://www.google.com';
-    ~ reload object         location.reload();
-    ~ navigator object      https://developer.mozilla.org/en-US/docs/Web/API/Navigator
-    ~ history object        https://developer.mozilla.org/en-US/docs/Web/API/History
+        ~ setTimeout(): code will execute after specified time interval has passed, executed only once
+            setTimeout(code)
+            setTimeout(code, delay)
+
+            setTimeout(functionRef)
+            setTimeout(functionRef, delay)
+            setTimeout(functionRef, delay, param1)
+            setTimeout(functionRef, delay, param1, param2)
+            setTimeout(functionRef, delay, param1, param2, /* … ,*/ paramN)
+
+
+            // this code will produce 1 alert after 5 seconds
+            // to cancel the timeout, you can call
+            // clearTimeout(timeoutId);
+            // prior to the delay expiring
+
+                var delay = 5000; // delay time in milliseconds
+
+                var timeoutId = setTimeout(function () {
+                    alert('Here is a delayed hello!');
+                }, delay);
+
+            // takes in a function and an interval (in ms)
+            // will execute one time at the end of the delay time
+            // will execute unless clearTimeout(timeoutId); is returned by the setTimeout() method
+
+
+Location Object:
+    - accessible though both the window object, and also the document object
+    - location object is aware of the currently loaded document
+    - provides detailed url information
+    - used to redirect the browser to a new location
+    - Location Methods:
+        ~ location object       window.location = 'http://www.google.com';
+        ~ reload object         location.reload();
+        ~ navigator object      https://developer.mozilla.org/en-US/docs/Web/API/Navigator
+        ~ history object        https://developer.mozilla.org/en-US/docs/Web/API/History
+
+
+
+------- DOM -------
+
+A tree-like hierarchy of nodes in an HTML document that allows querying and modification of HTML parts
+
+
+Locating Elements:
+    - document.getElementById('id')                 returns a single HTML element
+    - document.getElementsByClassName('class')      returns a HTML element collection
+    - document.getElementsByTagName('tag')          returns a HTML element collection
+    // document.getElementsByClassName() & document.getElementsByTagName() must be accessed like an array.
+
+
+Forms Collection
+    - direct access to form inputs
+    - form inputs can be accessed directly by name through special properties on the document object
+    - the document object has a collection named forms: var usernameInput = document.forms.login.username;
+    - you can get a value for a form input by using the value property: usernameInput.value;
+
+        <form name="login">
+            <div>
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text">
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password">
+            </div>
+            <div>
+                <input type="submit">
+            </div>
+        </form>
+        <script>
+            "use strict";
+            (function() {
+                // get the "username" input
+                var usernameInput = document.forms.login.username;
+
+                // log the value of the "username" input
+                console.log(usernameInput.value);
+            })();
+        </script>
+
+
+Other Collections:
+    - anchors
+    - images
+
+
+Accessing or Modifying Element Properties:
+    1. select an element or list of elements
+
+    .querySelector('')      returns first Element that matches the specified selector
+    .querySelectorAll('')   returns a group of Elements that matches the specified selector
+
+    2. making modifications
+        - inner HTML
+        - attributes
+        - styles
+
+    .innerHTML = "";        modify content within the open and close tag of an HTML element
+    .innerText = "";        modifies but ignores HTML tags (** prevents HTML tag injection)
+    .hasAttribute("");      check for attribute
+    .getAttribute("");      get attribute value
+    .setAttribute("","");   add or modify attribute
+    .removeAttribute("");   remove attribute
+    .style.color = "";      change style using style property + css word
+    .style.['color'] = "";  change style using style property + css word
+
+    3. add/remove HTML elements
+
+    .createElement('')      create a new HTML element
+    .removeChild()          removes a child node from the DOM and returns the removed node
+    .appendChild()          adds a node to the end of the list of children of a specified parent node
+    .replaceChild()         replaces a child node within the given (parent) node
+
+
+Adding HTML5 data-* Attributes
+    - The data-* attribute is used to store custom data private to the page or application.
+    - The data-* attribute gives us the ability to embed custom data attributes on all HTML elements.
+    - The * portion of the name must be at least one character long and should be all lower case.
+    - Using custom data attributes coupled with access via JavaScript can be very useful.
+
+        <ul>
+            <li data-dbid="123">Item one</li>
+            <li data-dbid="234">Item two</li>
+        </ul>
+        <script>
+            "use strict";
+            (function() {
+                // Get the main heading h1 by id
+                var listItems = document.getElementsByTagName('li');
+
+                for (var i = 0; i < listItems.length; i++) {
+                    var dbId = listItems[i].getAttribute("data-dbid");
+                    console.log(dbId);
+                }
+                // Prints
+                // 123
+                // 234
+            })();
+        </script>
+
+    - adding and accessing custom data attributes is easy
+    - doing so can help provide organized access to element metadata via JavaScript
+
+
+
 
 
 
