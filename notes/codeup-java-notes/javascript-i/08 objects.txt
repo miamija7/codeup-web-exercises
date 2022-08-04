@@ -77,6 +77,16 @@ THIS KEYWORD:
     }
     o.printKey();
 
+MATH OBJECT:
+    Math.random()               returns a pseudo-random number in the range 0 to 1
+    Math.round(num)             returns a number rounded to the nearest integer
+    Math.floor(num)             returns a number rounded down
+    Math.ceil(num)              returns a number rounded up
+    Math.pow(base, exp)         returns the base to the exponent power (base^exponent)
+    Math.sqrt(num)              returns the square root of a number
 
+MATH CONSTANTS:
+    Math.E                      2.718-ish represents the base of natural logarithms, e
+    Math.PI                     3.14159-ish represents the ratio of the circumference of a circle to its diameter
 
 
