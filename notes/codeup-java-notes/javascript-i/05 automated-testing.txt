@@ -74,3 +74,12 @@ Q: How do you know when you have written ENOUGH test cases?
 A: That is a very good question and there is no simple answer. Generally though,
    test the boundaries of data types, including null, undefined, empty strings,
    valid and invalid values, very large and very small positive and negative numbers, etc.
+
+
+MOVING FORWARD:
+Any time you find a bug in your implementation, here is the best practice:
+i.   Author test code that reproduces that bug in an automated way. This may involve adding one or
+     more assertions/expectations to a unit test.
+ii.  Refactor your implementation, relying on your newly added automated test to guide the solution.
+iii. Now that the steps to reproduce the bug are part of your test suite, you may move forward with
+     more confidence.
