@@ -12,10 +12,9 @@ IF/ELSE:
       statementN
 
 
-
-
 TERNARY OPERATORS:
     condition ? exprIfTrue : exprIfFalse
+    var message = (success) ? "Operation was successful." : "Oops, something went wrong.";
 
     //conditional chain
     function example() {
@@ -24,7 +23,6 @@ TERNARY OPERATORS:
             : condition3 ? value3
             : value4;
     }
-
 
 
 SWITCH:

@@ -15,7 +15,6 @@ HTML INLINE JS:
     </html>
 
 
-
 HTML EXTERNAL JS:
     <!DOCTYPE html>
     <html>
@@ -28,10 +27,8 @@ HTML EXTERNAL JS:
     </html>
 
 
-
 JS USE STRICT:
     "use strict";   //reliablity and easier to debug
-
 
 
 HTML INLINE STRICT JS:
@@ -50,16 +47,18 @@ HTML INLINE STRICT JS:
 
 
 
-
 JS CONSOLE LOG:
     console.log('Hello from JS!');
+
 
 JS ALERT:
     alert("Message goes here.");
 
+
 JS CONFIRM:
     var confirmed = confirm('Are you sure you want to do XYZ?');
     console.log(confirmed); // will be either true or false
+
 
 JS PROMPT:
     var userInput = prompt('Please type something:');

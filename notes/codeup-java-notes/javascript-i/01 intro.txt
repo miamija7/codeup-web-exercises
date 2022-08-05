@@ -10,10 +10,8 @@ null			lack of value	keyword
 NaN			    not a numeric value
 
 
-
 ESCAPE CHARACTER:
 \	escape
-
 
 
 ARITHMETIC:
@@ -24,17 +22,14 @@ ARITHMETIC:
 %	modulus (remainder)
 
 
-
 CONCATENATION:
 “Hello, ” + “World!” 		“Hello, World!”
-
 
 
 LOGICAL BOOLEAN:
 &&	AND	true if both operands are true, false otherwise
 ||	OR	true if wither operand is true, false otherwise
 !	NOT	the opposite
-
 
 
 TRUTH TABLES:
@@ -55,7 +50,6 @@ false || false		false
 !false			true
 
 
-
 COMPARISON:
 ==	equal value (loose)
 ===	equal type & value (strict)
@@ -67,7 +61,6 @@ COMPARISON:
 <= 	less than or equal to
 
 
-
 VARIABLES: 
 var name = value;				    define a variable
 name;						        print variable value
@@ -75,15 +68,12 @@ var name = value, name2 = value2;	define multiple variables
 var name;					        undefined
 
 
-
 CONSTANTS:
 const name = value;		define a read only variable
 
 
-
 ASSIGNMENT OPERATOR:
 lvalue = rvalue		    assign rvalue to lvalue
-
 
 
 SHORTHAND ASSIGNMENT OPERATORS:
@@ -94,13 +84,11 @@ SHORTHAND ASSIGNMENT OPERATORS:
 %=	var = var % __
 
 
-
 UNARY OPERATORS:
 +	plus
 -	negation
 ++	increment
 - -	decrement
-
 
 
 STRING & NUMBER CONVERSION
@@ -112,10 +100,9 @@ Number(string);		    convert string to number
 isNaN(string);		    determine if string can convert to number
 
 
-
 STRING FUNCTIONS:
 .length;			    returns number of chars in string	
-.indexOf(char);		    returns index of first occurance
+.indexOf(char);		    returns index of first occurrence
 .replace(from, to);		returns a copy w/ substitutions
 .substring(from, to);	returns a subset from indexes
 .toUpperCase();		    returns a copy in uppercase

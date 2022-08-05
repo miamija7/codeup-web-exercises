@@ -1,7 +1,6 @@
 *** JAVASCRIPT FUNCTIONS ***
 
 
-
 CALLING FUNCTIONS:
     function();
     function("string");
@@ -9,16 +8,13 @@ CALLING FUNCTIONS:
     function("string", 1234);
 
 
-
 STORING VALUE FROM FUNCTION:
     let value = function();
     console.log(value);
 
 
-
 CONVERT VALUE FROM FUNCTION TO A NUMBER:
     let number = parseInt(function());
-
 
 
 DEFINE A FUNCTIONS (function declaration):
@@ -27,17 +23,14 @@ DEFINE A FUNCTIONS (function declaration):
     }
 
 
-
 DEFINE ANONYMOUS FUNCTIONS (function expression):
     let myVariable = function(parameter) {
         return output;
     }
 
 
-
 SCOPE VARIABLES:
     let globalVar = "Look, I'm Global";
-
     function scope() {
         let localVar = "Look, I'm a local!"
         alert(globalVar);   // prints
@@ -47,14 +40,12 @@ SCOPE VARIABLES:
     alert(localVar);        // doesn't work
 
 
-
 IMMEDIATELY-INVOKED FUNCTION EXPRESSION (IIFE):
-function () {
-    var iffeVar = "I'm local to the IIFE.";
-})();
+    function () {
+        var iffeVar = "I'm local to the IIFE.";
+    })();
+    alert(iffeVar); // undefined
 
-alert(iffeVar); // undefined
-
-* TIP: Use IFFEs to wrap any variable declarations to keep them hidden from the browser! *
+    * TIP: Use IFFEs to wrap any variable declarations to keep them hidden from the browser! *
 
 
