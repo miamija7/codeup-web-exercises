@@ -48,3 +48,16 @@ or locally to an entire function regardless of block scope.
 
 INTELLIJ:
 "log" + tab                 shortcut -> console.log();
+
+
+GITHUB COPY REPO:
+GitHub repo that you want to copy -> Code -> SSH Key [copy ssh key]
+file -> New -> Project from version control -> [paste ssh key]-> clone
+
+OOPS...
+git stash
+git remote -v
+
+CREATE YOU BRANCH:
+git checkout -b "mia-evans"
+git push origin mia-evans
