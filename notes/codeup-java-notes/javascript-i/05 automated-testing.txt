@@ -63,3 +63,14 @@ REFACTOR:
         ~ add a fix for edge-case bugs
         ~ reduce duplication
         ~ make the code more accessible for yourself and other developers moving forward.
+
+
+REFACTOR TIME!:
+Q: How do we know that it's time to refactor?
+A: Once we have a handful of green tests, but the logic feels hard-coded,
+   funky, or incomplete, then it's probably refactoring time.
+
+Q: How do you know when you have written ENOUGH test cases?
+A: That is a very good question and there is no simple answer. Generally though,
+   test the boundaries of data types, including null, undefined, empty strings,
+   valid and invalid values, very large and very small positive and negative numbers, etc.
