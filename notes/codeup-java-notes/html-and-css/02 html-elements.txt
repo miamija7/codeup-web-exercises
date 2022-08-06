@@ -63,6 +63,7 @@ Common HTML Elements:
 <a href=""></a>         anchor
 <img src="" alt="">     image
 <table></table>         table
+<caption></caption>     table caption
 <tr></tr>               table row
 <th></th>               table heading
 <td></td>               table cell
