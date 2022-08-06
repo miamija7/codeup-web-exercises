@@ -63,8 +63,8 @@ git checkout -b "first-last"
 git push origin first-last
 
 
-
 ============= 6 Aug ============
+
 
 INTELLIJ:
 ⌘ ⌥ L               reformat code
