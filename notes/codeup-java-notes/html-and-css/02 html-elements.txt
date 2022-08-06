@@ -103,7 +103,3 @@ A two-column layout using semantic elements will be similar to the HTML below:
             Secondary links and copyright notices
         </footer>
     </body>
-
-
-
-
