@@ -1,0 +1,109 @@
+
+*** HTML ELEMENTS ***
+
+
+HTML Elements:
+- used to describe the data in a web document
+- give meaning and context to information being displayed
+- all elements have an opening & closing tag, unless it's a void element
+
+
+Contents:
+- between the opening and closing tag is the contents of the element
+- text or more elements
+
+
+Parent Element:
+- when an element contains other elements, parent is the surrounding element
+   Parent:     <body>
+                   <h1>Hello, World!</h1>
+   Parent:     </body>
+
+
+Child Element:
+- when an element contains other elements, child is the nested elements
+                <body>
+   Child:           <h1>Hello, World!</h1>
+                </body>
+
+
+Block-Level and Inline Elements:
+- block-level
+    + occupies the entire space of its parent element (container)
+    + begin on new lines
+    + generally contain data, other block-level elements, or inline elements
+- inline
+    + occupies only the space bounded by the tags that define the inline element
+    + generally contain only data and other inline elements
+
+
+Void Elements:
+- they do not contain any content
+- no closing tag
+    <br>
+    <input type="text" name="username" />
+
+
+Attributes:
+- additional data on HTML elements
+- specified inside the opening tag for an element
+- Consist of: name = ""
+
+
+Common HTML Elements:
+<h1></h1>               headings (h1-6)
+<p></p>                 paragraphs
+<br>                    line breaks
+<hr>                    horizontal rule
+<strong></strong>       strong
+<em></em>               emphasize
+<ul></ul>               unordered list
+<ol></ol>               ordered list
+<li></li>               list item
+<a href=""></a>         anchor
+<img src="" alt="">     image
+<table></table>         table
+<tr></tr>               table row
+<th></th>               table heading
+<td></td>               table cell
+<sup></sup              superscript
+<sub></sub>             subscript
+
+
+HTML for Page Layouts:
+<header> Defines a header for a document or a section.
+<nav> Defines a container for navigation links.
+<main> The main content area consists of content that is directly related to the central topic of a document.
+<article> Defines an independent self-contained article.
+<section> Defines a section in a document.
+<aside> Defines content aside from the content (like a sidebar).
+<footer> Defines a footer for a document or a section.
+
+
+A two-column layout using semantic elements will be similar to the HTML below:
+    <body>
+        <header>
+            Generally an image of the product/logo with a call to action, like subscribing or signing up.
+        </header>
+        <nav>
+            Usually an unordered list with links to the main pages of the site or application
+        </nav>
+        <main>
+            <section class="pricing-plans">
+                Sometimes a description of the pricing plans for the product
+            </section>
+            <article>
+                The description of the product/service/application
+            </article>
+        </main>
+        <aside>
+            A secondary navigation element or ads are common in this place
+        </aside>
+        <footer>
+            Secondary links and copyright notices
+        </footer>
+    </body>
+
+
+
+

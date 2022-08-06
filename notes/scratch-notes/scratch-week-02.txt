@@ -10,7 +10,7 @@ Navigate to repo -> Code -> [Copy SSH link]
 
 INTELLIJ:
 File -> New -> Project from Version Control
-//
+URL: [Paste SSH link] -> clone
 
 
 NODE NOTES:
@@ -59,5 +59,17 @@ git stash
 git remote -v
 
 CREATE YOU BRANCH:
-git checkout -b "mia-evans"
-git push origin mia-evans
+git checkout -b "first-last"
+git push origin first-last
+
+
+
+============= 6 Aug ============
+
+INTELLIJ:
+⌘ ⌥ L               reformat code
+
+KEYBOARD SHORTCUTS:
+option + 2          ™
+option + r          ®
+option + g          ©
