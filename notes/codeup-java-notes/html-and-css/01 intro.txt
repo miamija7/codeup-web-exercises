@@ -1,0 +1,72 @@
+
+*** HTML & CSS - INTRO  NOTES ***
+
+
+HTML:
+- HyperText Markup Language
+- the language of the web
+
+
+HyperText:
+- text displayed on an electronic device that can be linked to other text
+- clicking a link on a web page
+
+
+Markup Language:
+- defined annotations added to text to describe the text further
+- a defined format in which to represent the different parts of a document
+- <p></p>, <h1></h1>, <b></b>, <div></div>, etc.
+
+
+Doctype Declaration:
+- the first line of an HTML document
+- this line is needed to help the browser identify following html data
+    <!DOCTYPE html>
+
+
+Root Element:
+- the element that contains all other elements
+    <html>
+    </html>
+
+
+Head & Body:
+- The head element is used to tell the web browser information about the web page
+    <head>
+    </head>
+- The body element is used to define the content that the web browser will display to a user
+    <body>
+    </body>
+
+
+Page Title:
+- title element lives in the <head> and provides the title to the web browser
+- tab name, title bar, bookmark name
+    <title></title>
+
+
+Metadata:
+- "extended information"
+- title element lives in the <head> and provides the title to the web browser
+- search keywords, page description, page author, page character set
+- there is no close tag for <meta> because it is a void element
+    <meta charset="utf-8">
+
+
+Styles and Scripts:
+- CSS & JS
+
+
+Comments:
+- comments will not be rendered by the web browser
+- viewable in the source of the web page
+    <!-- comment goes here -->
+
+
+Semantic Markup:
+- that the same visual result can be achieved using different combinations of markup and styles...
+- the HTML element that best describes the data that it contains is the appropriate one for the job
+- Keep in mind that there are other consumers of web pages besides web browsers!
+    + screen readers, for the visually impaired
+    + read the contents of the page to a user
+    + not using appropriate elements, will not provide a good user experience
