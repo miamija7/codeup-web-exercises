@@ -6,20 +6,55 @@
     <title>Register With Us</title>
 </head>
 <body>
-    <h1>Register With Us</h1>
-    <form method="POST" action="https://request-inspector.glitch.me/">
-        <input id="email" type="text" name="email" placeholder="email">
-        <br>
-        <input id="password" type="password" name="password" placeholder="password">
-        <br>
-        <textarea id="bio" name="bio" placeholder="bio"></textarea>
-        <section>
-            How did you hear about us?
-            <br>
-            <label for="billboard">
-                <input id="billboard" type="radio" name="radio1" value="a">Billboard<br>
-            </label>
-        </section>
-    </form>
+<h1>Register With Us</h1>
+<form method="POST" action="https://request-inspector.glitch.me/">
+    <label for="email">
+        Email: <input id="email" type="text" name="email" placeholder="email"><br>
+    </label>
+    <label for="password">
+        Password: <input id="password" type="password" name="password" placeholder="password"><br>
+    </label>
+    <label for="bio">
+        Bio: <textarea id="bio" name="bio" placeholder="bio"></textarea><br>
+    </label>
+
+    <p>How did you hear about us:</p>
+    <div>
+        <label for="billboard">
+            <input id="billboard" type="checkbox" name="adMethod" value="billboard">Billboard<br>
+        </label>
+        <label for="radioAd">
+            <input id="radioAd" type="checkbox" name="adMethod" value="radioAd">Radio Advertisement<br>
+        </label>
+        <label for="internetAd">
+            <input id="internetAd" type="checkbox" name="adMethod" value="radio">Internet Advertisement<br>
+        </label>
+        <label for="other">
+            <input id="other" type="checkbox" name="adMethod" value="other">Other<br>
+        </label>
+    </div>
+
+    <select name="browser" id="browser">
+        <option value="default" selected disabled>Select Web Browser</option>
+        <option value="chrome">Google Chrome</option>
+        <option value="firefox">Firefox</option>
+        <option value="firefox">Firefox</option>
+        <option value="ie">Internet Explorer</option>
+    </select>
+    <div>
+    <button type="submit">Submit Form</button>
+    </div>
+</form>
 </body>
 </html>
+
+
+<!--Forms Exercise Output for POST-->
+<!--URL: https://request-inspector.glitch.me/-->
+<!--Body: {"method":"POST","query":{},"body":{"email":"mia@evans.com","password":"mypasswordiscool","bio":"Here is a story all about how my life got flipped turned upside down...","adMethod":["billboard","radio","other"],"browser":"ie"}}-->
+
+<!--Forms Exercise Output for GET-->
+<!--URL: https://request-inspector.glitch.me/?email=mia%40evans.com&password=mysupersecretpassword&bio=lalalalalala%21&adMethod=billboard&adMethod=radioAd&adMethod=radio&browser=chrome-->
+<!--Body: {"method":"GET","query":{"email":"mia@evans.com","password":"mysupersecretpassword","bio":"lalalalalala!","adMethod":["billboard","radioAd","radio"],"browser":"chrome"},"body":{}}-->
+
+
