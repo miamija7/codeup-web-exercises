@@ -20,6 +20,9 @@
             }
             // If doRounding is true, round the result to the nearest integer.
             // Otherwise, output the complete value
+            // logInfo(false);   ->   Area of a circle with radius: 3, is: 28.274333882308138
+            // logInfo(true);    ->   Area of a circle with radius: 3, is: 28
+
 
             console.log("Area of a circle with radius: " + this.radius + ", is: " + area);
         }
