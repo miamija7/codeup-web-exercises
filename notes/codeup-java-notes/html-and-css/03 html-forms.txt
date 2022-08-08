@@ -1,0 +1,36 @@
+
+*** HTML FORMS ***
+
+
+Forms:
+- Forms provide a way to take inputs from a user and then perform some action based upon them.
+    <form></form>
+
+
+Form Structure:
+- A simple login form:
+    <form method="POST" action="https://request-inspector.glitch.me/">
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text">
+        <br>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password">
+        <br>
+        <input type="submit">
+    </form>
+
+
+Method:
+    <form method="POST" ...> ...
+- refers to the HTTP method that should be used to transmit the form data
+- if no method, by default the GET method will be used
+- HTTP Methods
+    + GET: request information without changing date on server & data appends to url as a query string
+    + POST: change data on a server & data embedded in HTTP req body as key-value pairs
+
+
+Action:
+    <form method="POST" action="https://insert.url/"> ...
+-  
+
+
