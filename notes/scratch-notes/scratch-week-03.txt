@@ -1,0 +1,8 @@
+
+
+============= 8 Aug ============
+
+INTELLIJ:
+highlight + "               place quotes around highlighted code
+IntellijIDEA -> Preferences -> Plugins -> Search: Live Edit -> Install
+
