@@ -1,14 +1,14 @@
 
 *** HTML FORMS ***
 
-
 Forms:
-- Forms provide a way to take inputs from a user and then perform some action based upon them.
     <form></form>
+- Forms provide a way to take inputs from a user and then perform some action based upon them.
 
 
-Form Structure:
-- A simple login form:
+------- FORM STRUCTURES -------
+
+A simple login form:
     <form method="POST" action="https://request-inspector.glitch.me/">
         <label for="username">Username</label>
         <input id="username" name="username" type="text">
@@ -31,6 +31,107 @@ Method:
 
 Action:
     <form method="POST" action="https://insert.url/"> ...
--  
+- refers to the location that the form data should be sent
+- if no action, by default action will be to send data back to the current url
+
+
+Query String:
+    ?key1=value1&key2=value2&key3=value3
+- a query string is composed of key-value pairs
+- begins with a "?"
+- following the "?" is the first key-value pair "key=value"
+- key-value pairs are separated with an "&"
+    + GET appends query string to url
+    + POST appends query string (w/out "?") to the body of the http request
+
+    <form action="https://request-inspector.glitch.me" method="GET">
+        <label for="zipcode">Zipcode</label>
+        <input type="text" name="zipcode" id="zipcode" placeholder="input a zipcode">
+        <button type="submit">Search</button>
+    </form>
+
+    Submission: "https://request-inspector.glitch.me?zipcode=78205"
+
+
+Submitting:
+    <input type="submit">
+    <button type="submit">Submit the form</button>
+- the form must contain either a button, or input element
+- type value must be "submit"
+- using a button element gives styling flexibility
+
+
+------- FORM INPUTS -------
+
+Element-Text Inputs:
+    <input type="text" name="" placeholder="">
+    <input type="password" name="">
+
+
+Element-Text Areas:
+    <textarea name=""></textarea>
+
+
+Element-Checkboxes and Radio Buttons:
+    <input name="" value="true" type="checkbox" checked>
+
+    A <input type="radio" name="" value="a"><br>
+    B <input type="radio" name="" value="b"><br>
+    C <input type="radio" name="" value="c"><br>
+    D <input type="radio" name="" value="d"><br>
+    // name="" must match!
+
+Element-Selects (dropdown):
+    <select name="coffee_preference">
+        <option value="light">Light Roast</option>
+        <option value="dark">Dark Roast</option>
+        <option value="espresso">Espresso Blend</option>
+    </select>
+
+
+Element-Hidden Inputs:
+    <input type="hidden" name="user_id" value="432">
+
+
+Attribute-Name and Value:
+    <form>
+        <input name="" value="">
+        <input type="submit">
+    </form>
+    Submission: ?the_answer=42
+- there is no action attribute, it will default to submitting to the current page
+- there is no method attribute, it will default to a GET request
+- if POST as the method, we would not see a query string
+
+
+Attribute-Disabled:
+    <input type="text" name="" value="" disabled>
+
+    <select name="">
+        <option disabled value="n">No</option>
+        <option selected value="y">Yes</option>
+    </select>
+
+
+Labels:
+    <label for="username">Username</label>
+    <input id="username" name="username" type="text">
+
+    <h2>What kind of phone do you own?</h2>
+    <label for="android">
+        Android <input id="android" type="checkbox" name="phones" value="android">
+    </label>
+    <label for="ios">
+        iOS <input id="ios" type="checkbox" name="phones" value="ios">
+    </label>
+    <label for="windows">
+        Windows <input id="windows" type="checkbox" name="phones" value="windows">
+    </label>
+    <label for="other">
+        Other <input id="other" type="checkbox" name="phones" value="other">
+    </label>
+
+
+
 
 
