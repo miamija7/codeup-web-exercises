@@ -22,6 +22,10 @@ Console...
 
 
 Z SHELL:
-Setting a temporary environment variable for path to IdeaProjects...
+1. Setting a temporary environment variable for path to IdeaProjects...
     export IDEAPROJECTS="/Users/username/file path/for/IdeaProjects"
     cd $IDEAPROJECTS
+2. Viewing current commits in holding
+    git log origin/main..main
+    OR
+    git log origin/master..master
