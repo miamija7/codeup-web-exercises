@@ -15,7 +15,13 @@ Navigate to GitHub repo -> code -> [copy SSH link]
 INTELLIJ:
 File -> New -> Project from Version Control -> [paste SSH link]
 Console...
-    git remote -v
-    git branch
-    git checkout -b "mia-evans"
-    git branch
+    git remote -v                   view remote repo connection
+    git branch                      view current branch
+    git checkout -b "first-last"    create new branch
+    git branch                      verify newly created branch
+
+
+Z SHELL:
+Setting a temporary environment variable for path to IdeaProjects...
+    export IDEAPROJECTS="/Users/username/file path/for/IdeaProjects"
+    cd $IDEAPROJECTS
