@@ -4,16 +4,19 @@
 This is an repository for Codeup-Dallas' Full Stack Web Development Bootcamp exercises.
 
 ## Overview
-- HTML ans CSS
-- JavaScript
-- Test-Driven Development (TDD)
-- jQuery
-- MySQL
-- Spring
-- Capstone
+| Topic         | Description                                                                  |
+|---------------|------------------------------------------------------------------------------|
+| JavaScript I  | Introduction to programming and client-side interactivity
+| HTML and CSS  | The structure, content, and styling of web pages  |
+| jQuery        | A library for client-side interactivity and an introduction to AJAX requests |
+| JavaScript II | Advanced JavaScript concepts, and modern frontend tooling                    |
+| Java I        | Basics of the Java language                                                  |
+| Java II       | Object-Oriented Programming in Java                                          |
+| MySQL         | Relational databases, a data persistence solution                            |
+| Java III      | Web backends with Java                                                       |
+| Spring        | A Java framework to enable rapid web application development                 |
 
-
-
+## Timeline
 
 | Week Of    | Topic                      |
 |------------|----------------------------|
