@@ -4,6 +4,14 @@
 This is an repository for Codeup-Dallas' Full Stack Web Development Bootcamp exercises.
 
 ## Overview
+- JavaScript 
+- HTML and CSS
+- jQuery                     
+- Java                                                  
+- MySQL                            
+- Spring                
+
+## Topic Descriptions
 | Topic         | Description                                                                  |
 |---------------|------------------------------------------------------------------------------|
 | JavaScript I  | Introduction to programming and client-side interactivity
@@ -15,6 +23,7 @@ This is an repository for Codeup-Dallas' Full Stack Web Development Bootcamp exe
 | MySQL         | Relational databases, a data persistence solution                            |
 | Java III      | Web backends with Java                                                       |
 | Spring        | A Java framework to enable rapid web application development                 |
+
 
 ## Timeline
 
