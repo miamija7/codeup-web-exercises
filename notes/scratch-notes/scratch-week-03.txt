@@ -30,3 +30,5 @@ Z SHELL:
 2. View commits in holding
     git log origin/main..main
     git log origin/master..master
+3. Pull Requests
+    git pull origin main
