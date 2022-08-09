@@ -15,17 +15,18 @@ Navigate to GitHub repo -> code -> [copy SSH link]
 INTELLIJ:
 File -> New -> Project from Version Control -> [paste SSH link]
 Console...
-    git remote -v                   view remote repo connection
-    git branch                      view current branch
-    git checkout -b "first-last"    create new branch
-    git branch                      verify newly created branch
+    git remote -v                       view remote repo connection
+    git branch                          view current branch
+    git checkout -b "first-last"        create new branch
+    git branch                          verify newly created branch
+    git log origin/main..first-last     view commits in holding
+    git push origin first-last          finally... push to your new branch
 
 
 Z SHELL:
-1. Setting a temporary environment variable for path to IdeaProjects...
+1. Set a temporary environment variable for path to IdeaProjects...
     export IDEAPROJECTS="/Users/username/file path/for/IdeaProjects"
     cd $IDEAPROJECTS
-2. Viewing current commits in holding
+2. View commits in holding
     git log origin/main..main
-    OR
     git log origin/master..master
