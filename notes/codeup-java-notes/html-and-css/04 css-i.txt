@@ -22,42 +22,20 @@ Element Style:
     <h1 style="color:blue;text-decoration:underline;">Hello, CSS!</h1>
 
 
-Inline/Embedded Stylesheet:
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>CSS Test Page</title>
-        <style>
-            .fancy-header {
-                color: blue;
-                text-decoration: underline;
-            }
-        </style>
-    </head>
-    <body>
-        <h1 class="fancy-header">I've got style!</h1>
-    </body>
-    </html>
+Inline/Embedded Stylesheet (inside head):
+    <style>
+        .fancy-header {
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
 
 
-External Stylesheet:
+External Stylesheet (inside head):
 - File: css/style.css
-    .fancy-header {
-        color: blue;
-        text-decoration: underline;
-    }
-
 - File: index.html
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>CSS Test Page</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <h1 class="fancy-header">I've got style!</h1>
-    </body>
-    </html>
+    <link rel="stylesheet" href="css/style.css">
+
 
 - Elements in adding a stylesheet in html
     link            a void element
@@ -66,12 +44,10 @@ External Stylesheet:
 
 
 Comments:
-    /*
-    multi
-    line
-    comment
-    */
-    /* single line comment */
+    /*...*/
+
+
+------- CSS PROPERTIES & SELECTORS -------
 
 
 

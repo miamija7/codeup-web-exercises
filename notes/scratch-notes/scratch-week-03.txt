@@ -6,3 +6,16 @@ INTELLIJ:
 highlight + "               place quotes around highlighted code
 IntellijIDEA -> Preferences -> Plugins -> Search: Live Edit -> Install
 
+
+============= 8 Aug ============
+
+GITHUB:
+Navigate to GitHub repo -> code -> [copy SSH link]
+
+INTELLIJ:
+File -> New -> Project from Version Control -> [paste SSH link]
+Console...
+    git remote -v
+    git branch
+    git checkout -b "mia-evans"
+    git branch
