@@ -58,7 +58,7 @@ article{
     font-size: 2em;
 } #company-vision img {
     max-width: 49%;
-    opacity: 0.75;
+    opacity: 0.85;
 } #company-vision img:hover {
     opacity: 1;
 }
