@@ -5,14 +5,12 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    font-family: "Myriad Pro"
+    font-family: "Myriad Pro", "sans-serif";
 }
-
 #container {
-    margin-left: auto;
-    margin-right: auto;
     width: 60%;
     padding: 10px;
+    margin: auto;
 }
 
 header {
@@ -44,6 +42,8 @@ article{
     padding-right: 50px;
 } article ul {
     list-style-type: circle;
+    padding-right: 50px;
+
 }
 
 #company-vision {
