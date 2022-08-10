@@ -69,6 +69,7 @@ article{
     border-radius: 30px;
     padding: 50px 50px 5px 50px;
     text-align: center;
+    border: 1px solid dimgrey;
 } #pricing-plans h2 {
     font-size: 2em;
     color: #e0e1dd;
@@ -78,7 +79,7 @@ article{
     background-color: #e0e1dd;
     border-radius: 30px;
     padding: 15px;
-    border: 1px solid #415a77 ;
+    border: 1px solid dimgrey;
     text-align: left;
 } #pricing-plans th.title {
     color: #1b263b;
@@ -92,6 +93,14 @@ article{
     padding: 15px;
     font-size: 1.25em;
     text-align: center;
+} #pricing-plans td.price{
+    font-size: 1.75em;
+} #pricing-plans td.feature {
+    font-style: italic;
+    font-size: 1em;
+} #pricing-plans .prem {
+    background-color: lightgray;
+    border-radius: 5px;
 } #pricing-plans p{
     font-size: 0.75em;
     color: #e0e1dd;
