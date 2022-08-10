@@ -1,56 +1,12 @@
 body {
     margin: 0;
-    background-color: #415a77;
+    background-color: #1b263b;
     background-image: url("https://images.pexels.com/photos/3616764/pexels-photo-3616764.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     font-family: "Myriad Pro", "sans-serif";
 }
-
-@media (max-width: 1024px) {
-    #container {
-    width: 100%;
-    padding: 0px;
-    margin: auto;
-    }
-    #pricing-plans{
-        margin: 50px 0px 50px 0px;
-
-    }
-    table td, th, tr{
-        font-size: 0.6em;
-        margin: 0px;
-        padding: 2px;
-    }
-}
-@media (min-width: 500px){
-    #pricing-plans{
-        margin: 50px 50px 50px 50px;
-        padding: 0 25px ;
-    }
-    #company-vision{
-        margin-left: 50px;
-        margin-right: 50px;
-    }
-
-}
-
-@media (min-width: 1080px) {
-    #container {
-        width: 60%;
-        padding: 10px;
-        margin: auto;
-    }
-    #pricing-plans{
-        margin: 50px;
-        padding: 50px 50px 5px 50px;
-    }
-
-}
-
-
-
 
 
 header {
@@ -64,6 +20,7 @@ header {
 } header p {
     color: #778da9;
 }
+
 
 article{
     display: flex;
@@ -84,6 +41,7 @@ article{
     padding-right: 50px;
 }
 
+
 #company-vision {
     margin-left: auto;
     margin-right: auto;
@@ -101,8 +59,9 @@ article{
     opacity: 1;
 }
 
+
 #pricing-plans{
-    background-color: #778da9;
+    background-color: #1b263b;
     border-radius: 30px;
     text-align: center;
     border: 1px solid dimgrey;
@@ -145,17 +104,54 @@ article{
 
 
 footer {
-    background-color: #415a77;
+    background-color: #1b263b;
     text-align: center;
     padding: 20px;
 } footer a:link {
      color: white;
      text-decoration: none;
 } footer a:visited {
-    color: black;
+    color: mediumpurple;
     text-decoration: none;
 } footer a:hover {
     text-decoration: underline;
 } footer a:active {
     color: grey;
+}
+
+
+@media (max-width: 1024px) {
+    #container {
+        width: 100%;
+        padding: 0px;
+        margin: auto;
+    } #pricing-plans{
+        margin: 50px 0px 50px 0px;
+
+    } table td, th, tr{
+        font-size: 0.6em;
+        margin: 0px;
+        padding: 2px;
+    }
+}
+
+@media (min-width: 500px){
+    #pricing-plans{
+        margin: 50px 50px 50px 50px;
+        padding: 0 25px ;
+    } #company-vision{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+@media (min-width: 1080px) {
+    #container {
+        width: 60%;
+        padding: 10px;
+        margin: auto;
+    } #pricing-plans{
+        margin: 50px;
+        padding: 50px 50px 5px 50px;
+    }
 }
