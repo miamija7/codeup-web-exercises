@@ -43,7 +43,6 @@ article{
 } article ul {
     list-style-type: circle;
     padding-right: 50px;
-
 }
 
 #company-vision {
@@ -80,7 +79,7 @@ article{
     border-radius: 30px;
     padding: 15px;
     border: 1px solid dimgrey;
-    text-align: left;
+
 } #pricing-plans th.title {
     color: #1b263b;
     font-size: 2em;
