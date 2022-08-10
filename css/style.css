@@ -27,6 +27,7 @@ header {
     color: #778da9;
 }
 
+
 article{
     display: flex;
     flex-direction: column;
@@ -36,7 +37,7 @@ article{
 } article h2 {
     margin-bottom: 10px;
     color: #415a77;
-    font-size: 2.5em;
+    font-size: 2em;
 } article ul, ol {
     font-size: 1em;
     list-style-position: inside;
@@ -48,12 +49,13 @@ article{
 #company-vision {
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 50px;
     text-align: center;
 } #company-vision h2{
     padding: 10px;
-    color: #778da9;
-    font-size: 1.5em;
-    background-color: #1b263b;
+    margin-bottom: 10px;
+    color: #415a77;
+    font-size: 2em;
 } #company-vision img {
     max-width: 49%;
     opacity: 0.75;
@@ -61,24 +63,39 @@ article{
     opacity: 1;
 }
 
-
-table {
-    padding: 15px;
-    border: 1px solid grey;
+#pricing-plans{
+    margin: 50px;
+    background-color: #778da9;
+    border-radius: 30px;
+    padding: 50px 50px 5px 50px;
     text-align: center;
+} #pricing-plans h2 {
+    font-size: 2em;
+    color: #e0e1dd;
+    margin: 0 0 25px 0;
+} #pricing-plans table {
+    width: 100%;
+    background-color: #e0e1dd;
+    border-radius: 30px;
+    padding: 15px;
+    border: 1px solid #415a77 ;
+    text-align: left;
+} #pricing-plans th.title {
+    color: #1b263b;
+    font-size: 2em;
+    text-align: center;
+} #pricing-plans th.label{
+    color: #778da9;
+    font-size: 0.75em;
+} #pricing-plans td {
+    color: #1b263b;
+    padding: 15px;
+    font-size: 1.25em;
+    text-align: center;
+} #pricing-plans p{
+    font-size: 0.75em;
+    color: #e0e1dd;
 }
-
-td {
-    padding: 5px;
-}
-
-th {
-    font-size: 1.3em;
-}
-
-
-
-
 
 
 
