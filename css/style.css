@@ -88,6 +88,8 @@ article{
 } #pricing-plans th.label{
     color: #778da9;
     font-size: 0.75em;
+    text-align: center;
+    border-right: 1px solid lightgray;
 } #pricing-plans td {
     color: #1b263b;
     padding: 15px;
