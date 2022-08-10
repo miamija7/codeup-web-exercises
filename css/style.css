@@ -8,11 +8,50 @@ body {
     font-family: "Myriad Pro", "sans-serif";
 }
 
-#container {
-    width: 60%;
-    padding: 10px;
+@media (max-width: 1024px) {
+    #container {
+    width: 100%;
+    padding: 0px;
     margin: auto;
+    }
+    #pricing-plans{
+        margin: 50px 0px 50px 0px;
+
+    }
+    table td, th, tr{
+        font-size: 0.6em;
+        margin: 0px;
+        padding: 2px;
+    }
 }
+@media (min-width: 500px){
+    #pricing-plans{
+        margin: 50px 50px 50px 50px;
+        padding: 0 25px ;
+    }
+    #company-vision{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+}
+
+@media (min-width: 1080px) {
+    #container {
+        width: 60%;
+        padding: 10px;
+        margin: auto;
+    }
+    #pricing-plans{
+        margin: 50px;
+        padding: 50px 50px 5px 50px;
+    }
+
+}
+
+
+
+
 
 header {
     text-align: center;
@@ -63,10 +102,8 @@ article{
 }
 
 #pricing-plans{
-    margin: 50px;
     background-color: #778da9;
     border-radius: 30px;
-    padding: 50px 50px 5px 50px;
     text-align: center;
     border: 1px solid dimgrey;
 } #pricing-plans h2 {
