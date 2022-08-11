@@ -1,4 +1,5 @@
 body {
+    position: relative;
     margin: 0;
     font-family: sans-serif;
 }
@@ -30,14 +31,15 @@ body {
     margin: 2em 1em;
 }
 
-.profile h2 {
+.profile h2, h2 a {
     margin: auto 0;
     font-weight: normal;
+    text-decoration: none;
+    color: black;
 }
 
 .profile div {
     display: flex;
-
 }
 
 
@@ -54,7 +56,18 @@ body {
 
 #profile-nav li {
     padding: 0.5em 1em;
-    margin: 0;
+    margin: 0.25em;
+}
+
+#profile-nav li.inactive:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50px;
+}
+
+
+#top-nav li:hover, footer a:hover {
+    cursor: pointer;
+    opacity: 55%;
 }
 
 #profile-nav span {
@@ -72,6 +85,8 @@ body {
     border-top: 3px solid red;
     border-bottom: 1px solid white;
     background-color: white;
+    margin-bottom: 0;
+    padding-bottom: 0.7em;
 }
 
 #profile-content {
@@ -80,8 +95,79 @@ body {
     border-radius: 5px;
 }
 
-#profile-content div
+#profile-content #title {
+    margin: 0;
+    display: block;
+    background-color: #E6ECF0;
+    padding: 1em 0 1.5em 3em;
+    font-weight: bold;
+    border-bottom: 1px solid lightgray;
+}
 
+#profile-content {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+#profile-content table {
+    width: 92%;
+    margin-left: 4%;
+}
 
+#profile-content a {
+    font-weight: normal;
+    color: blueviolet;
+    font-size: 1.25em;
+    text-decoration: none;
+}
 
+#profile-content th span {
+    font-weight: normal;
+    border: none;
+    color: gray;
+    font-size: 1em;
+}
+
+#profile-content td.pic {
+    width: 1.5em;
+    padding: 1em 1em 1em 0;
+}
+
+#profile-content th {
+    text-align: left;
+}
+
+#profile-content td.status, td.teams {
+    text-align: right;
+    color: gray;
+}
+
+table td, th {
+    border-bottom: 1px solid lightgray;
+}
+
+table td.last, th.last {
+    border: none;
+}
+
+footer {
+    padding: 2em 3em;
+    border-top: 1px solid lightgray;
+}
+
+footer ul, p {
+    display: inline-block;
+}
+
+footer p {
+    color: gray;
+}
+
+footer a {
+    color: blueviolet;
+}
+
+footer ul:nth-of-type(2) {
+    float: right;
+}
