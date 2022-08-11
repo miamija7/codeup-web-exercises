@@ -230,3 +230,39 @@ Div/Span:
     + used to group elements for styling purposes
     + use when no other semantic element is appropriate
 
+
+------- CSS Positioning -------
+
+Static:
+- the default positioning for elements
+- elements will be rendered in order with the normal document flow
+
+
+Floating:
+- have an element break free from the normal document flow and shift to the left or right as far as possible
+- text and other inline elements can flow around it
+    float: left;
+    float: right;
+
+Clear:
+- allows us to have content "clear" or move below elements that are floated to either the left, right, or both
+    clear: left;
+    clear: right;
+    clear: both;
+
+Position:
+- modify position
+- top, left, bottom, and right
+- Relative Positioning:
+    position:relative;
+    + enables the top, left, bottom, right properties
+    + top:10px and right:10px will shift the element down 10px, and to the left 10px in the div!
+- Absolute Positioning:
+    position:absolute;
+    + enables the top, left, bottom, right properties
+    + top:10px and right:10px will place the element 10px from the top-right corner of the div!
+- Fixed Position:
+    position:fixed;
+    + enables the top, left, bottom, right properties
+    + top:10px and right:10px places the element 10px away from the top right corner of the browser!
+
