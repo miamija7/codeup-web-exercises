@@ -32,3 +32,11 @@ Z SHELL:
     git log origin/master..master
 3. Pull Requests
     git pull origin main
+
+
+============= 11 Aug ============
+
+UI: Explanation, presentation, navigation
+- Minimal work for the user!
+- "Easy to Use" + "Looks Nice" = GOOD APP!
+

@@ -191,10 +191,42 @@ element { font-family: "Courier New", Monospace; }
   If the browser font size changes, all em values would change accordingly.
 
 
+------- CSS Box Model -------
 
 
+CSS Box Model:
+- Every element in an HTML document is represented as a rectangular box
+- CSS box properties:
+    + height & width
+    + padding
+    + border
+    + margin
+
+    width: 200px;                   content width
+    height: 200px;                  content height
+    padding: 1px 3px 30px 5px;      padding between content and border (top + right + bottom + left)
+    border: 1px solid black;        border (width + style + color)
+    margin: 10px 3px 30px 5px;      margin beyond border, does not add to element size
+
+- The overall size for the box of an element is calculated as follows:
+    height = height + padding-top + padding-bottom + border-top + border-bottom
+    width = width + padding-left + padding-right + border-left + border-right
 
 
-
-
+Div/Span:
+- content container
+- without semantic meaning
+- for the purpose of applying style
+- <div>...</div>
+    + generic container for flow content
+    + block-level element
+    + does not represent anything
+    + used to group elements for styling purposes
+    + use when no other semantic element (such as <article> or <nav>) is appropriate
+- <span>...</span>
+    + generic container for phrasing content
+    + inline element
+    + does not inherently represent anything
+    + used to group elements for styling purposes
+    + use when no other semantic element is appropriate
 
