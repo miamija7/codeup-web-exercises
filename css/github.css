@@ -1,7 +1,87 @@
 body {
     margin: 0;
+    font-family: sans-serif;
 }
 
-header {
-    
+#top-nav {
+    background-color: black;
+    padding: 10px;
 }
+
+#top-nav img {
+    width: 3em;
+    float: left;
+    margin: auto 0;
+}
+
+#top-nav a, li {
+    display: inline-block;
+    text-decoration: none;
+    color: lightgray;
+    margin-left: 0.5em;
+}
+
+.profile {
+    background-color: #E6ECF0;
+}
+
+.profile img {
+    width: 3em;
+    margin: 2em 1em;
+}
+
+.profile h2 {
+    margin: auto 0;
+    font-weight: normal;
+}
+
+.profile div {
+    display: flex;
+
+}
+
+
+#profile-nav ul {
+    margin: 0 0 0 2em;
+    padding: 0;
+}
+
+#profile-nav a, li {
+    display: inline-block;
+    text-decoration: none;
+    color: dimgrey;
+}
+
+#profile-nav li {
+    padding: 0.5em 1em;
+    margin: 0;
+}
+
+#profile-nav span {
+    font-size: 0.8em;
+    font-weight: bolder;
+    padding: 0 6px;
+    margin-left: 5px;
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+#profile-nav li.active {
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-top: 3px solid red;
+    border-bottom: 1px solid white;
+    background-color: white;
+}
+
+#profile-content {
+    margin: 4em 2em;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+#profile-content div
+
+
+
+
