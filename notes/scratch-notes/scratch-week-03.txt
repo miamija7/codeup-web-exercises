@@ -40,3 +40,10 @@ UI: Explanation, presentation, navigation
 - Minimal work for the user!
 - "Easy to Use" + "Looks Nice" = GOOD APP!
 
+
+Bootstrap Colors:
+- Info:     #4F4AA4 #CDDDFF
+- Success:  #3A895A #CFF3DA
+- Warning:  #98872E #FCFBC9
+- Error:    #933447 #FAD3D7
+
