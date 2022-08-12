@@ -12,7 +12,7 @@ This is an repository for Codeup-Dallas' Full Stack Web Development Bootcamp exe
 - Spring                
 
 ## HTML Website Preview
-<b>Tip:</b> Preface HTML file links with `https://htmlpreview.github.io/?` to preview properly rendered HTML!
+<b>Tip:</b> Preface a HTML file link with `https://htmlpreview.github.io/?` to preview properly rendered HTML!
 
 <b>Example:</b> `https://htmlpreview.github.io/?https://github.com/miamija7/codeup-web-exercises/blob/main/html/github.html`
 
