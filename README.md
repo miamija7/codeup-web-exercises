@@ -14,7 +14,7 @@ This is an repository for Codeup-Dallas' Full Stack Web Development Bootcamp exe
 ## GitHub HTML Preview
 <b><em>Tip:</b> Preview html files within GitHub as a rendered website
 1. From GitHub, copy the link to an html file
-2. Prepend `https://htmlpreview.github.io/?` before the html file's url
+2. Prepend `https://htmlpreview.github.io/?` to the html file's url
 3. Preview rendered html! 
 
 Format:
