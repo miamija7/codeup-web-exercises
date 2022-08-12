@@ -27,14 +27,22 @@ a {
 }
 .top-nav {
     background: var(--light-bg);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 .nav {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
-.nav-link {
 
+.nav-item{
+    display: inline-block;
+    padding: 1em;
+}
+
+.nav-link {
     color: var(--main-link-color);
     font-weight: bold;
     text-decoration: none;
@@ -43,8 +51,18 @@ a {
     color: var(--link-color);
 }
 .profile {
+    height: 80px;
     background: var(--light-bg);
 }
+.profile-image{
+    position: absolute;
+    top: 250px;
+}
+.profile-form {
+    float: right;
+    line-height: 80px;
+}
+
 .btn {
     border: 1px solid var(--main-link-color);
     color: var(--main-link-color);
