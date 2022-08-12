@@ -47,3 +47,12 @@ Bootstrap Colors:
 - Warning:  #98872E #FCFBC9
 - Error:    #933447 #FAD3D7
 
+
+============= 12 Aug ============
+
+
+GET == ASK
+- Question is a search query
+- https://mylink.com/?Qeuery="string"
+
+
