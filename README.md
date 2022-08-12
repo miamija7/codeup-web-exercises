@@ -14,7 +14,7 @@ This is an repository for Codeup-Dallas' Full Stack Web Development Bootcamp exe
 ## HTML Website Preview
 <b>Tip:</b> Preface a HTML file link with `https://htmlpreview.github.io/?` to preview properly rendered HTML!
 
-<b>Example:</b> `https://htmlpreview.github.io/?https://github.com/miamija7/codeup-web-exercises/blob/main/html/github.html`
+<b>Example:</b> `https://htmlpreview.github.io/?https://github.com/miamija7/codeup-web-exercises/blob/main/html/welcome.html`
 
 ## Topic Descriptions
 | Topic         | Description                                                                  |
