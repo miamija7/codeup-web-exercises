@@ -266,3 +266,102 @@ Position:
     + enables the top, left, bottom, right properties
     + top:10px and right:10px places the element 10px away from the top right corner of the browser!
 
+
+------- Flexbox Fundamentals -------
+
+Flexbox:
+- Flexible Box Module
+- provides a convenient way to arrange the layout of elements inside a parent container
+
+
+To start using flexbox:
+    {
+        display: flex;
+    }
+    - Items display in a row (flex-direction is row).
+    - The items do not stretch on the main axis, but can shrink.
+    - The items will stretch to fill the size of the cross axis.
+    - The flex-basis property is set to auto.
+    - The flex-wrap property is set to nowrap
+
+
+
+Flex Direction:
+    {
+        flex-direction: row;
+        flex-direction: row-reverse;
+    }
+                   ^         (Main-Axis)
+                 <-|--------------------------------->
+                   |
+     (Cross-Axis)  |
+                   v
+
+
+    {
+        flex-direction: column;
+        flex-direction: column-reverse;
+    }
+                   ^         (Cross-Axis)
+                 <-|--------------------------------->
+                   |
+      (Main-Axis)  |
+                   v
+
+
+Justify Content (Main Axis):
+    {
+        justify-content: flex-start;
+        justify-content: flex-end;
+        justify-content: center;
+        justify-content: space-between;
+        justify-content: space-around;
+        justify-content: space-evenly;
+    }
+
+
+Align Items (Cross Axis):
+    {
+        align-items: normal;
+        align-items: stretch;
+        align-items: center;
+        align-items: start;
+        align-items: end;
+        align-items: flex-start;
+        align-items: flex-end;
+        align-items: baseline;
+    }
+
+
+Flex Wrap:
+    {
+        flex-wrap: nowrap;
+        flex-wrap: wrap;
+        flex-wrap: wrap-reverse;
+    }
+
+
+Align Content:
+    {
+        align-content: flex-start;
+        align-content: center;
+        align-content: space-evenly;
+        align-content: space-between;
+    }
+
+
+Flex Item Properties:
+- In addition to setting the properties a parent / flex container, several properties can be set
+  on individual flex items to control their positioning within a row or column.
+- Order:
+    + First flex item has an order value of 1
+    + First flex item has an order value of -1
+- Align Self:
+    + cross axis alignment
+
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout
+
+
+
+
