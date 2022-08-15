@@ -112,7 +112,8 @@ section:nth-of-type(5) {
 section:nth-of-type(6) {
     background: coral;
     height: 14em;
-    /* enter needed declarations here */
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .grey-box {
