@@ -10,6 +10,12 @@ body {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+    padding: 0;
+}
+
 nav {
     margin: 0;
     padding: 0;
@@ -22,21 +28,27 @@ nav * {
     display: inline-block;
 }
 
-nav ul a {
-    font-family: "Work Sans";
-    padding: 0 0.5em;
-    text-decoration: none;
-    color: black;
+ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
-    font-size: 0.75em;
+    font-size: .75em;
     font-weight: bold;
+    font-family: "Work Sans";
+    padding: 0 0.75em;
 }
 
 nav p {
     font-size: 3em;
     padding: 0.2em 0;
     font-family: "Montserrat";
-    margin: 0;
+    margin: 0 auto;
+}
+
+nav ul li img {
+    height: 20px;
 }
