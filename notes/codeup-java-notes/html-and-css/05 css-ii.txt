@@ -96,3 +96,7 @@ Including Bootstrap:
 - we will be using jsDelivr
 - link element that points to Bootstrap
 - https://getbootstrap.com/docs/5.1/getting-started/introduction/ keeps it up to date
+- include Bootstrap before we include our own CSS, so we can override as desired
+- you can also download Bootstrap and host it yourself
+
+
