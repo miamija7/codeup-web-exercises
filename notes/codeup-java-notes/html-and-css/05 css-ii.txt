@@ -15,5 +15,71 @@ Responsive Web Design:
 - crafting sites to provide an optimal viewing experience
 - easy reading, navigation, minimum resizing, panning, and scrolling
 - from desktop computer monitors to mobile phones
+- coined by Ethan Marcotte in 2010
+
+
+Setting the Viewport:
+- viewport meta tag instructs the page to match the screen's width
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+Media Queries:
+- the most important tool in your belt when it comes to building a responsive website
+- make changes based on the pixel width of the viewable area
+
+    /* screen sizes 500px and up */
+    @media screen and (min-width:500px) {
+        selector {
+            property: value;
+        }
+    }
+
+    /* screen sizes between 960px and 1200px */
+    @media screen and (min-width:960px) and (max-width:1200px) {
+        /* ... */
+    }
+
+
+Breakpoints:
+- referred to as major resolution changes
+- specified with media queries
+- use popular device configurations
+- layout elements are broken and repositioned
+
+    /* Small devices (phones and pocket devices, 576 and up) */
+    @media screen and (min-width:576px) { /* ... */ }
+
+    /* Medium devices (tablets, 768px and up) */
+    @media screen and (min-width:768px) { /* ... */ }
+
+    /* Large devices (desktops, 992px and up) */
+    @media screen and (min-width:992px) { /* ... */ }
+
+    /* Extra large devices (large desktops, 1200px and up) */
+    @media screen and (min-width:1200px) { /* ... */ }
+
+
+Mobile First Approach:
+- writing your default styling for a mobile device
+- use media queries to change the layout based on larger devices
+- support mobile and build up from there
+- larger first complicates as you break a design down to fit
+* CSS px !== device px
+    + device-width media query measures the width of the device in device pixels
+    + width media query measures the total width of the page in CSS pixels
+
+    Q: What is a layout viewport?
+    A: It’s the area (in CSS pixels) that the browser uses to calculate the dimensions
+       of elements with percent-ual width, the width of this layout viewport is constrained
+       to the device width in device pixels.
+
+       Nexus screen size = 480px, but when you apply the <meta> tag it acts as if the screen
+       width is 320px, 2/3rds of the official width.
+
+       dips; device-independent pixels
+
+* Rule
+    + The @media at-rule may be placed at the top level of your code or nested inside
+      any other conditional group at-rule.
 
 
