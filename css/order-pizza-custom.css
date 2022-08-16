@@ -1,0 +1,16 @@
+.jumbotron {
+    height: 346px;
+    background-image: url("https://images.pexels.com/photos/3761662/pexels-photo-3761662.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-size: cover;
+    background-position: 0 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jumbotron h1 {
+    background-color: white;
+    opacity: 75%;
+    width: 100%;
+    text-align: center;
+}
