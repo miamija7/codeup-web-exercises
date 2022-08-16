@@ -17,14 +17,16 @@ footer {
     flex-direction: column;
 }
 
+section {
+    display: flex;
+    flex-direction: row;
+}
+
 ul * {
     display: inline-block;
 }
 
-
 .connect {
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
     background-color: black;
     padding: 5em 5em 2.5em 5em;
@@ -35,32 +37,53 @@ ul * {
     flex-grow: 1;
 }
 
-
 .connect ul * {
     opacity: 85%;
+    padding-right: 0.2em
+}
+
+.connect ul a img {
+    height: 20px;
 }
 
 .connect .title, b {
     color: white;
+    font-weight: bold;
+}
+
+form, .title, .map, .connect ul {
+    margin-bottom: 1em;
+}
+
+.connect p {
+    line-height: 2em;
 }
 
 
 .quick-links {
-    display: flex;
-    flex-direction: row;
     background-color: dimgrey;
     padding: 2.5em 5em 2.5em 5em;
+    justify-content: space-between;
 }
 
-.quick-links * {
-    color: silver;
+.quick-links ul *{
+    padding-right: 1em;
 }
 
-
-p.title {
-    font-weight: bolder;
+form input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 30px;
+    background-color: black;
+    border: 1px solid silver;
+    margin-bottom: 0.5em;
 }
 
-footer a img {
-    height: 20px;
+form button {
+    padding: 15px 20px;
+    border-radius: 30px;
+    background-color: silver;
+    border: 1px solid silver;
+    color: white;
+
 }
