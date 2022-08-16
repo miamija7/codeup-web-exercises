@@ -78,7 +78,7 @@ Mobile First Approach:
 
        dips; device-independent pixels
 
-* Rule
+* @media Rule
     + The @media at-rule may be placed at the top level of your code or nested inside
       any other conditional group at-rule.
 
