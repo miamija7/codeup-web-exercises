@@ -6,3 +6,14 @@
 - fixed layout: the layout is specified in hardcoded pixel values
 - fluid layout: the layout is specified in percentages, but does not change based on screen size
 - responsive layout: the layout uses media queries to change based on screen size
+
+
+------- MEDIA QUERIES -------
+
+Responsive Web Design:
+- RWD
+- crafting sites to provide an optimal viewing experience
+- easy reading, navigation, minimum resizing, panning, and scrolling
+- from desktop computer monitors to mobile phones
+
+
