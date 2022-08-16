@@ -1,0 +1,8 @@
+
+*** CSS II ***
+
+------- OVERVIEW -------
+
+- fixed layout: the layout is specified in hardcoded pixel values
+- fluid layout: the layout is specified in percentages, but does not change based on screen size
+- responsive layout: the layout uses media queries to change based on screen size
