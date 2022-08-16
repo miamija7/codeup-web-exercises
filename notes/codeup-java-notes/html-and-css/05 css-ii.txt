@@ -83,3 +83,16 @@ Mobile First Approach:
       any other conditional group at-rule.
 
 
+------- BOOTSTRAP -------
+
+Bootstrap:
+- formerly Twitter Bootstrap
+- a front-end framework that provides CSS styling along with some JavaScript
+- build responsive web pages quickly and easily
+
+
+Including Bootstrap:
+- use a CDN (Content Delivery Network) to include Bootstrap on our page
+- we will be using jsDelivr
+- link element that points to Bootstrap
+- https://getbootstrap.com/docs/5.1/getting-started/introduction/ keeps it up to date
