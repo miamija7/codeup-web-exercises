@@ -60,8 +60,8 @@
                 </button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button"
-                        role="tab" aria-controls="contact" aria-selected="false"><span
+                <button class="nav-link" id="three-tab" data-bs-toggle="tab" data-bs-target="#three" type="button"
+                        role="tab" aria-controls="three" aria-selected="false"><span
                         class="badge bg-secondary">3</span> Toppings
                 </button>
             </li>
@@ -136,12 +136,12 @@
                         </li>
                     </div>
                     <div class="card-footer">
-                        <a class="btn btn-primary float-end" onclick="tabNav('two','contact')">Next ></a>
+                        <a class="btn btn-primary float-end" onclick="tabNav('two','three')">Next ></a>
                         <a class="btn btn-primary float-end" onclick="tabNav('two','one')">< Previous</a>
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+            <div class="tab-pane fade" id="three" role="tabpanel" aria-labelledby="three-tab">
                 <div class="card">
                     <div class="card-header bg-primary text-white">Choose Toppings</div>
                     <div class="card" style="margin: 1em;">
@@ -182,8 +182,8 @@
                         </ul>
                     </div>
                     <div class="card-footer">
-                        <a class="btn btn-primary float-end" type="submit" methods="POST">Checkout</a>
-                        <a class="btn btn-primary float-end" onclick="tabNav('contact','two')">< Previous</a>
+                        <button type="submit" class="btn btn-primary float-end">Checkout</button>
+                        <a class="btn btn-primary float-end" onclick="tabNav('three','two')">< Previous</a>
                     </div>
                 </div>
             </div>
