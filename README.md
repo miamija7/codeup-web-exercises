@@ -11,14 +11,6 @@ This is an repository for Codeup-Dallas' Full Stack Web Development Bootcamp exe
 - MySQL                            
 - Spring                
 
-## GitHub HTML Preview
-<b><em>Tip:</b> Preview html files from GitHub as rendered websites
-1. From GitHub, copy the link to a html file
-2. Prepend `https://htmlpreview.github.io/?` to the html file's url
-3. Preview rendered html! 
-
-Tool Source: [GitHub HTML Preview](https://github.com/htmlpreview/htmlpreview.github.com)
-</em>
 
 ## Topic Descriptions
 | Topic         | Description                                                                  |
@@ -59,3 +51,13 @@ Tool Source: [GitHub HTML Preview](https://github.com/htmlpreview/htmlpreview.gi
 | (20) 12/12 | Capstone Projects          |
 | 12/19-01/05| Winter Break               |
 | (21) 01/06 | Final Week & Graduation    |
+
+## GitHub HTML Preview
+<b><em>Tip:</b> Preview html files from GitHub as rendered websites
+1. From GitHub, copy the link to a html file
+2. Prepend `https://htmlpreview.github.io/?` to the html file's url
+3. Preview rendered html! 
+
+Tool Source: [GitHub HTML Preview](https://github.com/htmlpreview/htmlpreview.github.com)
+</em>
+
