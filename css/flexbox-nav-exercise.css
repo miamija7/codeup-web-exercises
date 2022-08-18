@@ -9,6 +9,10 @@ a {
     padding: 0;
 }
 
+li a:hover {
+    color: steelblue;
+}
+
 nav {
     margin: 0;
     padding: 0;
@@ -32,7 +36,6 @@ nav ul li {
     font-size: .75em;
     font-weight: bold;
     font-family: "Work Sans";
-    padding: 0 0.75em;
 }
 
 nav p {
@@ -42,6 +45,9 @@ nav p {
     margin: 0 auto;
 }
 
+nav ul li a {
+    padding: 0.75em;
+}
 nav ul li img {
     height: 20px;
 }
