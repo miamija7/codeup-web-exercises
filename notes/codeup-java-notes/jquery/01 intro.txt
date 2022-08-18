@@ -13,4 +13,9 @@ What is jQuery?
 *** REACT.JS ***
 
 What is React?
--
+- React.js (also known as ReactJS or React) is an open-source, front-end JavaScript library
+- created in 2013 by Jordan Walke, who works at Facebook as a software engineer
+- debugging and testing more easily
+-  Facebook, Instagram, and Whatsapp all use React
+
+
