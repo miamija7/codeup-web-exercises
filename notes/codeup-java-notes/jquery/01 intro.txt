@@ -1,0 +1,16 @@
+
+*** JQUERY - INTRO ***
+
+
+What is jQuery?
+- a cross-platform JavaScript library
+- designed to simplify the client-side scripting of HTML
+- released in January 2006 at BarCamp NYC by John Resig
+- jQuery is the most widely used JavaScript library on the internet today.
+- 77.6% of all sites use jQuery (as of 23rd February 2021)
+
+
+*** REACT.JS ***
+
+What is React?
+- 
