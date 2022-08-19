@@ -1,7 +1,7 @@
-# <img src="https://199lj33nqk3p88xz03dvn481-wpengine.netdna-ssl.com/wp-content/uploads/2021/06/webdev_icon.png" alt="nodejs" width="40" height="40"/>  Mia's Full Stack Web Exercises
+# <img src="https://199lj33nqk3p88xz03dvn481-wpengine.netdna-ssl.com/wp-content/uploads/2021/06/webdev_icon.png" alt="codeup" width="25" height="25"/>  Mia's Full Stack Web Exercises
 
 ## Summary
-This is a collection of personal web dev exercises, test-driven developments, and scratch notes. As a member of the Haskell Cohort at Codeup Dallas, this repository reflects my progress with the Full Stack course curriculum and contributes to my overall grade in the course.
+This is a collection of personal web dev exercises, test-driven developments, and scratch notes. I'm a member of the Haskell Cohort at Codeup Dallas, and this repository reflects my progress with the Full Stack course curriculum and contributes to my overall grade in the course.
 
 ## Recent Projects
 - [Bootstrap Pizza Order](https://htmlpreview.github.io/?https://github.com/miamija7/codeup-web-exercises/blob/main/html/order-pizza.html)
