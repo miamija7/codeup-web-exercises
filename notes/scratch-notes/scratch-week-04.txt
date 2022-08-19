@@ -1,5 +1,5 @@
 
-============= 12 Aug ============
+============= 18 Aug ============
 
 Font Awesome
 - HTML Link: <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.css">
@@ -12,3 +12,24 @@ Common breakpoints:
 - 769px-1024px for small screens like laptop
 - 1025px-1200px for large screens like Desktops
 - 1201px and above for extra large screens like TV
+
+============= 19 Aug ============
+
+Make a GitHub Organization:
+- Your Organizations -> New Org -> Free
+- Name: Julian-Mia-media-queries-exercise -> email -> Personal Account
+- Invite Members!
+
+Setup (One Person):
+GitHub      [copy ssh key]
+Intellij    File -> New -> Project from Version Control
+            [paste ssh key]
+GitHub      [copy …or create a new repository on the command line]
+Intellij    console -> [paste …or create a new repository on the command line]
+            create file: .gitignore
+            add: /.idea
+            create files for setup
+            git add, commit, push
+
+Pair Programming:
+- driver/navigator
