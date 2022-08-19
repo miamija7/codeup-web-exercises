@@ -30,6 +30,8 @@ Intellij    console -> [paste …or create a new repository on the command line]
             add: /.idea
             create files for setup
             git add, commit, push
+GitHub      Organizations -> People -> Change Role -> Owner
+            Repo -> select repo -> Settings -> Collaborators and Teams -> Add individual account
 
 Pair Programming:
 - driver/navigator
