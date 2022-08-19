@@ -19,7 +19,7 @@ footer {
 
 section {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 ul * {
@@ -29,7 +29,7 @@ ul * {
 .connect {
     justify-content: space-between;
     background-color: black;
-    padding: 5em 5em 2.5em 5em;
+    text-align: center;
     color: silver;
 }
 
@@ -52,7 +52,8 @@ ul * {
 }
 
 form, .title, .map, .connect ul {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
+    margin-top: 2em;
 }
 
 .connect p {
@@ -62,16 +63,21 @@ form, .title, .map, .connect ul {
 
 .quick-links {
     background-color: dimgrey;
-    padding: 2.5em 5em 2.5em 5em;
     justify-content: space-between;
+    padding: 1em;
+    text-align: center;
 }
 
+.quick-links * {
+    padding: 0.25em;
+}
 .quick-links ul *{
-    padding-right: 1em;
+    font-size: 0.85em;
+    padding-right: 0.25em;
 }
 
 form input {
-    width: 100%;
+    width: 85%;
     padding: 15px;
     border-radius: 30px;
     background-color: black;
@@ -86,4 +92,28 @@ form button {
     border: 1px solid silver;
     color: white;
 
+}
+
+@media (min-width: 1080px) {
+    section {
+        display: flex;
+        flex-direction: row;
+    }
+    .connect {
+        padding: 5em 5em 2.5em 5em;
+        text-align: left;
+    }
+    form, .title, .map, .connect ul {
+        margin-bottom: 1em;
+        margin-top: 0;
+    }
+    form input {
+        width: 100%;
+    }
+    .quick-links {
+        padding: 2.5em 5em 2.5em 5em;
+    }
+    .quick-links ul *{
+        padding-right: 1em;
+    }
 }
