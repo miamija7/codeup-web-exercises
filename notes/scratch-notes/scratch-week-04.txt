@@ -35,3 +35,12 @@ GitHub      Organizations -> People -> Change Role -> Owner
 
 Pair Programming:
 - driver/navigator
+
+============= 19 Aug ============
+
+fetch(`https://api.coingecko.com/api/v3/ping`).
+    then(res => res.json()).
+    then(data => {
+        //checks for coin name or coin ticker symbol
+        console.log(data)
+    })
