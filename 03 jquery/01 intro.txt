@@ -20,6 +20,7 @@ What is React?
 
 ***********************
 
+
 What is an API?
 - Application Programming Interface
 - An API is any way for one application or program to communicate with another one
@@ -39,3 +40,53 @@ What is an API?
       - Code on demand (optional)
       - Uniform interface
       - checkout more on APIs: https://en.wikipedia.org/wiki/Representational_state_transfer#Architectural_constraints
+
+
+Using jQuery:
+- install locally or use CDN linking
+- release types: compressed (production) and uncompressed (development)
+
+
+Downloading jQuery:
+- https://jquery.com/download/
+- Download Versions: https://releases.jquery.com/jquery/
+    + "uncompressed" link -> Save Link As... -> js folder
+    + in html reference like this: <script src="/js/jquery.js"></script>
+
+
+CDN jQuery link:
+- <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+- retrieve the jQuery source code from the CDN provided
+
+
+The jQuery object:
+- API Documentation: https://api.jquery.com/jQuery/
+- use the jQuery object to find and create HTML elements from the DOM
+- jQuery Object API returns a collection elements either found in the DOM or created by passing an HTML string
+- use $, as an alias of jQuery to reference the jQuery object
+
+
+Document Ready:
+- determine if the window has finished loading
+- fires when DOM is ready, after images download
+
+    window.onload = function() {
+        alert( 'The page has finished loading!' );
+    }
+
+- pass an anonymous handler function into the jQuery instance
+- fires when DOM is ready, before images download
+- $() will execute when the document is ready for JavaScript manipulation
+
+    $(function() {
+        alert( 'The DOM has finished loading!' );
+    });
+
+- If we put our JavaScript at the bottom of our document, it will already be loaded by the time the
+  JavaScript is loaded. Using the function above will ensure the DOM is loaded before running.
+- JavaScript should "use strict"; and live inside a $(function(){}) function
+
+
+
+
+

@@ -1,0 +1,12 @@
+Schedule:
+[ ]	    jQuery Intro
+[ ]		jQuery Selectors
+[ ]		jQuery Events
+
+============= 22 Aug ============
+
+BOOTSTRAP:
+- good to use the 2nd newest version, because they have vetted it more than the newest version
+- javascript framework
+
+
