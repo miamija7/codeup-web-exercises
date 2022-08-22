@@ -4,9 +4,10 @@
 This is a collection of personal web dev exercises, test-driven developments, and scratch notes. I'm a member of the Haskell Cohort at Codeup Dallas, and this repository reflects my progress with the Full Stack course curriculum and contributes to my overall grade in the course.
 
 ## Recent Projects
-- [Bootstrap Pizza Order](https://htmlpreview.github.io/?https://github.com/miamija7/codeup-web-exercises/blob/main/html/order-pizza.html)
-- [Webpage Footer](https://htmlpreview.github.io/?https://github.com/miamija7/codeup-web-exercises/blob/main/html/flexbox-footer.html)
-- [GitHub Page](https://htmlpreview.github.io/?https://github.com/miamija7/codeup-web-exercises/blob/main/html/github.html)
+- [Media Queries - Pair Programming](https://htmlpreview.github.io/?https://github.com/Julian-Mia-media-queries-exercise/media-queries-exercise/blob/main/media-queries.html)
+- [Bootstrap Pizza Order](https://htmlpreview.github.io/?https://github.com/miamija7/codeup-web-exercises/blob/main/02%20html-and-css/html/order-pizza.html)
+- [Webpage Footer](https://htmlpreview.github.io/?https://github.com/miamija7/codeup-web-exercises/blob/main/02%20html-and-css/html/flexbox-footer.html)
+- [GitHub Page](https://htmlpreview.github.io/?https://github.com/miamija7/codeup-web-exercises/blob/main/02%20html-and-css/html/github.html)
 
 ## Topics
 - HTML
