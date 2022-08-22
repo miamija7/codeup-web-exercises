@@ -87,6 +87,11 @@ Document Ready:
 - JavaScript should "use strict"; and live inside a $(function(){}) function
 
 
+JSBin:
+- You will also see links to JSBin
+- a platform that allows us to quickly create and embed front-end code samples
+
+
 
 
 
