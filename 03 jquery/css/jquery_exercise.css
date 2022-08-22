@@ -1,0 +1,6 @@
+.hidden {
+    visibility: hidden;
+    max-height: 0;
+}
+
+@media
