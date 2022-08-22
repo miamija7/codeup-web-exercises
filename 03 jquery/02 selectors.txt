@@ -45,6 +45,7 @@ ID Selector:
 Class Selector:
 - checkout: https://jsbin.com/topupe/1/edit?js,output
 - the below code changes the background color of ALL html elements with the class of 'important'
+
     $('.important').css('background-color', '#FF0');
 
     // Example
@@ -54,6 +55,7 @@ Class Selector:
 Element Selector:
 - checkout: https://jsbin.com/gayir/1/edit?js,output
 - the below code changes the font size of ALL 'p' html elements to 14px
+
     $('p').css('font-size', '14px');
 
     // Example
@@ -63,6 +65,7 @@ Element Selector:
 Multiple Selector:
 - checkout: https://jsbin.com/qejeli/1/edit?output
 - the below code changes background color of all elements with .important class and all p elements to yellow
+
     $('.important, p').css('background-color', '#FF0');
 
     // Example
@@ -72,6 +75,7 @@ Multiple Selector:
 All Selector:
 - checkout: https://jsbin.com/fivucu/1/edit?js,output
 - the below code adds a red border to every element within the html file!
+
     $('*').css('border', '1px solid #F00');
 
     // Example
