@@ -1,6 +1,38 @@
+/*Document Setup*/
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, blockquote {
+    font-family: "Lobster", sans-serif;
+}
+
 .hidden {
     visibility: hidden;
     max-height: 0;
 }
 
-@media
+/*Navigation*/
+ul {
+    padding:0;
+}
+
+h1{
+    text-align: center;
+}
+
+
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    .top-nav {
+        display: flex;
+        flex-direction: row;
+    }
+    body {
+        background-color: lightskyblue;
+    }
+}
+
