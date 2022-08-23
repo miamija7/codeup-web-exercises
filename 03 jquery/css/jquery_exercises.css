@@ -13,13 +13,18 @@ h1, h2 {
     font-family: "Lobster", sans-serif;
 }
 
-/*Header*/
+/*Navigation*/
 
 h1 {
     font-size: 5em;
     text-align: center;
+    padding: 0 0.5em;
+    margin: 0.5em 0;
 }
 
+.top-nav-links{
+    margin-bottom: 3em;
+}
 .top-nav ul {
     padding: 0;
     list-style: none;
@@ -42,21 +47,62 @@ h1 {
     color: dimgray;
 }
 
+/*Horizontal Rule*/
+
+hr {
+    margin: 0;
+}
+
+/*Planet Section*/
+
+.planet {
+    background-color: #415a77;
+    display: flex;
+}
+
+.planet table {
+    text-align: center;
+    background-color: lightgrey;
+    width: 90%;
+    align-self: center;
+}
+
+.planet th {
+    color: gray;
+}
+
+.planet td {
+    color: black;
+    padding: 0.5em 0;
+}
+
 img {
     width: 100%;
 }
 
+
 @media screen and (max-width:768px) {
+    /*Navigation*/
+    .top-nav-links {
+        margin-left: auto;
+        margin-right: auto;
+    }
     .top-nav ul {
-        flex-wrap: wrap
+        flex-wrap: wrap;
+        max-width: 430px;
     }
 
     .top-nav li {
-        margin: 1em;
+        margin: 1.5em;
     }
 
-    h2 {
+    /*Planet Section*/
+    .planet {
+        flex-direction: column;
+    }
+
+    .planet h2 {
         font-size: 3em;
-        text-align: center;
+        align-self: center;
     }
 }
