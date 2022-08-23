@@ -24,6 +24,8 @@ h1 {
 
 .top-nav-links{
     margin-bottom: 3em;
+    margin-left: auto;
+    margin-right: auto;
 }
 .top-nav ul {
     padding: 0;
@@ -31,6 +33,8 @@ h1 {
     text-align: center;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 430px;
 }
 
 .top-nav a {
@@ -39,6 +43,10 @@ h1 {
     background-color: dimgrey;
     padding: 0.5em 1em;
     border-radius: 50px;
+}
+
+.top-nav li {
+    margin: 1.5em;
 }
 
 .top-nav a:hover {
@@ -54,55 +62,52 @@ hr {
 }
 
 /*Planet Section*/
-
-.planet {
+.container {
     background-color: #415a77;
-    display: flex;
+    min-height: 100vh;
 }
 
-.planet table {
-    text-align: center;
-    background-color: lightgrey;
-    width: 90%;
+.planet {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.planet h2 {
+    font-size: 3em;
     align-self: center;
 }
 
-.planet th {
-    color: gray;
-}
-
-.planet td {
-    color: black;
-    padding: 0.5em 0;
-}
+/*Hello World*/
 
 img {
     width: 100%;
 }
 
+.greeting-container img {
+    width: 200px;
+    float: left;
+}
 
-@media screen and (max-width:768px) {
+.greeting-container blockquote {
+    position: relative;
+    right: 150px;
+    top: 50px;
+}
+
+
+
+@media screen and (min-width:768px) {
     /*Navigation*/
-    .top-nav-links {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .top-nav ul {
-        flex-wrap: wrap;
-        max-width: 430px;
-    }
 
-    .top-nav li {
-        margin: 1.5em;
-    }
+
 
     /*Planet Section*/
     .planet {
-        flex-direction: column;
+        flex-direction: row;
     }
 
-    .planet h2 {
-        font-size: 3em;
-        align-self: center;
-    }
+
 }

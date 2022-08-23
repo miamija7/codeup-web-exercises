@@ -13,43 +13,55 @@
 <div class="top-nav">
     <h1 id="hello">Hello World!</h1>
     <ul class="top-nav-links">
-        <li><a href="">Sun</a></li>
-        <li><a href="">Mercury</a></li>
-        <li><a href="">Venus</a></li>
-        <li><a href="">Earth</a></li>
-        <li><a href="">Mars</a></li>
-        <li><a href="">Jupiter</a></li>
-        <li><a href="">Saturn</a></li>
-        <li><a href="">Uranus</a></li>
-        <li><a href="">Neptune</a></li>
+        <li><a href="#planet">Sun</a></li>
+        <li><a href="#planet">Mercury</a></li>
+        <li><a href="#planet">Venus</a></li>
+        <li><a href="#planet">Earth</a></li>
+        <li><a href="#planet">Mars</a></li>
+        <li><a href="#planet">Jupiter</a></li>
+        <li><a href="#planet">Saturn</a></li>
+        <li><a href="#planet">Uranus</a></li>
+        <li><a href="#planet">Neptune</a></li>
     </ul>
 </div>
 <hr>
-<section class="planet">
-    <h2>Sun</h2>
-    <table>
-        <tr>
-            <th>TYPE</th>
-            <th>AGE</th>
-            <th>DISTANCE FROM EARTH</th>
-        </tr>
-        <tr>
-            <td>Yellow Dwarf</td>
-            <td>~4.5 billion years</td>
-            <td>93 million miles</td>
-        </tr>
-    </table>
-    <p>The Sun is the star at the center of the Solar System.<br>It is a nearly perfect ball of hot plasma, heated to
-        incandescence by nuclear fusion reactions in its core, radiating the energy mainly as light, ultraviolet, and
-        infrared radiation. It is the most important source of energy for life on Earth.</p>
-    <div class="img-container">
-        <img src="https://nineplanets.org/wp-content/uploads/2020/03/sun.png">
-    </div>
-    <blockquote class="greeting">
-        Hello World!
-        <cite>- The Sun</cite>
-    </blockquote>
-</section>
+<div class="container">
+    <a id="planet"></a>
+    <section class="planet">
+        <h2>Sun</h2>
+        <div class="facts">
+            <table>
+                <tr>
+                    <th>TYPE</th>
+                    <th>AGE</th>
+                    <th>DISTANCE FROM EARTH</th>
+                </tr>
+                <tr>
+                    <td>Yellow Dwarf</td>
+                    <td>~4.5 billion years</td>
+                    <td>93 million miles</td>
+                </tr>
+            </table>
+        </div>
+        <p>The Sun is the star at the center of the Solar System.<br>It is a nearly perfect ball of hot plasma, heated
+            to
+            incandescence by nuclear fusion reactions in its core, radiating the energy mainly as light, ultraviolet,
+            and
+            infrared radiation. It is the most important source of energy for life on Earth.</p>
+        <div class="hello-world">
+            <div class="img-container">
+                <img src="https://nineplanets.org/wp-content/uploads/2020/03/sun.png">
+            </div>
+            <div class="greeting-container">
+                <img src="https://cdn-icons-png.flaticon.com/512/2598/2598866.png" alt="">
+                <blockquote>
+                    Hello World!<br>
+                    <cite>- The Sun</cite>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+</div>
 <!--<section id="mercury" class="planet hidden">-->
 <!--    <h2>Mercury</h2>-->
 <!--    <table>-->
