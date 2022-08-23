@@ -9,9 +9,10 @@ body {
     color: white;
 }
 
-h1, h2 {
+h1, h2, blockquote {
     font-family: "Lobster", sans-serif;
 }
+
 
 /*Navigation*/
 
@@ -32,42 +33,49 @@ h1 {
     list-style: none;
     text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: 430px;
+    max-width: 80%;
 }
 
 .top-nav a {
     text-decoration: none;
     color: white;
-    background-color: dimgrey;
-    padding: 0.5em 1em;
-    border-radius: 50px;
 }
 
 .top-nav li {
-    margin: 1.5em;
+    margin: 0.5em 0;
+    width: 100%;
+    background-color: dimgrey;
+    padding: 0.5em 0;
+    border-radius: 50px;
 }
 
-.top-nav a:hover {
+.top-nav li:hover {
     box-sizing: border-box;
     background-color: lightgrey;
     color: dimgray;
 }
 
+
 /*Horizontal Rule*/
 
 hr {
     margin: 0;
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
 }
 
+
 /*Planet Section*/
+
 .container {
     background-color: #415a77;
     min-height: 100vh;
 }
 
-.planet {
+.planet-section {
     width: 85%;
     margin: auto;
     display: flex;
@@ -75,39 +83,58 @@ hr {
     align-items: center;
 }
 
-.planet h2 {
+.planet-section h2 {
     font-size: 3em;
     align-self: center;
 }
 
-/*Hello World*/
 
-img {
+
+/*Quote*/
+
+.img-container img {
     width: 100%;
 }
 
-.greeting-container img {
-    width: 200px;
+
+img {
+    width: 10em;
     float: left;
 }
 
-.greeting-container blockquote {
+blockquote {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    font-size: 2em;
     position: relative;
-    right: 150px;
-    top: 50px;
+    right: 7em;
+    top: 1.5em;
+    text-align: center;
 }
+
+cite {
+    font-size: 0.65em;
+}
+
 
 
 
 @media screen and (min-width:768px) {
     /*Navigation*/
+    .top-nav ul {
+        max-width: 100%;
+        flex-wrap: nowrap;
+        margin: 0 0 3em 0;
+    }
 
-
+    .top-nav li {
+        margin: 0;
+    }
 
     /*Planet Section*/
     .planet {
         flex-direction: row;
     }
-
 
 }
