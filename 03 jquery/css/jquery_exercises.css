@@ -1,10 +1,9 @@
-
 /*Document Setup*/
 
 body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: "Montserrat", sans-serif;
     background-color: black;
     color: white;
 }
@@ -23,11 +22,12 @@ h1 {
     margin: 0.5em 0;
 }
 
-.top-nav-links{
+.top-nav-links {
     margin-bottom: 3em;
     margin-left: auto;
     margin-right: auto;
 }
+
 .top-nav ul {
     padding: 0;
     list-style: none;
@@ -35,7 +35,7 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    max-width: 80%;
+    max-width: 50%;
 }
 
 .top-nav a {
@@ -88,29 +88,67 @@ hr {
     align-self: center;
 }
 
+/*Planet Table*/
+.planet-section table {
+    font-size: 0.65em;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.planet-section th {
+    width: 33%;
+    color: black;
+}
+
+.planet-section th, .planet-section td {
+    border-right: 1px solid black;
+    padding: 0.5em;
+}
+
+.planet-section th:nth-of-type(3), .planet-section td:nth-of-type(3) {
+    border-right: none;
+}
+
+/*Planet Description*/
+
+.planet-section p em {
+    font-size: 2em;
+    font-style: normal;
+    font-family: "Montserrat", sans-serif;
+}
+
+.planet-section p {
+    width: 80%;
+    margin: 1.5em;
+    text-align: justify;
+}
 
 
 /*Quote*/
+.hello-graphic {
+    position: relative;
+    margin-top: 3.5em;
+}
 
-.img-container img {
+img {
     width: 100%;
 }
 
-
-img {
-    width: 10em;
-    float: left;
+#bubble {
+    width: 9em;
+    position: absolute;
+    top: -1em;
+    right: 0;
 }
 
 blockquote {
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    font-size: 2em;
-    position: relative;
-    right: 7em;
-    top: 1.5em;
+    font-size: 1.5em;
     text-align: center;
+    margin: 0;
+    display: inline-block;
+    position: absolute;
+    top: 0.9em;
+    right: 0.5em;
 }
 
 cite {
@@ -118,11 +156,11 @@ cite {
 }
 
 
+@media screen and (min-width: 768px) {
 
-
-@media screen and (min-width:768px) {
     /*Navigation*/
     .top-nav ul {
+        flex-direction: row;
         max-width: 100%;
         flex-wrap: nowrap;
         margin: 0 0 3em 0;
@@ -130,11 +168,17 @@ cite {
 
     .top-nav li {
         margin: 0;
+        width: 10%;
     }
 
     /*Planet Section*/
-    .planet {
-        flex-direction: row;
+    .planet-section {
+        width: 50vw;
+        margin-left: 0;
     }
 
+    .hello-graphic {
+        position: absolute;
+        left: 50%;
+    }
 }
