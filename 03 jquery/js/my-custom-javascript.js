@@ -41,7 +41,7 @@ $(function (){
                 age: '~4.5 billion years',
                 distance: '0 miles'
             },
-            info: '  magnetic field can be seen at work during light shows. We have a magnetic field surrounding our planet that protects us from the blasts of radiation and particles the Sun sends our way. Good thing, too, because such flare-ups could prove deadly to unprotected people; that’s why NASA keeps an eye on solar activity for astronauts on the International Space Station, for example. At any rate, when you see auroras shining in the sky, that’s what happens when the particles from the Sun flow along the magnetic field lines and interact with Earth’s upper atmosphere.',
+            info: '\'s  magnetic field can be seen at work during light shows. We have a magnetic field surrounding our planet that protects us from the blasts of radiation and particles the Sun sends our way. Good thing, too, because such flare-ups could prove deadly to unprotected people; that’s why NASA keeps an eye on solar activity for astronauts on the International Space Station, for example. At any rate, when you see auroras shining in the sky, that’s what happens when the particles from the Sun flow along the magnetic field lines and interact with Earth’s upper atmosphere.',
             img: 'https://nineplanets.org/wp-content/uploads/2020/03/earth.png'
         },
         {
@@ -96,7 +96,11 @@ $(function (){
         }
     ]
 
-    
+    planets.forEach((planet, index)=> {
+        $(`.nav${index}`).bind('click', function (){
+            dataSwap(index);
+        })
+    })
 
 
     function dataSwap(i) {
