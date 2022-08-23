@@ -1,0 +1,62 @@
+
+/*Document Setup*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: black;
+    color: white;
+}
+
+h1, h2 {
+    font-family: "Lobster", sans-serif;
+}
+
+/*Header*/
+
+h1 {
+    font-size: 5em;
+    text-align: center;
+}
+
+.top-nav ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: white;
+    background-color: dimgrey;
+    padding: 0.5em 1em;
+    border-radius: 50px;
+}
+
+.top-nav a:hover {
+    box-sizing: border-box;
+    background-color: lightgrey;
+    color: dimgray;
+}
+
+img {
+    width: 100%;
+}
+
+@media screen and (max-width:768px) {
+    .top-nav ul {
+        flex-wrap: wrap
+    }
+
+    .top-nav li {
+        margin: 1em;
+    }
+
+    h2 {
+        font-size: 3em;
+        text-align: center;
+    }
+}
