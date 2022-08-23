@@ -3,9 +3,43 @@
 $(function (){
     // alert( 'The DOM has finished loading!' );
 
+    let planets = [
+        {
+            name: 'The Sun',
+            table: {
+                type: 'Yellow Dwarf',
+                age: '~4.5 billion years',
+                distance: '93 million miles'
+            },
+            info: ' is the star at the center of the Solar System. It is a nearly perfect ball of hot plasma, heated to incandescence by nuclear fusion reactions in its core, radiating the energy mainly as light, ultraviolet, and infrared radiation. It is the most important source of energy for life on Earth.',
+            img: 'https://nineplanets.org/wp-content/uploads/2020/03/sun.png'
+        },
+        {
+            name: 'Mercury',
+            table: {
+                type: 'Planet',
+                age: '~4.5 billion years',
+                distance: '92.8 million miles'
+            },
+            info: ' is hot, but not too hot for ice. The closest planet to the Sun does indeed have ice on its surface. That sounds surprising at first glance, but the ice is found in permanently shadowed craters — those that never receive any sunlight. It is thought that perhaps comets delivered this ice to Mercury in the first place. In fact, NASA’s MESSENGER spacecraft not only found ice at the North Pole, but it also found organics, which are the building blocks for life. Mercury is way too hot and airless for life as we know it, but it shows how these elements are distributed across the Solar System.',
+            img: 'https://nineplanets.org/wp-content/uploads/2020/03/mercury.png'
+        }
+    ]
+    
+    function dataSwap(i) {
+        $('.name').html(`${planets[i].name}`);
+        $('.type').html(`${planets[i].table.type}`);
+        $('.age').html(`${planets[i].table.age}`);
+        $('.distance').html(`${planets[i].table.distance}`);
+        $('.info').html(`${planets[i].info}`);
+        let em = $("<em></em>").text(`${planets[i].name}`);
+        $('.info').prepend(em);
+        $('.planet-img').attr('src', `${planets[i].img}`);
+        $('cite').html(`- ${planets[i].name}`);
+    }
+
 
 })
-
 
 
 /*
