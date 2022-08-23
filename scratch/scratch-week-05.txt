@@ -14,3 +14,20 @@ INTELLIJ COUPON:
 https://www.jetbrains.com/store/redeem/
 paste coupon code -> Tools & IDEs -> Intellij Idea Ultimate
 
+
+============= 23 Aug ============
+
+
+Make a GitHub Organization:
+- Your Organizations -> New Org -> Free
+- Name: Julian-Mia -> email -> Personal Account
+- Invite Members!
+
+Setup (One Person):
+Intellij    File -> New -> [name of project]
+            git add .gitignore -> add ./idea*
+            git commit -m "first commit"
+            git branch -M main
+            git remote add origin git@...
+            git push -u origin main
+            git remote -v
