@@ -31,3 +31,19 @@ Intellij    File -> New -> [name of project]
             git remote add origin git@...
             git push -u origin main
             git remote -v
+
+
+
+============= 24 Aug ============
+
+
+INTELLIJ:
+git checkout -b "mia"
+git push origin mia
+
+GITHUB:
+nav to repo -> branches -> create pull req -> to main
+approve
+
+INTELLIJ:
+git pull origin main
