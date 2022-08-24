@@ -54,7 +54,6 @@ h1 {
 }
 
 .top-nav li:hover {
-    box-sizing: border-box;
     background-color: #415a77;
 }
 
@@ -73,12 +72,12 @@ hr {
 
 .container {
     background-color: #415a77;
-    min-height: 90vh;
 }
 
 .planet-section {
     width: 85%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -158,7 +157,7 @@ cite {
 
 /*Footer*/
 footer{
-    height: 10vh;
+    height: 4em;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -176,19 +175,35 @@ footer a:hover {
     border-radius: 30px;
 }
 
+.hidden {
+    display: none;
+}
+
 @media screen and (min-width: 768px) {
 
     /*Navigation*/
+    .top-nav {
+        height: 11em;
+    }
+
     .top-nav ul {
         flex-direction: row;
         max-width: 100%;
         flex-wrap: nowrap;
-        margin: 0 0 3em 0;
+        margin: 0 0 0 0;
     }
 
     .top-nav li {
         margin: 0;
         width: 10%;
+        border-radius: 20px 20px 0 0;
+        background-color: black;
+        border: 1px solid #415a77;
+        border-bottom: none;
+    }
+
+    .top-nav li.active {
+        background-color: #415a77;
     }
 
     .top-nav a {
@@ -196,6 +211,15 @@ footer a:hover {
     }
 
     /*Planet Section*/
+    html {
+        max-height: 100vh;
+    }
+
+    .container {
+        visibility: visible;
+        height: calc(100vh - 15em);
+        margin-bottom: 0;
+    }
     .planet-section {
         width: 50vw;
         margin-left: 0;
