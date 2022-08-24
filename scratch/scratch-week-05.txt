@@ -43,7 +43,7 @@ git push origin mia
 
 GITHUB:
 nav to repo -> branches -> create pull req -> to main
-approve
+review & approve pull requests
 
 INTELLIJ:
 git pull origin main
