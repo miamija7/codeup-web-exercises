@@ -3,55 +3,6 @@
 $(function (){
     // alert( 'The DOM has finished loading!' );
 
-    // Initial Display
-    if (window.matchMedia('(min-width: 768px)').matches)
-    {
-        $('footer').toggleClass('hidden');
-    } else {
-        $('.container').toggleClass('hidden');
-        $('footer').toggleClass('hidden');
-    }
-
-
-    // Click Events
-    planets.forEach((planet, index)=> {
-        if (window.matchMedia('(min-width: 768px)').matches){
-            $(`.nav${index}`).bind('click', function (){
-                dataSwap(index);
-                toggleActive(index);
-            })
-        } else {
-            $(`.nav${index}`).bind('click', function (){
-                dataSwap(index);
-                $('.top-nav').toggleClass('hidden');
-                $('.container').toggleClass('hidden');
-                $('footer').toggleClass('hidden');
-            })
-            $('.more').bind('click', function (){
-                $('.top-nav').toggleClass('hidden');
-                $('.container').toggleClass('hidden');
-                $('footer').toggleClass('hidden');
-            })
-        }
-    })
-
-    // Function Definitions
-    function dataSwap(i) {
-        $('.name').html(`${planets[i].name}`);
-        $('.type').html(`${planets[i].table.type}`);
-        $('.age').html(`${planets[i].table.age}`);
-        $('.distance').html(`${planets[i].table.distance}`);
-        $('.info').html(`${planets[i].info}`);
-        let em = $("<em></em>").text(`${planets[i].name}`);
-        $('.info').prepend(em);
-        $('.planet-img').attr('src', `${planets[i].img}`);
-        $('cite').html(`- ${planets[i].name}`);
-    }
-
-    function toggleActive(i) {
-        $('.active').toggleClass('active')
-        $(`.nav${i}`).toggleClass('active')
-    }
 
     // Planet Data
     let planets = [
@@ -146,5 +97,56 @@ $(function (){
             img: 'https://nineplanets.org/wp-content/uploads/2020/03/neptune.png'
         }
     ]
+
+
+    // Initial Display
+    if (window.matchMedia('(min-width: 768px)').matches)
+    {
+        $('footer').toggleClass('hidden');
+    } else {
+        $('.container').toggleClass('hidden');
+        $('footer').toggleClass('hidden');
+    }
+
+
+    // Click Events
+    planets.forEach((planet, index)=> {
+        if (window.matchMedia('(min-width: 768px)').matches){
+            $(`.nav${index}`).bind('click', function (){
+                dataSwap(index);
+                toggleActive(index);
+            })
+        } else {
+            $(`.nav${index}`).bind('click', function (){
+                dataSwap(index);
+                $('.top-nav').toggleClass('hidden');
+                $('.container').toggleClass('hidden');
+                $('footer').toggleClass('hidden');
+            })
+            $('.more').bind('click', function (){
+                $('.top-nav').toggleClass('hidden');
+                $('.container').toggleClass('hidden');
+                $('footer').toggleClass('hidden');
+            })
+        }
+    })
+
+    // Function Definitions
+    function dataSwap(i) {
+        $('.name').html(`${planets[i].name}`);
+        $('.type').html(`${planets[i].table.type}`);
+        $('.age').html(`${planets[i].table.age}`);
+        $('.distance').html(`${planets[i].table.distance}`);
+        $('.info').html(`${planets[i].info}`);
+        let em = $("<em></em>").text(`${planets[i].name}`);
+        $('.info').prepend(em);
+        $('.planet-img').attr('src', `${planets[i].img}`);
+        $('cite').html(`- ${planets[i].name}`);
+    }
+
+    function toggleActive(i) {
+        $('.active').toggleClass('active')
+        $(`.nav${i}`).toggleClass('active')
+    }
 
 })

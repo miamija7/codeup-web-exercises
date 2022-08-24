@@ -72,6 +72,7 @@ hr {
 
 .container {
     background-color: #415a77;
+    min-height: 95vh;
 }
 
 .planet-section {
@@ -216,6 +217,7 @@ footer a:hover {
     }
 
     .container {
+        min-height: 0;
         visibility: visible;
         height: calc(100vh - 15em);
         margin-bottom: 0;
