@@ -8,10 +8,12 @@ jQuery Events:
 - events like a user clicking a mouse, hovering over an element, or bringing areas in and out of focus
 
 
+*** MOUSE EVENTS ***
+
 Mouse Events:
-.click() — Bind an event handler to the "click" JavaScript event or trigger that event on an element.
-.dblclick() — Bind an event handler to the "dblclick" JavaScript event or trigger that event on an element.
-.hover() — Bind two handlers to the matched elements, to be executed when the mouse pointer enters and leaves the elements.
+.click() — Bind an event handler to the "click" JavaScript event or trigger that event on an element
+.dblclick() — Bind an event handler to the "dblclick" JavaScript event or trigger that event on an element
+.hover() — Bind two handlers to the matched elements, to be executed when the mouse pointer enters and leaves the elements
 
 
 Event Handlers Refresher:
@@ -37,23 +39,24 @@ Event Handlers Refresher:
     ele.addEventListener('click', clickHandler);
 
     // jQuery
-    $( selector ).click( handler )
+    $('selector').click( handler )
 
 
-.click():
+click():
 - on click event
     $('selector').click(function() {
         alert('click event!');
     });
 
 
-.dbclick():
+dbclick():
 - on double click
     $('selector').dblclick(function(e) {
         alert('double click event!');
     });
 
-.hover():
+
+hover():
 - combination of mouseenter and mouseleave events
     $('selector').hover( handlerIn, handlerOut )
 
@@ -63,5 +66,48 @@ $(this):
 - available inside a callback function
 - refer to the selected DOM element that triggered the event
 
+
+*** KEYBOARD EVENTS ***
+
+Keyboard Events:
+.keydown() — Bind an event handler to the "keydown" JavaScript event or trigger that event on an element
+.keypress() — Bind an event handler to the "keypress" JavaScript event or trigger that event on an element
+.keyup() — Bind an event handler to the "keyup" JavaScript event or trigger that event on an element
+.on() - method, which allows us to listen for any arbitrary event
+.off() - method, which removes event listeners
+
+
+keydown():
+- similar to click event
+    $('selector').keydown( handler )
+
+
+keypress():
+- similar to keydown
+- exception: modifier keys (shift, control, escape, etc) being pressed will not trigger the keypress event
+    $('selector').keypress( handler )
+
+
+keyup():
+- similar to keydown event
+- keyup triggers when a key is released
+    $('selector').keyup( handler(eventObject) )
+
+
+on():
+- listen to events
+- this method takes any event listener type and a callback function
+    .on('keydown', function() {});
+
+
+off():
+- removes event listeners from a specified element or elements
+- remove event listeners for a specific event or all the event listeners
+
+    //Remove any handlers for the click event from all elements with the class clickable
+    $('.clickable').off('click');
+
+    // Remove all event handlers from all paragraph tags
+    $('p').off();
 
 
