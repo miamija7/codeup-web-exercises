@@ -5,7 +5,6 @@ This is a collection of personal web dev exercises, test-driven developments, an
 
 ## Recent Projects
 - [Pair Programming - Codeup Design Website](https://htmlpreview.github.io/?https://github.com/miamija7/codeup-web-exercises/blob/main/02%20html-and-css/html/codeup-design.html)
-- [jQuery - Hello World Web App :)](https://htmlpreview.github.io/?https://github.com/miamija7/codeup-web-exercises/blob/main/03%20jquery/html/jquery_exercises.html#planet)
 - [Bootstrap - Pizza Order Website](https://htmlpreview.github.io/?https://github.com/miamija7/codeup-web-exercises/blob/main/02%20html-and-css/html/order-pizza.html)
 - [Custom Footer](https://htmlpreview.github.io/?https://github.com/miamija7/codeup-web-exercises/blob/main/02%20html-and-css/html/flexbox-footer.html)
 
