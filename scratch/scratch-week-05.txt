@@ -47,3 +47,14 @@ review & approve pull requests
 
 INTELLIJ:
 git pull origin main
+
+
+============= 24 Aug ============
+
+Window Objects:
+- iife's make variables not accessible at the window object
+- refresh is a new instance of that window object
+- alerts halt the browser
+- chrome console: location="https://www.google.com"
+    + window.location changes your page!
+    + location.reload refreshes your page!
