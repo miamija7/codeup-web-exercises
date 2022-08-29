@@ -78,10 +78,17 @@
     livesDisplay.textContent = "3";
     timeDisplay.textContent = "0";
 
+    // timer
     let timer = setInterval(function () {
         timeDisplay.textContent = (parseInt(timeDisplay.textContent) + 1).toString();
     }, 100)
 
+    // end timer after 10 minutes
+    let timeout = setTimeout(function (){
+        clearInterval(timer);
+    }, 600000)
+
+    //
     $(document).keyup(function (event) {
         // header points handler
         let pointsEarned = parseInt(event.keyCode);
@@ -91,8 +98,6 @@
         if (keyBuffer === konamiCode) {
             // header live handler
             livesDisplay.textContent = (parseInt(livesDisplay.textContent) + 30).toString();
-            // header time handler
-            // clearInterval(timer);
         }
     })
 
