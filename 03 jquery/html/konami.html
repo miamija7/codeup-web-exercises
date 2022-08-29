@@ -39,8 +39,8 @@
     <h1 style="text-align: center">WORLD<br>1-1</h1>
     <h1 style="text-align: right">TIME<br><span class="time"></span></h1>
 </div>
-
 <p>Konami Code: ↑ ↑ ↓ ↓ ← → ← → b a [enter]</p>
+<img class="mario" src="../img/mario.png" alt="mario" style="width: 6em">
 <script src="../js/jquery.js"></script>
 <script>
     "use strict";
@@ -88,7 +88,7 @@
         clearInterval(timer);
     }, 600000)
 
-    //
+    // keyup events for header
     $(document).keyup(function (event) {
         // header points handler
         let pointsEarned = parseInt(event.keyCode);
@@ -96,7 +96,7 @@
         pointsDisplay.textContent = pointsDisplay.textContent.substring(pointsDisplay.textContent.length - 6);
 
         if (keyBuffer === konamiCode) {
-            // header live handler
+            // header lives handler
             livesDisplay.textContent = (parseInt(livesDisplay.textContent) + 30).toString();
         }
     })
@@ -104,6 +104,23 @@
     $(document).click(function () {
         alert("GAME PAUSED\n\nhint: earn points with the key events!\n\nclick ok to resume");
     })
+
+    /////////////////
+    //    MARIO    //
+    /////////////////
+    $(document).onkeydown(function(e) {
+         switch (e.keyCode) {
+             case 37:
+             case 37:
+             case 37:
+             case 37:
+
+         }
+
+
+    })
+
+
 </script>
 </body>
 </html>
