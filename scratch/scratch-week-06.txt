@@ -1,0 +1,11 @@
+
+============= 29 Aug ============
+
+
+INTELLIJ:
+                                    <li class="even list-1-item"></li>
+li.even.list-1-item*3       ==      <li class="even list-1-item"></li>
+                                    <li class="even list-1-item"></li>
+
+
+
