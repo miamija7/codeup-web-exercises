@@ -10,34 +10,50 @@
     <style>
         body {
             font-family: 'VT323', monospace;
-            background-image: url("http://www.heypoorplayer.com/wp-content/uploads/2016/07/nesgraphics.png");
+            background-image: url("../img/mario-bg.png");
             background-repeat: no-repeat;
             background-size: cover;
-        }
-        p{
             color: white;
-            opacity: 30%;
+            font-size: 1.5em;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        p {
+            color: white;
+            opacity: 20%;
+            text-align: center;
+            margin: 0;
+            font-size: 0.75em
         }
     </style>
 </head>
 <body>
-<h1>MARIO<br><span class="points">000000</span></h1>
-<h1>LIVES x <span class="lives">3</span></h1>
-<h1><img src="../img/IMG_6644.png" alt="coin"></h1>
+<div class="header">
+    <h1>MARIO<br><span class="points">000000</span></h1>
+    <h1>LIVES x <span class="lives"></span></h1>
+    <h1><img style="width: 0.6em" src="../img/coin.png" alt="coin"> x 05</h1>
+    <h1 style="text-align: center">WORLD<br>1-1</h1>
+    <h1 style="text-align: right">TIME<br><span class="time"></span></h1>
+</div>
 
 <p>Konami Code: ↑ ↑ ↓ ↓ ← → ← → b a [enter]</p>
 <script src="../js/jquery.js"></script>
 <script>
     "use strict";
 
-    document.body.style.color = "white";
-
+    /////////////////
+    // KONAMI CODE //
+    /////////////////
     let keyBuffer = "";
     const bufferLimit = 22;
     const konamiCode = "3838404037393739666513";
 
     $(document).keyup(function (event) {
-        // store key events
+        // store event keyCodes
         keyBuffer = (keyBuffer + ((event.keyCode).toString()));
 
         // trim buffer
@@ -45,11 +61,44 @@
             keyBuffer = keyBuffer.substring(keyBuffer.length - bufferLimit);
         }
 
-        // find match
+        // identify konami code
         if (keyBuffer === konamiCode) {
-            alert("+ 30 Lives!");
+            alert("+ 30 LIVES!");
         }
     });
+
+    /////////////////
+    // LIVE HEADER //
+    /////////////////
+    const pointsDisplay = document.querySelector(".points");
+    const livesDisplay = document.querySelector(".lives");
+    const timeDisplay = document.querySelector(".time");
+
+    pointsDisplay.textContent = "000000";
+    livesDisplay.textContent = "3";
+    timeDisplay.textContent = "0";
+
+    let timer = setInterval(function () {
+        timeDisplay.textContent = (parseInt(timeDisplay.textContent) + 1).toString();
+    }, 100)
+
+    $(document).keyup(function (event) {
+        // header points handler
+        let pointsEarned = parseInt(event.keyCode);
+        pointsDisplay.textContent = ("0000" + (parseInt(pointsDisplay.textContent) + pointsEarned).toString());
+        pointsDisplay.textContent = pointsDisplay.textContent.substring(pointsDisplay.textContent.length - 6);
+
+        if (keyBuffer === konamiCode) {
+            // header live handler
+            livesDisplay.textContent = (parseInt(livesDisplay.textContent) + 30).toString();
+            // header time handler
+            // clearInterval(timer);
+        }
+    })
+
+    $(document).click(function () {
+        alert("GAME PAUSED\n\nhint: earn points with the key events!\n\nclick ok to resume");
+    })
 </script>
 </body>
 </html>
