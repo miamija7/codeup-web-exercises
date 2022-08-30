@@ -29,6 +29,10 @@
             margin: 0;
             font-size: 0.75em
         }
+
+        .flip-horizontally {
+            transform: scaleX(-1);
+        }
     </style>
 </head>
 <body>
@@ -40,7 +44,7 @@
     <h1 style="text-align: right">TIME<br><span class="time"></span></h1>
 </div>
 <p>Konami Code: ↑ ↑ ↓ ↓ ← → ← → b a [enter]</p>
-<img class="mario" src="../img/mario.png" alt="mario" style="width: 6em">
+<img class="mario" src="../img/mario.png" alt="mario" style="width: 6em;">
 <script src="../js/jquery.js"></script>
 <script>
     "use strict";
@@ -84,7 +88,7 @@
     }, 100)
 
     // end timer after 10 minutes
-    let timeout = setTimeout(function (){
+    let timeout = setTimeout(function () {
         clearInterval(timer);
     }, 600000)
 
@@ -108,16 +112,31 @@
     /////////////////
     //    MARIO    //
     /////////////////
-    $(document).onkeydown(function(e) {
-         switch (e.keyCode) {
-             case 37:
-             case 37:
-             case 37:
-             case 37:
+    let marioSelector = document.querySelector(".mario");
 
-         }
+    window.addEventListener('load', () => {
+        marioSelector.style.position = 'absolute';
+        marioSelector.style.left = 0;
+        marioSelector.style.top = 0;
+    });
 
-
+    window.addEventListener('keyup', (event) => {
+        if (event.key === 'ArrowLeft') {
+            marioSelector.classList.add("flip-horizontally");
+            if (marioSelector.style.left.toString() !== '0px')
+                marioSelector.style.left = parseInt(marioSelector.style.left) - 50 + 'px';
+        } else if (event.key === 'ArrowRight') {
+            marioSelector.classList.remove("flip-horizontally");
+            if (marioSelector.style.left.toString() !== '1250px') {
+                marioSelector.style.left = parseInt(marioSelector.style.left) + 50 + 'px';
+            }
+        } else if (event.key === 'ArrowUp') {
+            if (marioSelector.style.top.toString() !== '0px')
+                marioSelector.style.top = parseInt(marioSelector.style.top) - 50 + 'px';
+        } else if (event.key === 'ArrowDown') {
+            if (marioSelector.style.top.toString() !== '550px')
+                marioSelector.style.top = parseInt(marioSelector.style.top) + 50 + 'px';
+        }
     })
 
 
