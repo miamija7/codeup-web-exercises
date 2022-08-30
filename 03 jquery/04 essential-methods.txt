@@ -1,2 +1,24 @@
 
 *** JQUERY - ESSENTIAL METHODS ***
+
+
+*** ATTRIBUTES & CSS ***
+
+jQuery Methods:
+.html()                 HTML contents                           .html();
+.css()                  value of a style property               .css('color', 'firebrick')
+.addClass()             add specified class(es)                 .addClass( className )
+.removeClass()          remove specified class(es)              .removeClass( className )
+.toggleClass()          toggle specified class(es) on/off       .toggleClass( className )
+
+
+Getters and Setters:
+- getter =  find an existing value
+- setter =  modify a value
+
+
+Method Chaining:
+- most of the jQuery methods return a jQuery object
+- you can add, or chain, methods calls together
+
+
