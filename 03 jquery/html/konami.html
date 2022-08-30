@@ -11,7 +11,7 @@
         body {
             font-family: 'VT323', monospace;
             background-image: url("../img/mario-bg.png");
-            background-repeat: no-repeat;
+            background-repeat: repeat-x;
             background-size: cover;
             color: white;
             font-size: 1.5em;
@@ -113,23 +113,30 @@
     //    MARIO    //
     /////////////////
     let marioSelector = document.querySelector(".mario");
+    let background = document.querySelector("body");
 
     window.addEventListener('load', () => {
         marioSelector.style.position = 'absolute';
-        marioSelector.style.left = 0;
-        marioSelector.style.top = 0;
+        marioSelector.style.left = '50px';
+        marioSelector.style.top = '200px';
+        background.style.backgroundPositionX = 0;
     });
 
     window.addEventListener('keyup', (event) => {
         if (event.key === 'ArrowLeft') {
             marioSelector.classList.add("flip-horizontally");
-            if (marioSelector.style.left.toString() !== '0px')
+            if (marioSelector.style.left.toString() !== '0px') {
                 marioSelector.style.left = parseInt(marioSelector.style.left) - 50 + 'px';
+            }
+            background.style.backgroundPositionX = parseInt(background.style.backgroundPositionX) + 50 + 'px';
+
         } else if (event.key === 'ArrowRight') {
             marioSelector.classList.remove("flip-horizontally");
             if (marioSelector.style.left.toString() !== '1250px') {
                 marioSelector.style.left = parseInt(marioSelector.style.left) + 50 + 'px';
             }
+            background.style.backgroundPositionX = parseInt(background.style.backgroundPositionX) - 50 + 'px';
+
         } else if (event.key === 'ArrowUp') {
             if (marioSelector.style.top.toString() !== '0px')
                 marioSelector.style.top = parseInt(marioSelector.style.top) - 50 + 'px';
