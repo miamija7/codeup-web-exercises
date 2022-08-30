@@ -9,3 +9,21 @@ li.even.list-1-item*3       ==      <li class="even list-1-item"></li>
 
 
 
+
+============= 30 Aug ============
+
+
+*** ASSESSMENT ***
+
+GITHUB:
+Navigate to GitHub repo -> code -> [copy SSH link]
+
+INTELLIJ:
+File -> New -> Project from Version Control -> [paste SSH link]
+Console...
+    git remote -v                       view remote repo connection
+    git branch                          view current branch
+    git checkout -b "first-last"        create new branch
+    git branch                          verify newly created branch
+    git log origin/main..first-last     view commits in holding
+    git push origin first-last          finally... push to your new branch
