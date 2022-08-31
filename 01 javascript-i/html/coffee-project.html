@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../02%20html-and-css/css/coffee-project.css">
     <style>
-        .logo { font-family: Michroma, sans-serif;}
+        .navbar-brand { font-family: Michroma, sans-serif;}
         .coffee {
             width: 50%;
             display: flex;
@@ -22,21 +22,19 @@
     </style>
 </head>
 <body>
-<!--        NOMAD ROASTERS Banner           -->
-<div class="d-flex justify-content-center align-items-center my-4">
-    <p class="h1 logo pt-4 pe-3">NOMAD</p>
-    <img src="../../02%20html-and-css/img/nomad_coffee.png" alt="" width="100" height="100" class="">
-    <p class="h1 logo pt-4">ROASTERS</p>
-</div>
+<!--        NAV           -->
+<nav class="nav bg-light mb-5 pb-3 d-flex justify-content-center">
+        <a class="navbar-brand d-flex align-items-end fs-1" href="#">
+            <img src="../img/nomad_coffee.png" alt="logo" height="80" class="d-inline-block pt-1">
+            <b><span class="text-success">CODE</span> <span>CAFE</span></b>
+        </a>
+</nav>
+<!--        CONTAINER           -->
 <div class="container">
     <div class="row">
         <!--        Start Coffee List           -->
         <div class="col-md d-flex align-items-center">
             <div id="coffees" class="d-flex flex-wrap">
-                <div class="coffee" id="">
-                    <h2></h2>
-                    <p class="ms-2"></p>
-                </div>
             </div>
         </div>
         <!--        Stop Coffee List           -->
