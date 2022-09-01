@@ -2,31 +2,31 @@
 
 function renderCoffee(coffee) {
     let html = `<div class="coffee my-2" id="${coffee.id}">`;
-    html += '<h2>' + coffee.name + '</h2>';
-    html += '<p class="ms-2 text-muted">' + coffee.roast + '</p>';
+    html += `<h2>${coffee.name}</h2>`;
+    html += `<p class="ms-2 text-muted">${coffee.roast}</p>`;
     html += '</div>';
 
     return html;
 }
 
 function renderCoffees(coffees) {
-    let htmlS = '';
+    let html = '';
     for (let i = 0; i < coffees.length; i++) {
-        htmlS += renderCoffee(coffees[i]);
+        html += renderCoffee(coffees[i]);
     }
-    return htmlS;
+    return html;
 }
 
 function renderOpt(coffee) {
     return `<option value="${coffee.name}">`;
 }
 
-function renderDatalistOpt(coffees) {
-    let htmlS = '';
+function renderDatalistOpts(coffees) {
+    let html = '';
     for (let i = 0; i < coffees.length; i++) {
-        htmlS += renderOpt(coffees[i]);
+        html += renderOpt(coffees[i]);
     }
-    return htmlS;
+    return html;
 }
 
 function updateCoffees(e) {
@@ -100,7 +100,7 @@ function addCoffee(e) {
     let datalistOptions = document.querySelector('#datalistOptions');
 
     tbody.innerHTML = renderCoffees(coffees);
-    datalistOptions.innerHTML = renderDatalistOpt(coffees);
+    datalistOptions.innerHTML = renderDatalistOpts(coffees);
 
     clearForm.addEventListener('submit', clearCoffees);
     createForm.addEventListener('submit', addCoffee);
