@@ -58,8 +58,17 @@ function clearCoffees(e) {
 
 function addCoffee(e) {
     e.preventDefault();
+    if (!nameCreate.value) {
+        alert('Please provide a name for your new coffee :)');
+        return;
+    }
     coffees.push({id: coffees.length+1, name: `${nameCreate.value}`, roast: `${roastCreate.value}`});
+    // render all coffees
     tbody.innerHTML = renderCoffees(coffees);
+    // clear both forms
+    nameCreate.value = "";
+    document.querySelector('#roast-selection').value = 'default';
+    nameSelection.value = "";
 }
 
 
