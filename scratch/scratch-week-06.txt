@@ -8,8 +8,6 @@ li.even.list-1-item*3       ==      <li class="even list-1-item"></li>
                                     <li class="even list-1-item"></li>
 
 
-
-
 ============= 30 Aug ============
 
 
@@ -27,3 +25,14 @@ Console...
     git branch                          verify newly created branch
     git log origin/main..first-last     view commits in holding
     git push origin first-last          finally... push to your new branch
+
+
+============= 2 Sep ============
+
+jQuery Link:
+https://releases.jquery.com/jquery/
+
+INTELLIJ:
+preferences -> languages and frameworks -> javascript -> libraries -> download -> jquery
+
+multi select            highlight -> control + g
