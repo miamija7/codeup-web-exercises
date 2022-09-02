@@ -1,10 +1,30 @@
 body {
     margin: 0;
-    font-family: sans-serif;
+    font-family: Avenir, sans-serif;
     justify-content: center;
 }
+
+body * {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 1em;
+    background-color: #E6E6E6;
+    display: flex;
+    justify-content: center;
+    border: 1em solid;
+}
+
+.title{
+    font-family: Geneva, sans-serif;
+    font-weight: bolder;
+}
+
 .container {
     width: 80%;
+    margin-top: 5em;
     margin-right: auto;
     margin-left: auto;
 }
@@ -26,6 +46,9 @@ body {
 .highlight {
     background-color: yellow
 }
+
+
+
 
 /* Medium devices (tablets, 768px and up) */
 @media screen and (min-width:768px) {
