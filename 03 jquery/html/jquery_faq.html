@@ -6,56 +6,89 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>jQuery FAQ</title>
-    <style>
-        .invisible { visibility: hidden }
-        .highlight { background-color: yellow }
-    </style>
+    <link rel="stylesheet" href="../css/jquery_faq.css">
 </head>
 <body>
-<p>National Parks:</p>
-<dl>
-    <dt>How many people visit the national parks?</dt>
-    <dd class="invisible">Total recreation visitors to the national parks in 2021: 297,115,406.</dd>
+<header>
+    <p>National Parks:</p>
+</header>
+<div class="container">
+    <div class="row">
+        <div class="col-1">
+            <dl>
+                <dt>How many people visit the national parks?</dt>
+                <dd class="invisible">Total recreation visitors to the national parks in 2021: 297,115,406.</dd>
 
-    <dt>What is the largest national park site?</dt>
-    <dd class="invisible">Wrangell-St. Elias National Park and Preserve, AK, at 13.2 million acres.</dd>
+                <dt>What is the largest national park site?</dt>
+                <dd class="invisible">Wrangell-St. Elias National Park and Preserve, AK, at 13.2 million acres.</dd>
 
-    <dt>What is the smallest national park site?</dt>
-    <dd class="invisible">Thaddeus Kosciuszko National Memorial, PA, at 0.02 acres.</dd>
+                <dt>What is the smallest national park site?</dt>
+                <dd class="invisible">Thaddeus Kosciuszko National Memorial, PA, at 0.02 acres.</dd>
 
-    <dt>What is the most-visited national park?</dt>
-    <dd class="invisible">Blue Ridge Parkway with 15.9 million visits in 2021.</dd>
+                <dt>What is the most-visited national park?</dt>
+                <dd class="invisible">Blue Ridge Parkway with 15.9 million visits in 2021.</dd>
 
-    <dt>How do I obtain a park entrance pass?</dt>
-    <dd class="invisible">Fewer than one-third of the national parks charge entrance fees. You can obtain park entrance
-        passes by visiting a park site that charges an entrance fee.
-    </dd>
+                <dt>How do I obtain a park entrance pass?</dt>
+                <dd class="invisible">Fewer than one-third of the national parks charge entrance fees. You can obtain
+                    park
+                    entrance
+                    passes by visiting a park site that charges an entrance fee.
+                </dd>
 
-    <dt>Where can I find a park map?</dt>
-    <dd class="invisible">You can view maps on specific park websites or find national park, National Park System,
-        National Trails System, and other maps.
-    </dd>
+                <dt>Where can I find a park map?</dt>
+                <dd class="invisible">You can view maps on specific park websites or find national park, National Park
+                    System,
+                    National Trails System, and other maps.
+                </dd>
 
-    <dt>How do I make reservations for camping/lodging in national parks?</dt>
-    <dd class="invisible">For campground reservations, visit Recreation.gov.</dd>
+                <dt>How do I make reservations for camping/lodging in national parks?</dt>
+                <dd class="invisible">For campground reservations, visit Recreation.gov.</dd>
 
-    <dt>Can I bring my pet to a national park?</dt>
-    <dd class="invisible">Some national parks welcome pets—in developed areas, on many trails and campgrounds, and in
-        some lodging facilities.
-    </dd>
+                <dt>Can I bring my pet to a national park?</dt>
+                <dd class="invisible">Some national parks welcome pets—in developed areas, on many trails and
+                    campgrounds,
+                    and
+                    in
+                    some lodging facilities.
+                </dd>
 
-    <dt>Can I bring my service dog to a national park?</dt>
-    <dd class="invisible">Yes, service dogs are legally permitted anywhere in a park that visitors can go.</dd>
+                <dt>Can I bring my service dog to a national park?</dt>
+                <dd class="invisible">Yes, service dogs are legally permitted anywhere in a park that visitors can go.
+                </dd>
 
-    <dt>What do I need to know about driving off-road in national parks?</dt>
-    <dd class="invisible">Before you head out, check with the national parks that you intend to visit. In many national
-        parks, off-road driving is illegal. Where off-road driving is allowed, the National Park Service regulates it.
-    </dd>
-</dl>
-
-<button class="toggle">View Answers</button>
-
-<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+                <dt>What do I need to know about driving off-road in national parks?</dt>
+                <dd class="invisible">Before you head out, check with the national parks that you intend to visit. In
+                    many
+                    national
+                    parks, off-road driving is illegal. Where off-road driving is allowed, the National Park Service
+                    regulates
+                    it.
+                </dd>
+            </dl>
+            <button class="toggle">View Answers</button>
+        </div>
+        <div class="col-2">
+            <h3 id="national-parks-heading">National Parks</h3>
+            <ul id="national-parks">
+                <li>Arches</li>
+                <li>Badlands</li>
+                <li>Carlsbad Caverns</li>
+                <li>Denali</li>
+                <li>Everglades</li>
+            </ul>
+            <h3>State Parks of Texas</h3>
+            <ul id="state-parks-texas">
+                <li>Abilene</li>
+                <li>Big Bend</li>
+                <li>Choke Canyon</li>
+                <li>Davis Mountains</li>
+                <li>Enchanted Rock</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+        crossorigin="anonymous"></script>
 <script src="../js/jquery_faq.js"></script>
 </body>
 </html>

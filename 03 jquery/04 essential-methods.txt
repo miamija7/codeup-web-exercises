@@ -2,6 +2,7 @@
 *** JQUERY - ESSENTIAL METHODS ***
 
 
+
 *** ATTRIBUTES & CSS ***
 
 jQuery Methods:
@@ -21,4 +22,17 @@ Method Chaining:
 - most of the jQuery methods return a jQuery object
 - you can add, or chain, methods calls together
 
+
+
+*** TRAVERSING ***
+
+- jQuery gives us a suite of methods to get and set CSS properties
+
+Traversing Methods:
+.each()             for each element in set                     .each( function(index, element) { /* ... */ } )
+.first()            for first in set                            $('li').first().css('background-color', '#FF0');
+.last()             for final one in set                        $('li').last().css('background-color', '#FF0');
+.parent()           parent of each element in set               .children( [selector ] )
+.children()         children of each element in set             .parent( [selector ] ) |OR| .parents( [selector ] )
+.next()             get the immediate sibling in the set        .next()
 
