@@ -2,6 +2,7 @@ body {
     margin: 0;
     font-family: Avenir, sans-serif;
     justify-content: center;
+    background-color: #fefae0;
 }
 
 body * {
@@ -22,10 +23,10 @@ header {
 header div {
     display: flex;
     justify-content: center;
-    background-color: #E6E6E6;
+    background-color: #fefae0;
     width: 98%;
     padding: 1em;
-    opacity: 80%;
+    opacity: 75%;
 }
 
 .title{
@@ -51,7 +52,7 @@ header div {
 }
 
 .invisible {
-    visibility: hidden
+    display: none;
 }
 
 .highlight {
