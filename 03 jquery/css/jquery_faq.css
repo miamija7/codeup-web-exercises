@@ -10,11 +10,22 @@ body * {
 }
 
 header {
+    background-image: url("https://source.unsplash.com/900x400/?national,parks");
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 1em;
-    background-color: #E6E6E6;
+    background-color: black;
     display: flex;
     justify-content: center;
-    border: 1em solid;
+}
+
+header div {
+    display: flex;
+    justify-content: center;
+    background-color: #E6E6E6;
+    width: 98%;
+    padding: 1em;
+    opacity: 80%;
 }
 
 .title{
