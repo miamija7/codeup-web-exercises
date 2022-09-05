@@ -9,10 +9,12 @@ body {
 body * {
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    color: black;
 }
 
 header {
-    background-image: url("https://source.unsplash.com/900x400/?national,parks");
+    background-image: url("https://source.unsplash.com/900x400/?nature");
     background-repeat: no-repeat;
     background-size: cover;
     padding: 5em;
@@ -30,9 +32,14 @@ header div {
     opacity: 75%;
 }
 
-.title{
+.title {
     font-family: Geneva, sans-serif;
     font-weight: bolder;
+}
+
+.title span {
+    display: block;
+    text-align: center;
 }
 
 .container {
@@ -62,19 +69,31 @@ header div {
 
 .q-and-a {
     background-color: white;
-    box-shadow: 5px 5px 15px -5px #000000;
+    box-shadow: 1px 1px 10px -5px #000000;
     border-radius: 10px;
     padding: 1em;
     margin: 1em 0;
 }
 
+dt {
+    font-weight: bolder;
+}
 
+dd {
+    padding-top: 0.75em;
+    margin-top: 0.75em;
+    border-top: 1px solid lightgrey;
+}
 
 
 /* Medium devices (tablets, 768px and up) */
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
     .row {
         flex-direction: row;
+    }
+
+    .title span {
+        display: inline;
     }
 
     .col-1 {
