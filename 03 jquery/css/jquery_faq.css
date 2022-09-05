@@ -1,8 +1,9 @@
+
 body {
     margin: 0;
     font-family: Avenir, sans-serif;
     justify-content: center;
-    background-color: #fefae0;
+    background-color: white;
 }
 
 body * {
@@ -14,7 +15,7 @@ header {
     background-image: url("https://source.unsplash.com/900x400/?national,parks");
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 1em;
+    padding: 5em;
     background-color: black;
     display: flex;
     justify-content: center;
@@ -23,7 +24,7 @@ header {
 header div {
     display: flex;
     justify-content: center;
-    background-color: #fefae0;
+    background-color: white;
     width: 98%;
     padding: 1em;
     opacity: 75%;
@@ -59,6 +60,14 @@ header div {
     background-color: yellow
 }
 
+.q-and-a {
+    background-color: white;
+    box-shadow: 5px 5px 15px -5px #000000;
+    border-radius: 10px;
+    padding: 1em;
+    margin: 1em 0;
+}
+
 
 
 
@@ -69,7 +78,8 @@ header div {
     }
 
     .col-1 {
-        width: 70%;
+        width: 60%;
+        margin-right: 10%;
     }
 
     .col-2 {
