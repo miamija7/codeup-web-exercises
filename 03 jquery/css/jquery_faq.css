@@ -11,6 +11,7 @@ body * {
     padding: 0;
     text-decoration: none;
     color: black;
+    list-style: none;
 }
 
 header {
@@ -72,7 +73,7 @@ header div {
     box-shadow: 1px 1px 10px -5px #000000;
     border-radius: 10px;
     padding: 1em;
-    margin: 1em 0;
+    margin: 1.5em 0;
 }
 
 dt {
@@ -83,6 +84,11 @@ dd {
     padding-top: 0.75em;
     margin-top: 0.75em;
     border-top: 1px solid lightgrey;
+    color: grey;
+}
+
+.bold {
+    font-weight: bolder;
 }
 
 

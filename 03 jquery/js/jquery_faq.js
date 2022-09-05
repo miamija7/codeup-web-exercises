@@ -15,4 +15,7 @@ $(function (){
         $(this).children("dd").toggleClass('invisible');
     })
 
+    $('#national-parks').children().on('click', function(){
+        $(this).toggleClass('bold');
+    })
 });
