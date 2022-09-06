@@ -76,6 +76,10 @@ header div {
     margin: 1.5em 0;
 }
 
+.q-and-a:hover {
+    box-shadow: 3px 3px 15px -5px #000000;
+}
+
 dt {
     font-weight: bolder;
 }
