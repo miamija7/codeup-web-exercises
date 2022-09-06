@@ -67,6 +67,10 @@ header>div {
     margin-bottom: 5em;
 }
 
+h2 {
+    text-align: center;
+}
+
 
 /* Q&A Section */
 .invisible {
@@ -142,7 +146,7 @@ button {
     padding: 0.5em;
     border-radius: 30px;
     background-color: black;
-    width: 10em;
+    width: 100%;
     border: none;
     color: white;
 }
@@ -152,7 +156,7 @@ button, .q-and-a, li {
 }
 
 button:active {
-    background-color: gray;
+    background-color: cornflowerblue;
 }
 
 
@@ -174,5 +178,13 @@ button:active {
     .col-2 {
         margin-top: 0;
         width: 30%;
+    }
+
+    h2 {
+        text-align: left;
+    }
+
+    button {
+        width: 10em;
     }
 }
