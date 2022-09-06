@@ -7,11 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>National Parks</title>
     <link rel="icon" href="https://img.icons8.com/small/344/ski-resort.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/jquery_faq.css">
 </head>
 <body>
 <header>
-    <div><a class="title"><span>N A T I O N A L </span>&nbsp;<span> P A R K S</span></a></div>
+    <h1 class="title">NATIONAL PARKS</h1>
 </header>
 <div class="container">
     <div class="row">
@@ -72,18 +75,9 @@
             </dl>
             <button class="toggleView">Show All</button>
         </div>
+        <hr>
         <div class="col-2">
             <h2>Featured Parks</h2>
-            <div class="frame">
-                <img class="imgSrc" src="https://images.unsplash.com/photo-1562742940-e255567c00f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1774&q=80" width="300px" height="200px" alt="park">
-                <h4><span class="name">Arches</span> <span class="type">National Park</span></h4>
-                <p>Location: <span class="state">Utah</span></p>
-                <p>Rating: <span class="rating">4.8</span> ★★★★★</p>
-                <p>Size: <span class="area">119.8</span></p>
-                <p>Visitors: <span class="visitors">1.2</span></p>
-                <p class="description">Bordered by the Colorado River in the southeast, it’s known as the site of more than 2,000 natural sandstone arches, such as the massive, red-hued Delicate Arch in the east.</p>
-            </div>
-            <h3 id="national-parks-heading">National Parks</h3>
             <ul id="national-parks">
                 <li class="active">Arches</li>
                 <li>Grand Canyon</li>
@@ -91,14 +85,23 @@
                 <li>Yosemite</li>
                 <li>Zion</li>
             </ul>
-            <h3>State Parks of Texas</h3>
-            <ul id="state-parks-texas">
-                <li>Abilene</li>
-                <li>Big Bend</li>
-                <li>Choke Canyon</li>
-                <li>Davis Mountains</li>
-                <li>Enchanted Rock</li>
-            </ul>
+            <div class="frame">
+                <img class="imgSrc" src="https://images.unsplash.com/photo-1562742940-e255567c00f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1774&q=80" width="300px" height="200px" alt="park">
+                <h4><span class="name">Arches</span> <span class="type">National Park</span></h4>
+                <p>Location: <span class="state">Utah</span></p>
+                <p>Rating: <span class="rating">4.8 ★★★★★</span></p>
+                <p>Size: <span class="area">119.8</span></p>
+                <p>Visitors: <span class="visitors">1.2</span></p>
+                <p class="description">Bordered by the Colorado River in the southeast, it’s known as the site of more than 2,000 natural sandstone arches, such as the massive, red-hued Delicate Arch in the east.</p>
+            </div>
+<!--            <h3>State Parks of Texas</h3>-->
+<!--            <ul id="state-parks-texas">-->
+<!--                <li>Abilene</li>-->
+<!--                <li>Big Bend</li>-->
+<!--                <li>Choke Canyon</li>-->
+<!--                <li>Davis Mountains</li>-->
+<!--                <li>Enchanted Rock</li>-->
+<!--            </ul>-->
 <!--            <button class="featured">Featured</button>-->
         </div>
     </div>
