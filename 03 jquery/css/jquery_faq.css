@@ -95,6 +95,10 @@ dd {
     font-weight: bolder;
 }
 
+.blue {
+    color: blue;
+}
+
 button {
     padding: 0.5em;
     border-radius: 30px;
