@@ -144,6 +144,15 @@ h3 {
     width: 100%;
 }
 
+.frame>p{
+    padding: 0.3em 0;
+    font-size: 0.8em;
+}
+
+.frame>.description {
+    font-size: 1em;
+}
+
 
 /* Buttons */
 button {
