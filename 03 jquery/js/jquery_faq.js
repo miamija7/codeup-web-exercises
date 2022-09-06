@@ -1,7 +1,6 @@
 "use strict";
-
-$(function() {
-
+//VANILLA JS
+(function () {
     const Parks = [
         {
             name: "Arches",
@@ -55,73 +54,76 @@ $(function() {
         },
     ];
 
-    // Show/Hide All FAQs button
-    let faqView = true;
-    $('.toggleView').on('click', function (e) {
-        e.preventDefault();
-        faqView = !faqView;
-        if (!faqView) {
-            $('dd').removeClass('invisible');
-            $(this).text("Hide All");
-        } else {
-            $('dd').addClass('invisible');
-            $(this).text("Show All");
-        }
-    });
-
-    // Toggle FAQ answers on click
-    $('.q-and-a').on('click', function (e) {
-        e.preventDefault();
-        $(this).children("dd").toggleClass('invisible');
-    });
-
-    // Display active class on li click
-    $('li').on('click', function () {
-        $('li').each(function () {
-            $(this).removeClass('active');
-        });
-        $(this).addClass('active');
-
-        // Display active li information
-        let index = Parks.findIndex(park => park.name === $('.active').html());
-        cardDisplay(index);
-    });
-
     // Function to display active li information
-    function cardDisplay(index){
+    function cardDisplay(index) {
         $('.imgSrc').attr('src', `${Parks[index].imgSrc}`);
-        $('.name').text(()=> `${Parks[index].name}`)
-        $('.type').text(()=> `${Parks[index].type}`)
-        $('.state').text(()=> `${Parks[index].state}`)
-        $('.rating').text(()=> `${Parks[index].rating}`)
-        $('.area').text(()=> `${Parks[index].area}`)
-        $('.visitors').text(()=> `${Parks[index].visitors}`)
-        $('.description').text(()=> `${Parks[index].description}`)
+        $('.name').text(() => `${Parks[index].name}`)
+        $('.type').text(() => `${Parks[index].type}`)
+        $('.state').text(() => `${Parks[index].state}`)
+        $('.rating').text(() => `${Parks[index].rating}`)
+        $('.area').text(() => `${Parks[index].area}`)
+        $('.visitors').text(() => `${Parks[index].visitors}`)
+        $('.description').text(() => `${Parks[index].description}`)
     }
 
+    // JQUERY
+    $(function () {
 
-    // // Attributes & CSS - Exercise #5
-    // $('dt').on('click', function (){
-    //     $(this).toggleClass('highlight');
-    // })
+        // Show/Hide All FAQs button
+        let faqView = true;
+        $('.toggleView').on('click', function (e) {
+            e.preventDefault();
+            faqView = !faqView;
+            if (!faqView) {
+                $('dd').removeClass('invisible');
+                $(this).text("Hide All");
+            } else {
+                $('dd').addClass('invisible');
+                $(this).text("Show All");
+            }
+        });
 
-    // // Traversing Methods - Exercise #3
-    // $('.featured').on('click', function(e){
-    //     e.preventDefault();
-    //     $('#national-parks').children('li').last().toggleClass('highlight')
-    //     $('#state-parks-texas').children('li').last().toggleClass('highlight')
-    // })
+        // Toggle FAQ answers on click
+        $('.q-and-a').on('click', function (e) {
+            e.preventDefault();
+            $(this).children("dd").toggleClass('invisible');
+        });
 
-    // // Traversing Methods - Exercise #4
-    // $('h3').on('click', function () {
-    //     $(this).next('ul').children('li').toggleClass('bold');
-    // })
+        // Display active class on li click
+        $('li').on('click', function () {
+            $('li').each(function () {
+                $(this).removeClass('active');
+            });
+            $(this).addClass('active');
 
-    // // Traversing Methods - Exercise #5
-    // $('li').on('click', function(){
-    //     $(this).parent('ul').children('li').first().toggleClass('blue');
-    // })
+            // Display active li information
+            let index = Parks.findIndex(park => park.name === $('.active').html());
+            cardDisplay(index);
+        });
 
 
-})
-;
+        // // Attributes & CSS - Exercise #5
+        // $('dt').on('click', function (){
+        //     $(this).toggleClass('highlight');
+        // })
+
+        // // Traversing Methods - Exercise #3
+        // $('.featured').on('click', function(e){
+        //     e.preventDefault();
+        //     $('#national-parks').children('li').last().toggleClass('highlight')
+        //     $('#state-parks-texas').children('li').last().toggleClass('highlight')
+        // })
+
+        // // Traversing Methods - Exercise #4
+        // $('h3').on('click', function () {
+        //     $(this).next('ul').children('li').toggleClass('bold');
+        // })
+
+        // // Traversing Methods - Exercise #5
+        // $('li').on('click', function(){
+        //     $(this).parent('ul').children('li').first().toggleClass('blue');
+        // })
+    });
+
+})();
+
