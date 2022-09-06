@@ -14,6 +14,7 @@ body * {
     list-style: none;
 }
 
+
 /* Header */
 header {
     background-image: url("https://source.unsplash.com/900x400/?forest");
@@ -44,6 +45,7 @@ header>div {
     text-align: center;
 }
 
+
 /* Container Layout */
 .container {
     width: 80%;
@@ -51,6 +53,7 @@ header>div {
     margin-right: auto;
     margin-left: auto;
 }
+
 
 /* Rows & Columns */
 .row {
@@ -63,6 +66,7 @@ header>div {
     width: 100%;
     margin-bottom: 5em;
 }
+
 
 /* Q&A Section */
 .invisible {
@@ -111,26 +115,26 @@ li:hover {
     color: black;
 }
 
-
 .blue {
     color: blue;
 }
 
-ul {
-    margin: 1.5em 0;
+h3 {
+    margin-top: 1.5em;
 }
 
+
+/* Featured Preview Pane */
 .frame {
     box-shadow: 1px 1px 10px -5px #000000;
     border-radius: 20px;
     padding: 1.5em;
-    margin: 1em 0;
+    margin: 1.5em 0;
 }
 
 .frame>img{
     width: 100%;
 }
-
 
 
 /* Buttons */
@@ -150,7 +154,6 @@ button, .q-and-a, li {
 button:active {
     background-color: gray;
 }
-
 
 
 /* Medium devices (tablets, 768px and up) */
