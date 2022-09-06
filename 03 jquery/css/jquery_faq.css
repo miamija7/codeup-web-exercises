@@ -110,6 +110,7 @@ dd {
 li {
     color: gray;
     transition: color 300ms;
+    margin: 0.2em;
 }
 
 li:hover {
@@ -127,6 +128,7 @@ li:hover {
 
 h3 {
     margin-top: 1.5em;
+    margin-bottom: 0.75em;
 }
 
 

@@ -30,7 +30,7 @@ $(function () {
         $(this).addClass('active');
     });
 
-    //
+    // Display Active li information
 
     const parks = [
         { imgSrc: "https://images.unsplash.com/photo-1562742940-e255567c00f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1774&q=80", name: "Arches National Park", state: "Utah", rating: 4.8, area: 119.8, visitors: 1238000, description: "Bordered by the Colorado River in the southeast, it’s known as the site of more than 2,000 natural sandstone arches, such as the massive, red-hued Delicate Arch in the east." },
