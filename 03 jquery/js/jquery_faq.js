@@ -2,7 +2,7 @@
 
 $(function () {
 
-    // View/Hide All FAQs
+    // Show/Hide All FAQs button
     let faqView = true;
     $('.toggleView').on('click', function (e) {
         e.preventDefault();
@@ -12,11 +12,11 @@ $(function () {
             $(this).text("Hide All");
         } else {
             $('dd').addClass('invisible');
-            $(this).text("View All");
+            $(this).text("Show All");
         }
     })
 
-
+    // Toggle FAQ answers on click
     $('.q-and-a').on('click', function (e) {
         e.preventDefault();
         $(this).children("dd").toggleClass('invisible');
