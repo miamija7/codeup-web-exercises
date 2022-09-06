@@ -1,4 +1,4 @@
-
+/* Document Setup (mobile first) */
 body {
     margin: 0;
     font-family: Avenir, sans-serif;
@@ -14,6 +14,7 @@ body * {
     list-style: none;
 }
 
+/* Header */
 header {
     background-image: url("https://source.unsplash.com/900x400/?forest");
     background-repeat: no-repeat;
@@ -24,7 +25,7 @@ header {
     justify-content: center;
 }
 
-header div {
+header>div {
     display: flex;
     justify-content: center;
     background-color: white;
@@ -43,6 +44,7 @@ header div {
     text-align: center;
 }
 
+/* Container Layout */
 .container {
     width: 80%;
     margin-top: 5em;
@@ -50,6 +52,7 @@ header div {
     margin-left: auto;
 }
 
+/* Rows & Columns */
 .row {
     width: 100%;
     display: flex;
@@ -58,8 +61,10 @@ header div {
 
 .col-1, .col-2 {
     width: 100%;
+    margin-bottom: 5em;
 }
 
+/* Q&A Section */
 .invisible {
     display: none;
 }
@@ -91,34 +96,30 @@ dd {
     color: grey;
 }
 
-.bold {
-    font-weight: bolder;
+
+/* Top Parks Section */
+li {
+    color: gray;
 }
+
+li:hover {
+    color:black;
+}
+
+.active {
+    font-weight: bolder;
+    color: black;
+}
+
 
 .blue {
     color: blue;
 }
 
-button {
-    padding: 0.5em;
-    border-radius: 30px;
-    background-color: black;
-    width: 10em;
-    border: none;
-    color: white;
+ul {
+    margin: 1.5em 0;
 }
 
-button, .q-and-a {
-    cursor: pointer;
-}
-
-button:active {
-    background-color: gray;
-}
-
-footer {
-    height: 5em;
-}
 .frame {
     box-shadow: 1px 1px 10px -5px #000000;
     border-radius: 20px;
@@ -128,6 +129,26 @@ footer {
 
 .frame>img{
     width: 100%;
+}
+
+
+
+/* Buttons */
+button {
+    padding: 0.5em;
+    border-radius: 30px;
+    background-color: black;
+    width: 10em;
+    border: none;
+    color: white;
+}
+
+button, .q-and-a, li {
+    cursor: pointer;
+}
+
+button:active {
+    background-color: gray;
 }
 
 
@@ -148,6 +169,7 @@ footer {
     }
 
     .col-2 {
+        margin-top: 0;
         width: 30%;
     }
 }
