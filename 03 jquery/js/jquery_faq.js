@@ -2,11 +2,11 @@
 
 $(function () {
 
-    let view = true;
+    let faqView = true;
     $('.toggleView').on('click', function (e) {
         e.preventDefault();
-        view = !view;
-        if (!view) {
+        faqView = !faqView;
+        if (!faqView) {
             $('dd').removeClass('invisible');
             $(this).text("Hide All");
         } else {
@@ -15,9 +15,11 @@ $(function () {
         }
     })
 
+    // // HIGHLIGHT ON CLICK
     // $('dt').on('click', function (){
     //     $(this).toggleClass('highlight');
     // })
+
 
     $('.q-and-a').on('click', function (e) {
         e.preventDefault();
@@ -27,4 +29,6 @@ $(function () {
     $('#national-parks').children().on('click', function () {
         $(this).toggleClass('bold');
     })
+
+
 });

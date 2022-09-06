@@ -91,6 +91,22 @@ dd {
     font-weight: bolder;
 }
 
+button {
+    padding: 0.5em;
+    border-radius: 30px;
+    background-color: black;
+    width: 10em;
+    border: 1px solid #415a77;
+    color: white;
+}
+button:active {
+    background-color: gray;
+}
+
+footer {
+    height: 5em;
+}
+
 
 /* Medium devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
