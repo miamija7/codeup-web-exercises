@@ -15,7 +15,7 @@ body * {
 }
 
 header {
-    background-image: url("https://source.unsplash.com/900x400/?nature");
+    background-image: url("https://source.unsplash.com/900x400/?forest");
     background-repeat: no-repeat;
     background-size: cover;
     padding: 5em;
@@ -104,9 +104,14 @@ button {
     border-radius: 30px;
     background-color: black;
     width: 10em;
-    border: 1px solid #415a77;
+    border: none;
     color: white;
 }
+
+button, .q-and-a {
+    cursor: pointer;
+}
+
 button:active {
     background-color: gray;
 }
@@ -114,6 +119,17 @@ button:active {
 footer {
     height: 5em;
 }
+.frame {
+    box-shadow: 1px 1px 10px -5px #000000;
+    border-radius: 20px;
+    padding: 1.5em;
+    margin: 1em 0;
+}
+
+.frame>img{
+    width: 100%;
+}
+
 
 
 /* Medium devices (tablets, 768px and up) */
