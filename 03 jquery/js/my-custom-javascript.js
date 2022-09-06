@@ -27,8 +27,4 @@ $(function (){
         $(this).css({'color':'black'})
     })
 
-
-
-
-
 })
