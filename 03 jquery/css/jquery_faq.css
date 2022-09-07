@@ -19,7 +19,6 @@ body * {
 header {
     background-image: url("https://source.unsplash.com/900x400/?nature,forest");
     background-size: cover;
-    background-attachment: fixed;
     padding: 5em;
     background-color: black;
     display: flex;
