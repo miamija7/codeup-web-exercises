@@ -146,6 +146,7 @@ Callback Methods:
 
 
 Combining all 3 callbacks:
+- .done() and .fail() are mutually exclusive, so there should never be a case where both are called
     $.ajax("/some-url").done(function(data, status, jqXhr) {
         alert("Everything went great! Check out the server's response in the console.");
         console.log(data);
