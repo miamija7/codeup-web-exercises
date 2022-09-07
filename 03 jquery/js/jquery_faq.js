@@ -1,4 +1,5 @@
 "use strict";
+
 //VANILLA JS
 (function () {
     const Parks = [
@@ -54,76 +55,112 @@
         },
     ];
 
-    // Function to display active li information
-    function cardDisplay(index) {
-        $('.imgSrc').attr('src', `${Parks[index].imgSrc}`);
-        $('.name').text(() => `${Parks[index].name}`)
-        $('.type').text(() => `${Parks[index].type}`)
-        $('.state').text(() => `${Parks[index].state}`)
-        $('.rating').text(() => `${Parks[index].rating}`)
-        $('.area').text(() => `${Parks[index].area}`)
-        $('.visitors').text(() => `${Parks[index].visitors}`)
-        $('.description').text(() => `${Parks[index].description}`)
+    const frame = document.querySelector('.frame').children;
+    const faqs = document.querySelectorAll('.faq');
+    const faqsBtn =  document.querySelector('#faqsBtn');
+    const faqAnswers = document.querySelectorAll('dd');
+    const featuredParks = document.querySelectorAll('.park');
+    let isHidden = true;
+
+
+    // Show/Hide All FAQs button
+    faqsBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        isHidden = !isHidden;
+        // Show or Hide all answers
+        (isHidden) ?
+            faqAnswers.forEach((dd)=> dd.classList.add('invisible')) :
+            faqAnswers.forEach((dd)=> dd.classList.remove('invisible'))
+        // "Show" or "Hide" button
+        faqsBtn.textContent = (isHidden) ? "Show All" : "Hide All"
+    })
+
+    // Toggle FAQ answers on click
+    faqs.forEach((question)=>{
+        question.addEventListener('click', function (e){
+            e.preventDefault();
+            question.children.item(1).classList.toggle('invisible')
+        })
+    })
+
+    // Change 'active' on li click
+    for (let i = 0; i < featuredParks.length; i++) {
+        featuredParks[i].addEventListener('click', function(){
+            featuredParks.forEach((li)=> li.classList.remove('active'))
+            this.classList.add('active');
+            frameDisplay(i);
+        })
     }
 
-    // JQUERY
-    $(function () {
-
-        // Show/Hide All FAQs button
-        let faqView = true;
-        $('.toggleView').on('click', function (e) {
-            e.preventDefault();
-            faqView = !faqView;
-            if (!faqView) {
-                $('dd').removeClass('invisible');
-                $(this).text("Hide All");
-            } else {
-                $('dd').addClass('invisible');
-                $(this).text("Show All");
-            }
-        });
-
-        // Toggle FAQ answers on click
-        $('.q-and-a').on('click', function (e) {
-            e.preventDefault();
-            $(this).children("dd").toggleClass('invisible');
-        });
-
-        // Display active class on li click
-        $('li').on('click', function () {
-            $('li').each(function () {
-                $(this).removeClass('active');
-            });
-            $(this).addClass('active');
-
-            // Display active li information
-            let index = Parks.findIndex(park => park.name === $('.active').html());
-            cardDisplay(index);
-        });
-
-
-        // // Attributes & CSS - Exercise #5
-        // $('dt').on('click', function (){
-        //     $(this).toggleClass('highlight');
-        // })
-
-        // // Traversing Methods - Exercise #3
-        // $('.featured').on('click', function(e){
-        //     e.preventDefault();
-        //     $('#national-parks').children('li').last().toggleClass('highlight')
-        //     $('#state-parks-texas').children('li').last().toggleClass('highlight')
-        // })
-
-        // // Traversing Methods - Exercise #4
-        // $('h3').on('click', function () {
-        //     $(this).next('ul').children('li').toggleClass('bold');
-        // })
-
-        // // Traversing Methods - Exercise #5
-        // $('li').on('click', function(){
-        //     $(this).parent('ul').children('li').first().toggleClass('blue');
-        // })
-    });
-
+    // frameDisplay() Function: display active li information
+    function frameDisplay(index) {
+        let park = Parks[index];
+        frame[0].setAttribute('src', park.imgSrc )
+        frame[1].children[0].textContent = park.name;
+        frame[1].children[1].textContent = park.type;
+        frame[2].children[0].textContent = park.state;
+        frame[3].children[0].textContent = park.rating;
+        frame[4].children[0].textContent = park.area;
+        frame[5].children[0].textContent = park.visitors;
+        frame[6].textContent = park.description;
+    }
 })();
 
+// // JQUERY
+// $(function () {
+//
+//     // Show/Hide All FAQs button
+//     let faqView = true;
+//     $('.toggleView').on('click', function (e) {
+//         e.preventDefault();
+//         faqView = !faqView;
+//         if (!faqView) {
+//             $('dd').removeClass('invisible');
+//             $(this).text("Hide All");
+//         } else {
+//             $('dd').addClass('invisible');
+//             $(this).text("Show All");
+//         }
+//     });
+//
+//     // Toggle FAQ answers on click
+//     $('.q-and-a').on('click', function (e) {
+//         e.preventDefault();
+//         $(this).children("dd").toggleClass('invisible');
+//     });
+//
+//     // Display active class on li click
+//     $('li').on('click', function () {
+//         $('li').each(function () {
+//             $(this).removeClass('active');
+//         });
+//         $(this).addClass('active');
+//
+//         // Display active li information
+//         let index = Parks.findIndex(park => park.name === $('.active').html());
+//         cardDisplay(index);
+//     });
+//
+//
+//     // // Attributes & CSS - Exercise #5
+//     // $('dt').on('click', function (){
+//     //     $(this).toggleClass('highlight');
+//     // })
+//
+//     // // Traversing Methods - Exercise #3
+//     // $('.featured').on('click', function(e){
+//     //     e.preventDefault();
+//     //     $('#national-parks').children('li').last().toggleClass('highlight')
+//     //     $('#state-parks-texas').children('li').last().toggleClass('highlight')
+//     // })
+//
+//     // // Traversing Methods - Exercise #4
+//     // $('h3').on('click', function () {
+//     //     $(this).next('ul').children('li').toggleClass('bold');
+//     // })
+//
+//     // // Traversing Methods - Exercise #5
+//     // $('li').on('click', function(){
+//     //     $(this).parent('ul').children('li').first().toggleClass('blue');
+//     // })
+// });
