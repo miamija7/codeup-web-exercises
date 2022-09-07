@@ -23,16 +23,32 @@
     <tbody id="insertProducts"></tbody>
 </table>
 
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
-    (function() {
+    (function () {
         "use strict";
         // TODO: Create an AJAX GET request for the file under data/inventory.json
+        $.get("../data/inventory.json").done((data, status, jqXhr) => {
+            // console.log(`====== Data ======`);
+            // console.log(data);
+            // console.log(`====== Status ======`);
+            // console.log(status);
+            // console.log(`====== jqXhr ======`);
+            // console.log(jqXhr);
 
-        // TODO: Take the data from inventory.json and append it to the products table
-        //       HINT: Your data should come back as a JSON object; use console.log() to inspect
-        //             its contents and fields
-        //       HINT: You will want to target #insertProducts for your new HTML elements
+            // TODO: Take the data from inventory.json and append it to the products table
+            let product = '';
+            // ITERATING THROUGH OBJECTS
+            $.each(data, function (key, value) {
+                //CONSTRUCTING ROWS WITH DATA FROM JSON OBJECT
+                product += `<tr><td>${value.title}</td>`;
+                product += `<td>${value.quantity}</td>`;
+                product += `<td>${value.price}</td>`;
+                product += `<td>${value.categories}</td></tr>`;
+            });
+            $('#insertProducts').append(product);
+        })
     })();
 </script>
 </body>
