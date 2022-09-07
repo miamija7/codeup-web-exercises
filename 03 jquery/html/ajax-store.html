@@ -6,12 +6,12 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Online Store</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="../css/ajax-store.css">
 </head>
 <body>
-
-<h1>My Tool Store</h1>
-
-<table id="products">
+<h1>My Store</h1>
+<table id="products" class="table">
     <thead>
     <tr>
         <th>Title</th>
@@ -22,34 +22,12 @@
     </thead>
     <tbody id="insertProducts"></tbody>
 </table>
-
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"
-        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-<script>
-    (function () {
-        "use strict";
-        // TODO: Create an AJAX GET request for the file under data/inventory.json
-        $.get("../data/inventory.json").done((data, status, jqXhr) => {
-            // console.log(`====== Data ======`);
-            // console.log(data);
-            // console.log(`====== Status ======`);
-            // console.log(status);
-            // console.log(`====== jqXhr ======`);
-            // console.log(jqXhr);
-
-            // TODO: Take the data from inventory.json and append it to the products table
-            let product = '';
-            // ITERATING THROUGH OBJECTS
-            $.each(data, function (key, value) {
-                //CONSTRUCTING ROWS WITH DATA FROM JSON OBJECT
-                product += `<tr><td>${value.title}</td>`;
-                product += `<td>${value.quantity}</td>`;
-                product += `<td>${value.price}</td>`;
-                product += `<td>${value.categories}</td></tr>`;
-            });
-            $('#insertProducts').append(product);
-        })
-    })();
-</script>
+<button id="refresh">Refresh JSON</button>
+<form action="../data/inventory.json">
+    <h2>Add inventory item</h2>
+    <button type="submit">Add</button>
+</form>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="../js/ajax-store.js"></script>
 </body>
 </html>
