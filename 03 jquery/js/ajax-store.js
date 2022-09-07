@@ -1,6 +1,7 @@
 (function () {
     "use strict";
     const localUrl = "../data/inventory.json";
+    let postCount = 0;
     const refreshJsonBtn = document.querySelector('#refresh')
 
     // FUNCTION: REFRESH TABLE
@@ -9,6 +10,7 @@
             // TODO: Take the data from inventory.json and append it to the products table
             // ITERATING THROUGH OBJECTS
             data.forEach(item => {
+                postCount++;
                 $('#insertProducts').append(
                     `<tr>
                         <td>${item.title}</td>
@@ -28,7 +30,7 @@
         refreshJSON();
     })
 
-    // FUNCTION: ADD OBJ TO JSON
+    // FUNCTION: ADD OBJECT TO JSON
 
 
 
