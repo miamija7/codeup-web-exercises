@@ -1,0 +1,59 @@
+
+*** JQUERY - AJAX OVERVIEW ***
+
+Ajax:
+- Asynchronous JavaScript and XML
+- send & retrieve data from a server asynchronously without interfering with page display
+    + Retrieving data -> XMLHttpRequest object (JSON)
+
+JSON:
+- JavaScript Object Notation
+- data-interchange format
+- USE: in cloud based services and APIs
+- Object literal and array literal notations used in JSON
+    {}      empty object in json form
+    []      empty array in json form
+
+- Object properties in JSON must be double-quoted strings, and properties are separated by a commas
+    {
+        "name1": "value1",
+        "name2": "value2"
+    }
+
+- The value of a property can be one of the following:
+  A quoted string
+  A number
+  An object
+  An array
+  true or false
+  null
+
+- example utilizing all the possible types:
+    {
+        "stringProp": "stringValue",
+        "numberProp": 1,
+        "objectProp": {
+            "prop": "value"
+        },
+        "arrayProp" : ["item1", "item2"],
+        "arrayOfObjectsProp" : [
+            {
+                "prop": "value"
+            },
+            {
+                "prop": "value"
+            }
+        ],
+        "boolProp"  : true,
+        "nullProp"  : null
+    }
+
+- For More: https://www.json.org/json-en.html
+
+
+
+*** JQUERY - REQUESTS & RESPONSES ***
+
+Request:
+- communicate with a server
+
