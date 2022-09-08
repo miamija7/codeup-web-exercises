@@ -2,11 +2,11 @@
 
 // ADD JSON DATA TO PAGE
 const localUrl = "../data/inventory.json";
-const insertProducts = document.querySelector('#insertProducts');
 
 const loadJSON = ()=> {
     $.get(localUrl).done(function (data) {
         data.forEach(item => {
+
             $('#insertProducts').append(
                 `<tr>
                     <td>${item.title}</td>
@@ -18,7 +18,12 @@ const loadJSON = ()=> {
         })
     })
 };
-loadJSON();
+
+$('#refresh').on('click', function(e){
+    e.preventDefault();
+    loadJSON();
+})
+
 
 
 const addItem = (name, qty, price, catArray)=> {
