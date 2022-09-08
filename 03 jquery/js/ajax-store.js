@@ -1,39 +1,60 @@
-(function () {
+
     "use strict";
     const localUrl = "../data/inventory.json";
-    let postCount = 0;
-    const refreshJsonBtn = document.querySelector('#refresh')
+    const refreshJsonBtn = document.querySelector('#refresh');
+    let localData;
 
-    // FUNCTION: REFRESH TABLE
-    const refreshJSON = function(){
-        $.get(localUrl).done(data => {
-            // TODO: Take the data from inventory.json and append it to the products table
-            // ITERATING THROUGH OBJECTS
-            data.forEach(item => {
-                postCount++;
-                $('#insertProducts').append(
-                    `<tr>
-                        <td>${item.title}</td>
-                        <td>${item.quantity}</td>
-                        <td>${item.price}</td>
-                        <td>${item.categories}</td>
-                    </tr>`
-                )
-            })
-        })}
+    $.ajax({
+        url:localUrl,
+        type:"GET",
+        success:function(data){
+            localData = data;
+        },
+        dataType:"json"
+    });
 
-    refreshJSON();
+    console.log(localData);
 
-    // REFRESH JSON BUTTON
-    refreshJsonBtn.addEventListener('click', (e)=>{
-        e.preventDefault();
-        refreshJSON();
-    })
+    // // FUNCTION: REFRESH TABLE
+    // const loadJSON = function () {
+    //     $.get(localUrl).done(data => {
+    //         // TODO: Take the data from inventory.json and append it to the products table
+    //         // ITERATING THROUGH OBJECTS
+    //         data.forEach(item => {
+    //             postCount++;
+    //             $('#insertProducts').append(
+    //                 `<tr>
+    //                     <td>${item.title}</td>
+    //                     <td>${item.quantity}</td>
+    //                     <td>${item.price}</td>
+    //                     <td>${item.categories}</td>
+    //                 </tr>`
+    //             )
+    //         })
+    //     })
+    // }
+    //
+    // loadJSON();
+    //
+    // // REFRESH JSON BUTTON
+    //
+    //
+    // // FUNCTION: ADD OBJECT TO JSON
+    // const data = {
+    //     title: "Camera",
+    //     quantity: 3,
+    //     price : 170,
+    //     categories : [
+    //         "technology",
+    //         "digital",
+    //         "tools"
+    //     ]
+    // }
+    // $("#addProduct").on('click', function(e){
+    //     e.preventDefault();
+    //     $.post(localUrl, data,
+    //         function(data, status){
+    //             alert("Data: " + data + "\nStatus: " + status);
+    //         });
+    // });
 
-    // FUNCTION: ADD OBJECT TO JSON
-
-
-
-
-
-})();
