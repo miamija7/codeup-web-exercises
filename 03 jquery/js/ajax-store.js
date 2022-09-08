@@ -1,6 +1,6 @@
 "use strict";
 
-// CREATE A LOCAL COPY OF JSON ARRAY DATA
+// ADD JSON DATA TO PAGE
 const localUrl = "../data/inventory.json";
 const insertProducts = document.querySelector('#insertProducts');
 
@@ -18,8 +18,12 @@ const loadJSON = ()=> {
         })
     })
 };
+loadJSON();
 
-loadJSON()
+
+const addItem = (name, qty, price, catArray)=> {
+
+}
 
 
 
