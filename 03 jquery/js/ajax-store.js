@@ -1,30 +1,42 @@
 "use strict";
 
-// ADD JSON DATA TO PAGE
 const localUrl = "../data/inventory.json";
 let counter = 0;
 
-const loadJSON = () => {
+// LOAD JSON TO PAGE
+$.get(localUrl).done(function (data) {
+    data.forEach(item => {
+        counter++;
+        addItem(item);
+    })
+})
+
+// ADD AN ITEM
+function addItem(item){
+    $('#insertProducts').append(
+        `<tr>
+            <td>${item.title}</td>
+            <td>${item.quantity}</td>
+            <td>${item.price}</td>
+            <td>${item.categories}</td>
+        </tr>`
+    )
+}
+
+// REFRESH JSON DATA
+const refreshJSON = () => {
     $.get(localUrl).done(function (data) {
-        if (counter < data.length) {
-            data.forEach(item => {
-                counter++;
-                $('#insertProducts').append(
-                    `<tr>
-                    <td>${item.title}</td>
-                    <td>${item.quantity}</td>
-                    <td>${item.price}</td>
-                    <td>${item.categories}</td>
-                    </tr>`
-                )
-            })
+        for (let i = counter; i <= data.length; i++){
+            counter++;
+            addItem(data[i]);
         }
     })
-};
+}
 
+// REFRESH BUTTON
 $('#refresh').on('click', function (e) {
     e.preventDefault();
-    loadJSON();
+    refreshJSON();
 })
 
 
