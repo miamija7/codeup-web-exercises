@@ -26,6 +26,18 @@
 <br>
 <form action="../data/inventory.json">
     <h2>Add inventory item</h2>
+    <label for="title">Item Name:
+        <input type="text" name="title" id="title">
+    </label><br>
+    <label for="qty">Quantity:
+        <input type="number" name="qty" id="qty">
+    </label><br>
+    <label for="price">Price per Unit: $
+        <input type="number" name="price" id="price">
+    </label>
+    <br><label for="categories">Categories:
+        <input type="text" name="categories" id="categories" placeholder="comma separated">
+    </label><br>
     <button type="submit" id="add">Add Item</button>
 </form>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"

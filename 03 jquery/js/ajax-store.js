@@ -42,16 +42,25 @@ function addItem(item) {
 }
 
 // FUNCTION: CREATE A NEW ITEM
-
-
 let localData = [];
 const createItem = () => {
-    let newTitle = document.querySelector('#title');
-    let newQty = document.querySelector('#qty');
-    let newPrice = document.querySelector('#price');
-    let newCategories = document.querySelector('#categories');
+    let newTitle = document.querySelector('#title').value;
+    let newQty = document.querySelector('#qty').value;
+    let newPrice = document.querySelector('#price').value;
+    let newCategories = document.querySelector('#categories').value
+        .split(",")
+        .map(element => element.trim())
+        .filter(element => element !== '');
 
-    localData.push({title: 'newTitle', quantity: 'newQty', price: 'newPrice', categories: 'newCategories'});
+    if (!newTitle || !newQty || !newPrice || !newCategories) {
+        alert('Please provide all item information.');
+    } else {
+        {
+            localData.push({title: newTitle, quantity: newQty, price: newPrice, categories: newCategories});
+            alert(`Successfully created ${newTitle} item!\nRefresh JSON!`);
+            newTitle = newQty = newPrice = newCategories = "";
+        }
+    }
 }
 
 
@@ -64,7 +73,6 @@ $('#refresh').on('click', function (e) {
 $('#add').on('click', function (e) {
     e.preventDefault();
     createItem();
-    refreshJSON();
 })
 
 
