@@ -1,18 +1,27 @@
 "use strict";
 
+// FUNCTION: FETCH JSON (CALLS UPDATE HTML)
+// PROTOTYPE: loadJSON()
 const loadJSON = async () => {
     try {
         const res = await fetch(`../data/inventory.json`);
         const data = await res.json();
-        updateHTML(data);
+        updateHTML(data, localData);
     } catch (e) {
         console.log("ERROR:", e);
     }
 }
 
+// FUNCTION: UPDATE HTML DATA
+// PROTOTYPE: updateHTML([array],[array])
 const updateHTML = (array1, array2) => {
-    if (array1 && array2) { array1 = array1.concat(array2); }
+    // concat arrays
+    array1 = array1.concat(array2);
+
+    //clear old data
     insertProducts.innerHTML = "";
+
+    //add new data
     array1.forEach(product => {
         insertProducts.innerHTML +=
         `<tr>
@@ -23,6 +32,12 @@ const updateHTML = (array1, array2) => {
         </tr>`
     })
 }
+
+// FUNCTION: CREATE NEW ITEM
+let localData = [];
+
+
+
 
 // SELECTORS
 const insertProducts = document.querySelector('#insertProducts');
