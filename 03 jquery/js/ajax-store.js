@@ -14,15 +14,23 @@ $.get(localUrl).done(function (data) {
 // FUNCTION: REFRESH JSON
 const refreshJSON = () => {
     $.get(localUrl).done(function (data) {
-        for (let i = counter; i <= data.length; i++){
-            counter++;
-            addItem(data[i]);
+        if (counter < data.length) {
+            for (let i = counter; i <= data.length; i++) {
+                counter++;
+                addItem(data[i]);
+            }
+        }
+        else if (counter < data.length + localData.length) {
+            for (let i = counter - data.length; i < localData.length; i++) {
+                counter++;
+                addItem(localData[i]);
+            }
         }
     })
 }
 
 // FUNCTION: APPEND ITEM TO TABLE
-function addItem(item){
+function addItem(item) {
     $('#insertProducts').append(
         `<tr>
             <td>${item.title}</td>
@@ -34,22 +42,29 @@ function addItem(item){
 }
 
 // FUNCTION: CREATE A NEW ITEM
-let newTitle = document.querySelector('#title').textContent;
-let newQty = document.querySelector('#qty').textContent;
-let newPrice = document.querySelector('#price').textContent;
-let newCategories = document.querySelector('#categories').textContent;
+
 
 let localData = [];
-const createItem = {
-    return : `{ title: ${newTitle}, quantity: ${newQty}, price: ${newPrice}, categories: ${newCategories} }`
+const createItem = () => {
+    let newTitle = document.querySelector('#title');
+    let newQty = document.querySelector('#qty');
+    let newPrice = document.querySelector('#price');
+    let newCategories = document.querySelector('#categories');
+
+    localData.push({title: 'newTitle', quantity: 'newQty', price: 'newPrice', categories: 'newCategories'});
 }
 
 
-
-const refreshJsonBtn = document.querySelector('#refresh');
-
-// EVENTS
+// CLICK EVENTS
 $('#refresh').on('click', function (e) {
     e.preventDefault();
     refreshJSON();
 })
+
+$('#add').on('click', function (e) {
+    e.preventDefault();
+    createItem();
+    refreshJSON();
+})
+
+
