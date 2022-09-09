@@ -24,7 +24,7 @@ const updateHTML = (array1, array2) => {
     //add new data
     array1.forEach(product => {
         insertProducts.innerHTML +=
-        `<tr>
+            `<tr>
             <td>${product.title}</td>
             <td>${product.quantity}</td>
             <td>${product.price}</td>
@@ -34,95 +34,51 @@ const updateHTML = (array1, array2) => {
 }
 
 // FUNCTION: CREATE NEW ITEM
-let localData = [];
+// PROTOTYPE: createItem(itemData)
+const createItem = async (itemData) => {
+    if (isEmptyInput(itemData)) alert('Please fill out all data fields for new item.');
+    else {
+        localData.push({
+            title: itemData[0].value,
+            quantity: itemData[1].value,
+            price: itemData[2].value,
+            categories: itemData[3].value.split(",").map(element => element.trim()).filter(element => element !== '')
+        })
+        // CLEAR FORM INPUT FIELDS
+        itemData[0].value = itemData[1].value = itemData[2].value = itemData[3].value = ''
+        // UPDATE PAGE
+        await loadJSON();
+    }
+}
 
+// FUNCTION: CHECK FORM FOR EMPTY INPUTS
+// PROTOTYPE: isEmptyInput(inputs)
+const isEmptyInput = (inputs) => {
+    return (inputs[0].value === "" || inputs[1].value === "" || inputs[2].value === "" || inputs[3].value === "")
+}
 
+// ONLOAD
+(async ()=>{
+    await loadJSON();
+})();
+
+// VARIABLES
+const localData = [];
 
 
 // SELECTORS
 const insertProducts = document.querySelector('#insertProducts');
 const refreshBtn = document.querySelector('#refresh');
+const addItemBtn = document.querySelector('#add');
+const itemData = document.querySelector('#createForm');
+
 
 //EVENT LISTENERS
-refreshBtn.addEventListener('click', async (e)=>{
+refreshBtn.addEventListener('click', async (e) => {
     e.preventDefault();
     await loadJSON();
 })
-
-// updateHTML([{name: "Mia", age: 25}, {name: "Arri", age: 26}], [{ name: "Mikhah", age: 0}]);
-
-
-// const localUrl = "../data/inventory.json";
-// let counter = 0;
-//
-// // ONLOAD: LOAD JSON
-// $.get(localUrl).done(function (data) {
-//     data.forEach(item => {
-//         counter++;
-//         addItem(item);
-//     })
-// })
-//
-// // FUNCTION: REFRESH JSON
-// const refreshJSON = () => {
-//     $.get(localUrl).done(function (data) {
-//         if (counter < data.length) {
-//             for (let i = counter; i <= data.length; i++) {
-//                 counter++;
-//                 addItem(data[i]);
-//             }
-//         } else if (counter < data.length + localData.length) {
-//             for (let i = counter - data.length; i < localData.length; i++) {
-//                 counter++;
-//                 addItem(localData[i]);
-//             }
-//         }
-//     })
-// }
-//
-// // FUNCTION: APPEND ITEM TO TABLE
-// function addItem(item) {
-//     $('#insertProducts').append(
-//         `<tr>
-//             <td>${item.title}</td>
-//             <td>${item.quantity}</td>
-//             <td>${item.price}</td>
-//             <td>${item.categories}</td>
-//         </tr>`
-//     )
-// }
-//
-// // FUNCTION: CREATE A NEW ITEM
-// let localData = [];
-// const createItem = () => {
-//     let newTitle = document.querySelector('#title').value;
-//     let newQty = document.querySelector('#qty').value;
-//     let newPrice = document.querySelector('#price').value;
-//     let newCategories = document.querySelector('#categories').value;
-//     let categoryArray = newCategories
-//                         .split(",")
-//                         .map(element => element.trim())
-//                         .filter(element => element !== '');
-//
-//     if (!newTitle || !newQty || !newPrice || !newCategories) {
-//         alert('Please provide all item information.');
-//     } else {
-//             localData.push({title: newTitle, quantity: newQty, price: newPrice, categories: categoryArray});
-//             alert(`Successfully added!\nClick reload JSON button to view new item!`)
-//     }
-// }
-//
-//
-// // CLICK EVENTS
-// $('#refresh').on('click', function (e) {
-//     e.preventDefault();
-//     refreshJSON();
-// })
-//
-// $('#add').on('click', function (e) {
-//     e.preventDefault();
-//     createItem();
-//     refreshJSON();
-// })
-
-
+addItemBtn.addEventListener('click', async (e) => {
+    e.preventDefault();
+    await createItem(itemData);
+})
