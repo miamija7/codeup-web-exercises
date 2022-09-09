@@ -4,16 +4,14 @@ const loadJSON = async () => {
     try {
         const res = await fetch(`../data/inventory.json`);
         const data = await res.json();
-        updateHTML(data, [{title: "iPad Pro", quantity: 25, price: 400, categories: ["digital", "content creation"]}]);
+        updateHTML(data);
     } catch (e) {
         console.log("ERROR:", e);
     }
 }
 
-const insertProducts = document.querySelector('#insertProducts');
-
 const updateHTML = (array1, array2) => {
-    if (array1 && array2) { array1 = array1.concat(array2);}
+    if (array1 && array2) { array1 = array1.concat(array2); }
     insertProducts.innerHTML = "";
     array1.forEach(product => {
         insertProducts.innerHTML +=
@@ -25,6 +23,17 @@ const updateHTML = (array1, array2) => {
         </tr>`
     })
 }
+
+// SELECTORS
+const insertProducts = document.querySelector('#insertProducts');
+const refreshBtn = document.querySelector('#refresh');
+
+//EVENT LISTENERS
+refreshBtn.addEventListener('click', async (e)=>{
+    e.preventDefault();
+    await loadJSON();
+})
+
 // updateHTML([{name: "Mia", age: 25}, {name: "Arri", age: 26}], [{ name: "Mikhah", age: 0}]);
 
 
