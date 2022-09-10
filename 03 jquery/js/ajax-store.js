@@ -76,19 +76,22 @@ const localData = [];
 
 // SELECTORS
 const insertProducts = document.querySelector('#insertProducts');
-const refreshBtn = document.querySelector('#refresh');
+// const refreshBtn = document.querySelector('#refresh');
 const addItemBtn = document.querySelector('#add');
 const itemData = document.querySelectorAll('input');
 
 //EVENT LISTENERS
-refreshBtn.addEventListener('click', async (e) => {
-    e.preventDefault();
-    await loadJSON();
-})
+// refreshBtn.addEventListener('click', async (e) => {
+//     e.preventDefault();
+//     await loadJSON();
+// })
 addItemBtn.addEventListener('click', async (e) => {
     e.preventDefault();
     await createItem(itemData);
 })
+
+// SYNC DATA EVERY MINUTE
+setInterval(loadJSON, 60000);
 
 
 //------------> EXTRAS (CARDS) <---------------
@@ -112,7 +115,7 @@ const updateCards = (array1, array2) => {
                         <div class="content">
                             Price: $${product.price.toFixed(2)}
                             <br>Inventory: ${product.quantity}
-                            <br><a class="card-category" href="#">#${product.categories.join(' #')}</a> 
+                            <br><span class="card-category" href="#">#${product.categories.join(' #')}</span> 
                         </div>
                     </div>
             </div>`
