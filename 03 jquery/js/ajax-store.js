@@ -37,7 +37,13 @@ const updateHTML = (array1, array2) => {
 // FUNCTION: CREATE NEW ITEM
 // PROTOTYPE: createItem(itemData)
 const createItem = async (itemData) => {
-    if (isEmptyInput(itemData)) alert('Please fill out all data fields for new item.');
+    if (isEmptyInput(itemData)) {
+        itemData.forEach(item=>{
+            if (item.value === ""){
+                item.classList.add('is-danger');
+            }
+        })
+    }
     else {
         localData.push({
             title: itemData[0].value,
@@ -47,7 +53,10 @@ const createItem = async (itemData) => {
             imgSrc: itemData[4].value
         })
         // CLEAR FORM INPUT FIELDS
-        itemData[0].value = itemData[1].value = itemData[2].value = itemData[3].value = itemData[4].value =''
+        itemData.forEach(item=>{
+            item.value = "";
+            item.classList.remove('is-danger');
+        })
         // UPDATE PAGE
         await loadJSON();
     }
@@ -71,7 +80,7 @@ const localData = [];
 const insertProducts = document.querySelector('#insertProducts');
 const refreshBtn = document.querySelector('#refresh');
 const addItemBtn = document.querySelector('#add');
-const itemData = document.querySelector('#createForm');
+const itemData = document.querySelectorAll('input');
 
 //EVENT LISTENERS
 refreshBtn.addEventListener('click', async (e) => {
