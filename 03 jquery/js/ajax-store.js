@@ -48,7 +48,7 @@ const createItem = async (itemData) => {
             quantity: Number(itemData[1].value),
             price: Number(itemData[2].value),
             categories: itemData[3].value.split(",").map(element => element.trim()).filter(element => element !== ''),
-            imgSrc: `https://source.unsplash.com/random/800x800/?${itemData[0].value.replace(' ', ',')}`
+            imgSrc: `https://source.unsplash.com/random/800x800/?${itemData[0].value.replace(' ', ',').toLowerCase()}`
         })
         // CLEAR FORM INPUT FIELDS
         itemData.forEach(item=>{

@@ -33,6 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Add a click event on various child elements to close the parent modal
+    (document.querySelector('#createForm').addEventListener('submit', (e) => {
+        const $target = this.closest('.modal');
+        closeModal($target);
+    }));
+
     // Add a keyboard event to close all modals
     document.addEventListener('keydown', (event) => {
         const e = event || window.event;
