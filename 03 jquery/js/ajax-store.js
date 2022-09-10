@@ -39,9 +39,7 @@ const updateHTML = (array1, array2) => {
 const createItem = async (itemData) => {
     if (isEmptyInput(itemData)) {
         itemData.forEach(item=>{
-            if (item.value === ""){
-                item.classList.add('is-danger');
-            }
+            (item.value === "") ? item.classList.add('is-danger') : item.classList.remove('is-danger');
         })
     }
     else {
@@ -50,7 +48,7 @@ const createItem = async (itemData) => {
             quantity: Number(itemData[1].value),
             price: Number(itemData[2].value),
             categories: itemData[3].value.split(",").map(element => element.trim()).filter(element => element !== ''),
-            imgSrc: "https://source.unsplash.com/random/800x800/?" + itemData[4].value
+            imgSrc: `https://source.unsplash.com/random/800x800/?${itemData[0].value.replace(' ', ',')}`
         })
         // CLEAR FORM INPUT FIELDS
         itemData.forEach(item=>{
@@ -65,7 +63,7 @@ const createItem = async (itemData) => {
 // FUNCTION: CHECK FORM FOR EMPTY INPUTS
 // PROTOTYPE: isEmptyInput(inputs)
 const isEmptyInput = (inputs) => {
-    return (inputs[0].value === "" || inputs[1].value === "" || inputs[2].value === "" || inputs[3].value === "" || inputs[4].value === "")
+    return (inputs[0].value === "" || inputs[1].value === "" || inputs[2].value === "" || inputs[3].value === "")
 }
 
 // ONLOAD
@@ -96,17 +94,14 @@ addItemBtn.addEventListener('click', async (e) => {
 //------------> EXTRAS (CARDS) <---------------
 
 
-// CARDS!
+// DISPLAY CARDS
 const insertCards = document.querySelector('#insertCards');
 
 const updateCards = (array1, array2) => {
-    // concat arrays
-    array1 = array1.concat(array2);
+    array1 = array1.concat(array2);      // concat arrays
+    insertCards.innerHTML = "";          // clear old data
 
-    //clear old data
-    insertCards.innerHTML = "";
-
-    //add new data
+    // create new card html
     array1.forEach(product => {
         insertCards.innerHTML += `
             <div class="card">
@@ -124,8 +119,8 @@ const updateCards = (array1, array2) => {
     })
 }
 
-// TOGGLE TABLE VIEW
 
+// TOGGLE TABLE VIEW
 const toggleTable = document.querySelector('#tableView');
 const table = document.querySelector('#products');
 let isHidden = true;
@@ -135,5 +130,3 @@ toggleTable.addEventListener('click', function(e){
     toggleTable.textContent = (isHidden) ? "Show Table" : "Collapse Table";
     table.classList.toggle('hidden');
 })
-
-
