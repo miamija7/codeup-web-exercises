@@ -10,46 +10,70 @@
     <link rel="stylesheet" href="../css/ajax-store.css">
 </head>
 <body>
-<h1>My Store</h1>
+<div class="container">
+    <h1>My Store</h1>
+    <!--    TABLE (hidden)       -->
+    <table id="products" class="table hidden">
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Categories</th>
+        </tr>
+        </thead>
+        <tbody id="insertProducts"></tbody>
+    </table>
+    <!--    REFRESH JSON BUTTON     -->
+    <button id="refresh">Refresh JSON</button>
+    <br>
+    <!--    ADD AN ITEM MODAL    -->
+    <button class="js-modal-trigger button" data-target="modal-js-example">
+        Add inventory item
+    </button>
+    <div id="modal-js-example" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Please fill out the form.</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <form id="createForm" action="">
+                    <h2 class="title">Add inventory item</h2>
+                    <label class="label" for="title">Item Name:
+                        <input class="input" type="text" name="title" id="title">
+                    </label><br>
+                    <label class="label" for="qty">Quantity:
+                        <input class="input" type="number" name="qty" id="qty">
+                    </label><br>
+                    <label class="label" for="price">Price per unit:
+                        <input class="input" type="number" name="price" id="price">
+                    </label><br>
+                    <label class="label" for="categories">Categories:
+                        <input class="input" type="text" name="categories" id="categories" placeholder="comma separated">
+                    </label><br>
+                    <label class="label" for="imgSrc">Image Link:
+                        <input class="input" type="text" name="categories" id="imgSrc" placeholder="paste image url">
+                    </label>
+                </form>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button" type="submit">Add Item</button>
+                <button class="button">Cancel</button>
+            </footer>
+        </div>
+    </div>
 
-<table id="products" class="table">
-    <thead>
-    <tr>
-        <th>Title</th>
-        <th>Quantity</th>
-        <th>Price</th>
-        <th>Categories</th>
-    </tr>
-    </thead>
-    <tbody id="insertProducts"></tbody>
-</table>
-<button id="refresh">Refresh JSON</button>
-<br>
-<form id="createForm" action="">
-    <h2>Add inventory item</h2>
-    <label for="title">Item Name:
-        <input type="text" name="title" id="title">
-    </label><br>
-    <label for="qty">Quantity:
-        <input type="number" name="qty" id="qty">
-    </label><br>
-    <label for="price">Price per Unit: $
-        <input type="number" name="price" id="price">
-    </label><br>
-    <label for="categories">Categories:
-        <input type="text" name="categories" id="categories" placeholder="comma separated">
-    </label><br>
-    <label for="imgSrc">Image Link:
-        <input type="text" name="categories" id="imgSrc" placeholder="paste image url">
-    </label><br>
-    <button type="submit" id="add">Add Item</button>
-</form>
-<!--    EXTRAS      -->
-<div id="insertCards">
+
+    <!--    EXTRAS      -->
+    <div id="insertCards">
+    </div>
 </div>
-
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script src="../js/ajax-store.js"></script>
+<script src="../js/bulma-modal.js"></script>
+
 </body>
 </html>
