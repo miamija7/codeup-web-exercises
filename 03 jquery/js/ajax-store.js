@@ -1,12 +1,13 @@
 "use strict";
 
-// FUNCTION: FETCH JSON (CALLS UPDATE HTML)
+// FUNCTION: FETCH JSON (& CALL updateHTML())
 // PROTOTYPE: loadJSON()
 const loadJSON = async () => {
     try {
         const res = await fetch(`../data/inventory.json`);
         const data = await res.json();
         updateHTML(data, localData);
+        updateCards(data, localData);
     } catch (e) {
         console.log("ERROR:", e);
     }
@@ -65,13 +66,11 @@ const isEmptyInput = (inputs) => {
 // VARIABLES
 const localData = [];
 
-
 // SELECTORS
 const insertProducts = document.querySelector('#insertProducts');
 const refreshBtn = document.querySelector('#refresh');
 const addItemBtn = document.querySelector('#add');
 const itemData = document.querySelector('#createForm');
-
 
 //EVENT LISTENERS
 refreshBtn.addEventListener('click', async (e) => {
@@ -82,3 +81,34 @@ addItemBtn.addEventListener('click', async (e) => {
     e.preventDefault();
     await createItem(itemData);
 })
+
+
+//------------> EXTRAS <---------------
+
+const insertCards = document.querySelector('#insertCards');
+
+const updateCards = (array1, array2) => {
+    // concat arrays
+    array1 = array1.concat(array2);
+
+    //clear old data
+    insertCards.innerHTML = "";
+
+    //add new data
+    array1.forEach(product => {
+        insertCards.innerHTML += `
+            <div class="card">
+                <img src="../img/${product.title}.png"
+                     alt="${product.title}">
+                    <div class="card-content">
+                        <p class="title is-4">${product.title}</p>
+                        <div class="content">
+                            Inventory: $${product.price.toFixed(2)}
+                            <br>Price: ${product.quantity}
+                            <br><a class="card-category" href="#">#${product.categories}</a> 
+                        </div>
+                    </div>
+            </div>`
+    })
+}
+

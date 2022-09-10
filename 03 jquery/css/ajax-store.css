@@ -7,3 +7,15 @@ body{
 tbody tr:hover {
     background-color: #CDDDFF;
 }
+
+.hidden {
+    display: none;
+}
+
+#insertCards {
+    display: flex;
+}
+
+.card{
+    width: 33%;
+}
