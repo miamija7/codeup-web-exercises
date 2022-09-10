@@ -10,11 +10,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
           integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../css/ajax-store.css">
 </head>
 <body>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="#"><i class="fa-solid fa-screwdriver-wrench"></i>AJAX STORE</a>
+    </div>
+</nav>
 <div class="container">
-    <h1>My Store</h1>
+    <!--    TOGGLE TABLE VIEW BUTTON     -->
+    <button class="button" id="tableView">Show Table</button>
+
     <!--    TABLE (hidden)       -->
     <table id="products" class="table hidden">
         <thead>
@@ -27,10 +38,8 @@
         </thead>
         <tbody id="insertProducts"></tbody>
     </table>
-    <!--    REFRESH JSON BUTTON     -->
-    <button id="refresh">Refresh JSON</button>
-    <br>
-    <!--    ADD AN ITEM MODAL    -->
+
+    <!--    ADD AN ITEM BUTTON & MODAL    -->
     <button class="js-modal-trigger button" data-target="create-item-modal">Add inventory item</button>
     <div id="create-item-modal" class="modal">
         <div class="modal-background"></div>
@@ -52,7 +61,8 @@
                         <div class="field">
                             <p class="control has-icons-left">
                                 <input class="input" type="number" name="price" id="price">
-                                <span class="icon is-small is-left"><i class="fa-solid fa-dollar-sign"></i></span>                             </span>
+                                <span class="icon is-small is-left"><i
+                                        class="fa-solid fa-dollar-sign"></i></span>                             </span>
                             </p>
                         </div>
                     </label><br>
@@ -64,7 +74,8 @@
                         <div class="field">
                             <p class="control has-icons-left">
                                 <input class="input" type="text" name="categories" id="imgSrc" placeholder="https://">
-                                <span class="icon is-small is-left"><i class="fa-solid fa-link"></i></i></span>                             </span>
+                                <span class="icon is-small is-left"><i
+                                        class="fa-solid fa-link"></i></i></span>                             </span>
                             </p>
                         </div>
                     </label>
@@ -76,12 +87,16 @@
             </footer>
         </div>
     </div>
-
-
-    <!--    EXTRAS      -->
-    <div id="insertCards">
-    </div>
 </div>
+
+<!--    INSERT CARDS      -->
+<div id="insertCards">
+</div>
+
+<!--    REFRESH JSON BUTTON     -->
+<button class="button" id="refresh">Refresh JSON</button>
+
+
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script src="../js/ajax-store.js"></script>

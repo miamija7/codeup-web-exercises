@@ -93,8 +93,10 @@ addItemBtn.addEventListener('click', async (e) => {
 })
 
 
-//------------> EXTRAS <---------------
+//------------> EXTRAS (CARDS) <---------------
 
+
+// CARDS!
 const insertCards = document.querySelector('#insertCards');
 
 const updateCards = (array1, array2) => {
@@ -121,4 +123,17 @@ const updateCards = (array1, array2) => {
             </div>`
     })
 }
+
+// TOGGLE TABLE VIEW
+
+const toggleTable = document.querySelector('#tableView');
+const table = document.querySelector('#products');
+let isHidden = true;
+
+toggleTable.addEventListener('click', function(e){
+    isHidden = !isHidden;
+    toggleTable.textContent = (isHidden) ? "Show Table" : "Collapse Table";
+    table.classList.toggle('hidden');
+})
+
 
