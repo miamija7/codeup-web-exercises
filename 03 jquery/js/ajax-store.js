@@ -26,11 +26,11 @@ const updateHTML = (array1, array2) => {
     array1.forEach(product => {
         insertProducts.innerHTML +=
             `<tr>
-            <td>${product.title}</td>
-            <td>${product.quantity}</td>
-            <td>${product.price}</td>
-            <td>${product.categories}</td>
-        </tr>`
+                <td>${product.title}</td>
+                <td>${product.quantity}</td>
+                <td>${product.price}</td>
+                <td>${product.categories}</td>
+            </tr>`
     })
 }
 
@@ -41,12 +41,13 @@ const createItem = async (itemData) => {
     else {
         localData.push({
             title: itemData[0].value,
-            quantity: itemData[1].value,
-            price: itemData[2].value,
-            categories: itemData[3].value.split(",").map(element => element.trim()).filter(element => element !== '')
+            quantity: Number(itemData[1].value),
+            price: Number(itemData[2].value),
+            categories: itemData[3].value.split(",").map(element => element.trim()).filter(element => element !== ''),
+            imgSrc: itemData[4].value
         })
         // CLEAR FORM INPUT FIELDS
-        itemData[0].value = itemData[1].value = itemData[2].value = itemData[3].value = ''
+        itemData[0].value = itemData[1].value = itemData[2].value = itemData[3].value = itemData[4].value =''
         // UPDATE PAGE
         await loadJSON();
     }
@@ -55,7 +56,7 @@ const createItem = async (itemData) => {
 // FUNCTION: CHECK FORM FOR EMPTY INPUTS
 // PROTOTYPE: isEmptyInput(inputs)
 const isEmptyInput = (inputs) => {
-    return (inputs[0].value === "" || inputs[1].value === "" || inputs[2].value === "" || inputs[3].value === "")
+    return (inputs[0].value === "" || inputs[1].value === "" || inputs[2].value === "" || inputs[3].value === "" || inputs[4].value === "")
 }
 
 // ONLOAD
@@ -98,7 +99,7 @@ const updateCards = (array1, array2) => {
     array1.forEach(product => {
         insertCards.innerHTML += `
             <div class="card">
-                <img src="../img/${product.title}.png"
+                <img src="${product.imgSrc}"
                      alt="${product.title}">
                     <div class="card-content">
                         <p class="title is-4">${product.title}</p>

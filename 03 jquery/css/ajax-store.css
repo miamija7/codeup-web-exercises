@@ -13,9 +13,17 @@ tbody tr:hover {
 }
 
 #insertCards {
+    width: 80%;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card{
-    width: 33%;
+    width: 20%;
+    margin: 2em;
+}
+
+.card img {
+    height: 50%;
 }

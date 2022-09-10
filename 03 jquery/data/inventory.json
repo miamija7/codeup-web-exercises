@@ -5,7 +5,8 @@
     "categories": [
       "tool"
     ],
-    "price": 20
+    "price": 20,
+    "imgSrc": "../img/hammer.png"
   }, {
   "title": "Drill",
   "quantity": 5,
@@ -13,7 +14,8 @@
     "tool",
     "powered"
   ],
-  "price": 100
+  "price": 100,
+  "imgSrc": "../img/drill.png"
 }, {
   "title": "Mower",
   "quantity": 5,
@@ -22,20 +24,23 @@
     "gas",
     "outdoor"
   ],
-  "price": 200
+  "price": 200,
+  "imgSrc": "../img/mower.png"
 }, {
   "title": "Screwdrivers",
   "quantity": 25,
   "categories": [
     "tool"
   ],
-  "price": 10
+  "price": 10,
+  "imgSrc": "../img/screwdrivers.png"
 }, {
   "title": "Camera",
   "quantity": 17,
   "categories": [
     "technology"
   ],
-  "price": 150
+  "price": 150,
+  "imgSrc": "../img/camera.png"
 }
 ]
