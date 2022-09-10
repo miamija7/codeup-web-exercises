@@ -50,7 +50,7 @@ const createItem = async (itemData) => {
             quantity: Number(itemData[1].value),
             price: Number(itemData[2].value),
             categories: itemData[3].value.split(",").map(element => element.trim()).filter(element => element !== ''),
-            imgSrc: itemData[4].value
+            imgSrc: "https://source.unsplash.com/random/800x800/?" + itemData[4].value
         })
         // CLEAR FORM INPUT FIELDS
         itemData.forEach(item=>{
@@ -115,9 +115,9 @@ const updateCards = (array1, array2) => {
                     <div class="card-content">
                         <p class="title is-4">${product.title}</p>
                         <div class="content">
-                            Inventory: $${product.price.toFixed(2)}
-                            <br>Price: ${product.quantity}
-                            <br><a class="card-category" href="#">#${product.categories}</a> 
+                            Price: $${product.price.toFixed(2)}
+                            <br>Inventory: ${product.quantity}
+                            <br><a class="card-category" href="#">#${product.categories.join(' #')}</a> 
                         </div>
                     </div>
             </div>`
