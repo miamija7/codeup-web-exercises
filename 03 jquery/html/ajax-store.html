@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Online Store</title>
+    <link rel="icon" href="">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
           integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
@@ -24,7 +25,7 @@
 </nav>
 <div class="container">
     <!--    TABLE (hidden)       -->
-    <table id="products" class="table hidden">
+    <table id="products" class="table">
         <thead>
         <tr>
             <th>Title</th>
@@ -36,7 +37,7 @@
         <tbody id="insertProducts"></tbody>
     </table>
     <!--    TOGGLE TABLE VIEW BUTTON     -->
-    <button class="button" id="tableView">Show Table</button>
+    <button class="button" id="tableView">Hide Table</button>
     <!--    ADD AN ITEM BUTTON     -->
     <button class="js-modal-trigger button is-warning" data-target="create-item-modal">Add inventory item</button>
     <!--    ADD AN ITEM MODAL      -->

@@ -122,11 +122,11 @@ const updateCards = (array1, array2) => {
 // TOGGLE TABLE VIEW
 const toggleTable = document.querySelector('#tableView');
 const table = document.querySelector('#products');
-let isHidden = true;
+let isHidden = toggleTable.classList.contains('hidden');
 
 toggleTable.addEventListener('click', function(e){
     isHidden = !isHidden;
-    toggleTable.textContent = (isHidden) ? "Show Table" : "Collapse Table";
+    toggleTable.textContent = (isHidden) ? "Show Table" : "Hide Table";
     table.classList.toggle('hidden');
 })
 
