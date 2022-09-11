@@ -1,20 +1,32 @@
 [
   {
-    "title": "My First Blog Post",
-    "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "title": "Psalm 16",
+    "content": "Protect me, God, for you are my refuge. I said to Adonai, “You are my Lord; I have nothing good outside of you.” The holy people in the land are the ones who are worthy of honor; all my pleasure is in them. Those who run after another god multiply their sorrows; To such gods I will not offer drink offerings of blood or take their names on my lips. Adonai, my assigned portion, my cup: you safeguard my share. Pleasant places were measured out for me; I am content with my heritage. I bless Adonai, my counselor; at night my inmost being instructs me. I always set Adonai before me; with him at my right hand, I can never be moved; so my heart is glad, my glory rejoices, and my body too rests in safety; for you will not abandon me to Sh’ol, you will not let your faithful one see the Abyss. You make me know the path of life; in your presence is unbounded joy, in your right hand eternal delight.",
     "categories": [
-      "greek"
+      "safety",
+      "delight",
+      "hope"
     ],
-    "date": "January 25, 2015"
+    "date": "January 25, 2022"
   }, {
-  "title": "The Second Post",
-  "content": "Cupcake ipsum dolor sit amet gummies. Cake chocolate sweet ice cream oat cake biscuit bear claw dessert. Jujubes marzipan toffee apple pie pastry dragée jujubes marshmallow. Dragée chocolate gingerbread liquorice chocolate bar jujubes. Sweet chocolate bar jelly-o chocolate cake candy carrot cake cotton candy macaroon marzipan. Sweet roll biscuit sweet gummies topping sesame snaps tootsie roll sugar plum pie. Sweet muffin croissant chocolate cake chupa chups. Donut croissant gummies donut powder ice cream. Chupa chups halvah apple pie topping jelly beans donut candy canes donut. Bonbon cake gummi bears cheesecake tart topping powder liquorice gummi bears.",
+  "title": "Psalm 63",
+  "content": "O God, you are my God; I will seek you eagerly. My heart thirsts for you, my body longs for you in a land parched and exhausted, where no water can be found. I used to contemplate you in the sanctuary, seeing your power and glory; for your grace is better than life. My lips will worship you. Yes, I will bless you as long as I live; in your name I will lift up my hands. I am as satisfied as with rich food; my mouth praises you with joy on my lips when I remember you on my bed and meditate on you in the night watches. For you have been my help; in the shadow of your wings I rejoice; my heart clings to you; your right hand supports me. But those who seek to destroy my life — may they go to the lowest parts of the earth. May they be given over to the power of the sword; may they become prey for jackals. But the king will rejoice in God. Everyone who swears by him will exult, for the mouths of liars will be silenced.",
   "categories": [
-    "family",
-    "candy",
-    "sweets",
-    "sugar"
+    "praise",
+    "fulfillment",
+    "satisfaction",
+    "waiting"
   ],
-  "date": "February 14, 2015"
+  "date": "February 14, 2022"
+}, {
+  "title": "Psalm 42",
+  "content" : "Just as a deer longs for running streams, God, I long for you. I am thirsty for God, for the living God! When can I come and appear before God? My tears are my food, day and night, while all day people ask me, “Where is your God?” I recall, as my feelings well up within me, how I’d go with the crowd to the house of God, with sounds of joy and praise from the throngs observing the festival. My soul, why are you so downcast? Why are you groaning inside me? Hope in God, since I will praise him again for the salvation that comes from his presence. My God, when I feel so downcast, I remind myself of you from the land of Yarden, from the peaks of Hermon, from the hill Mizar. Deep is calling to deep at the thunder of your waterfalls; all your surging rapids and waves are sweeping over me. By day Adonai commands his grace, and at night his song is with me as a prayer to the God of my life. I say to God my Rock, “Why have you forgotten me? Why must I go about mourning, under pressure by the enemy? My adversaries’ taunts make me feel as if my bones were crushed, as they ask me all day long, ‘Where is your God?’” My soul, why are you so downcast? Why are you groaning inside me? Hope in God, since I will praise him again for being my Savior and God.",
+  "categories": [
+    "process",
+    "hope",
+    "peace",
+    "drink"
+  ],
+  "date": "September 11, 2022"
 }
 ]
