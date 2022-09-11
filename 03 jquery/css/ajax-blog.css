@@ -1,11 +1,28 @@
+html * {
+    color: white;
+}
+
 .container {
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
-.message {
-    margin: 2em;
+.columns {
+    margin-bottom: 2em;
+}
+
+.blogTags {
+    color: dodgerblue;
+    cursor: pointer;
+}
+
+.blogTags:hover {
+    opacity: 70%;
+}
+
+.profile-image {
+    border-radius: 100%;
 }
 
 @media screen and (min-width:768px) {
@@ -13,5 +30,9 @@
         display: flex;
         justify-content: center;
         width: 70%;
+    }
+
+    .columns {
+        margin-top: 2em;
     }
 }
