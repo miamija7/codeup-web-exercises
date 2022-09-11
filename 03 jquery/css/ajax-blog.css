@@ -5,11 +5,16 @@ html * {
 .container {
     display: flex;
     justify-content: center;
-    width: 90%;
+    width: 100%;
 }
 
 .columns {
     margin-bottom: 2em;
+}
+
+.column:nth-of-type(2) {
+    width: 90%;
+    margin: 0 auto;
 }
 
 .blogTags {
