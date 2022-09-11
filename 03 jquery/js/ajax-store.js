@@ -6,8 +6,8 @@ const loadJSON = async () => {
     try {
         const res = await fetch(`../data/inventory.json`);
         const data = await res.json();
-        updateHTML(data, localData);
-        updateCards(data, localData);
+        updateHTML(data, localProducts);
+        updateCards(data, localProducts);
     } catch (e) {
         console.log("ERROR:", e);
     }
@@ -43,7 +43,7 @@ const createItem = async (itemData) => {
         })
     }
     else {
-        localData.push({
+        localProducts.push({
             title: itemData[0].value,
             quantity: Number(itemData[1].value),
             price: Number(itemData[2].value),
@@ -57,6 +57,7 @@ const createItem = async (itemData) => {
         })
         // UPDATE PAGE
         await loadJSON();
+        closeModal(document.querySelector('.modal'));
     }
 }
 
@@ -72,19 +73,14 @@ const isEmptyInput = (inputs) => {
 })();
 
 // VARIABLES
-const localData = [];
+const localProducts = [];
 
 // SELECTORS
 const insertProducts = document.querySelector('#insertProducts');
-// const refreshBtn = document.querySelector('#refresh');
 const addItemBtn = document.querySelector('#add');
 const itemData = document.querySelectorAll('input');
 
 //EVENT LISTENERS
-// refreshBtn.addEventListener('click', async (e) => {
-//     e.preventDefault();
-//     await loadJSON();
-// })
 addItemBtn.addEventListener('click', async (e) => {
     e.preventDefault();
     await createItem(itemData);
@@ -94,7 +90,7 @@ addItemBtn.addEventListener('click', async (e) => {
 setInterval(loadJSON, 60000);
 
 
-//------------> EXTRAS (CARDS) <---------------
+//------------> EXTRAS (CARD VIEW & MODAL) <---------------
 
 
 // DISPLAY CARDS
@@ -133,3 +129,33 @@ toggleTable.addEventListener('click', function(e){
     toggleTable.textContent = (isHidden) ? "Show Table" : "Collapse Table";
     table.classList.toggle('hidden');
 })
+
+
+// MODAL
+// Functions to open and close a modal
+function openModal($el) {
+    $el.classList.add('is-active');
+}
+
+function closeModal($el) {
+    $el.classList.remove('is-active');
+}
+
+// Add a click event on buttons to open a specific modal
+(document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
+    const modal = $trigger.dataset.target;
+    const $target = document.getElementById(modal);
+
+    $trigger.addEventListener('click', () => {
+        openModal($target);
+    });
+});
+
+// Add a click event on various child elements to close the parent modal
+(document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot #cancel') || []).forEach(($close) => {
+    const $target = $close.closest('.modal');
+
+    $close.addEventListener('click', () => {
+        closeModal($target);
+    });
+});
