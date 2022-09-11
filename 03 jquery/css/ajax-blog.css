@@ -8,15 +8,6 @@ html * {
     width: 100%;
 }
 
-.columns {
-    margin-bottom: 2em;
-}
-
-.column:nth-of-type(2) {
-    width: 90%;
-    margin: 0 auto;
-}
-
 .blogTags {
     color: dodgerblue;
     cursor: pointer;
@@ -28,6 +19,10 @@ html * {
 
 .profile-image {
     border-radius: 100%;
+}
+
+article {
+    margin: 0 2em 2em 2em;
 }
 
 @media screen and (min-width:768px) {
