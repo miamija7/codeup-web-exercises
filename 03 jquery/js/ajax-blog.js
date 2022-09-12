@@ -8,7 +8,7 @@ const loadJSON = async() => {
     try {
         const res = await fetch('../data/blog.json');
         const data = await res.json();
-        updateHTML(localPosts.reverse(), data.reverse());
+        updateHTML(localPosts.slice().reverse(), data.slice().reverse());
         postCount.textContent = count;
     } catch (e) {
         console.log(e);
