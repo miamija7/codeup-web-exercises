@@ -6,8 +6,8 @@ const loadJSON = async () => {
     try {
         const res = await fetch(`../data/inventory.json`);
         const data = await res.json();
-        updateHTML(data, localProducts);
-        updateCards(data, localProducts);
+        updateHTML(localProducts.reverse(),data.reverse());
+        updateCards(localProducts.reverse(),data.reverse());
     } catch (e) {
         console.log("ERROR:", e);
     }
