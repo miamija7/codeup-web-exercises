@@ -74,7 +74,7 @@ map.on('load', () => {
         'type': 'circle',
         'source': 'places',
         'paint': {
-            'circle-color': 'lightskyblue',
+            'circle-color': getRandomColor(),
             'circle-radius': 6,
             'circle-stroke-width': 2,
             'circle-stroke-color': '#ffffff'
@@ -112,4 +112,9 @@ map.on('load', () => {
         popup.remove();
     });
 });
+
+const getRandomColor = ()=>{
+    let colors = ["#a9def9", "#ede7b1", "#f694c1", "#e4c1f9", "#d3f8e2"]
+    return colors[Math.floor(Math.random() * 5)];
+}
 
