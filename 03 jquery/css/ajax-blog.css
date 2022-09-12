@@ -27,7 +27,7 @@ article {
 
 .js-modal-trigger {
     padding: 1.5em;
-    width: 90%;
+    width: 82%;
     margin: 0 2em 2em 2em;
 }
 
@@ -40,5 +40,9 @@ article {
 
     .columns {
         margin-top: 2em;
+    }
+
+    .js-modal-trigger{
+        width: 90%;
     }
 }
