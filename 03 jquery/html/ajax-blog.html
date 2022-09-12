@@ -32,6 +32,38 @@
             </div>
         </div>
         <div class="column is-three-quarters">
+            <!--    ADD AN ITEM BUTTON     -->
+            <button class="js-modal-trigger button" data-target="create-item-modal">Create Post</button>
+            <!--    ADD AN ITEM MODAL      -->
+            <div id="create-item-modal" class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head">
+                        <p class="modal-card-title">Create a new post.</p>
+                        <button class="delete" aria-label="close"></button>
+                    </header>
+                    <section class="modal-card-body">
+                        <form id="createForm" action="">
+                            <h2 class="title">Add inventory item</h2>
+                            <label class="label" for="title">Title:
+                                <input class="input" type="text" name="title" id="title">
+                            </label><br>
+                            <label class="label" for="body">Body:
+                                <textarea id="body" class="textarea" placeholder="What's on your mind..."></textarea>                            </label><br>
+                            <label class="label" for="tags">Tags:
+                                <input class="input" type="text" name="tags" id="tags" placeholder="Comma separated">
+                            </label><br>
+                            <label class="label" for="date">Categories:
+                                <input class="input" type="date" name="date" id="date">
+                            </label><br>
+                        </form>
+                    </section>
+                    <footer class="modal-card-foot">
+                        <button class="button" type="submit" id="add">Add Item</button>
+                        <button class="button" id="cancel">Cancel</button>
+                    </footer>
+                </div>
+            </div>
             <div id="posts" class="block ">
             </div>
         </div>
