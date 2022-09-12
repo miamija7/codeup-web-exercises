@@ -2,7 +2,12 @@ body{
     margin: 0;
     background-color: lightslategrey;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav {
+
 }
 
 .container {
