@@ -1,15 +1,26 @@
-body{
+/* Mapbox CSS */
+body {
     margin: 0;
+    padding: 0;
     font-family: sans-serif;
 }
+#map {
+    width: 100%;
+}
 
+.mapboxgl-popup {
+    max-width: 400px;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+/* My CSS */
 nav {
     margin: 0 auto 2em;
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 80%;
-    border-bottom: 1px solid dimgrey;
+    border-bottom: 1px solid lightgrey;
 }
 
 .container {

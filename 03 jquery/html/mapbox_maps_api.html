@@ -7,16 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mapbox</title>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css' rel='stylesheet'/>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
     <link rel="stylesheet" href="../css/mapbox.css">
 </head>
 <body>
 <nav>
-    <h1>🗺️ 📦 Exercise</h1>
+    <h1>🗺️ 📦 API</h1>
 </nav>
 <div class="container">
-    <iframe id='map' src="https://api.mapbox.com/styles/v1/miamija7/cl7z0jkd5001f15lujjq1bmzj.html?title=false&access_token=pk.eyJ1IjoibWlhbWlqYTciLCJhIjoiY2w3ejBmazd2MTFqMTNycDdpanFxb2RycCJ9.vdXYFQybqjp0FrkRw5Zfkw&zoomwheel=false#10.12/32.8178/-96.7756" title="Dallas" style="border:none;"></iframe>
+    <div id='map' style='width: 400px; height: 300px;'></div>
 </div>
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js'></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
 <script src='../js/keychain.js'></script>
 <script src='../js/mapbox.js'></script>
 </body>
