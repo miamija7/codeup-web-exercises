@@ -16,8 +16,8 @@ const loadJSON = async() => {
 }
 
 // ONLOAD
-(async ()=>{
-    await loadJSON();
+(()=>{
+    loadJSON();
 })();
 
 // FUNCTION: POST BLOG POST
@@ -71,7 +71,7 @@ const localPosts = [];
 
 // FUNCTION: CREATE NEW BLOG POST
 // PROTOTYPE: createItem(itemData)
-const createItem = async (itemData) => {
+const createItem = (itemData) => {
     if (isEmptyInput(itemData)) {
         itemData.forEach(item=>{
             (item.value === "") ? item.classList.add('is-danger') : item.classList.remove('is-danger');
@@ -90,7 +90,7 @@ const createItem = async (itemData) => {
             item.classList.remove('is-danger');
         })
         // UPDATE PAGE
-        await loadJSON();
+        loadJSON();
         closeModal(document.querySelector('.modal'));
     }
 }
