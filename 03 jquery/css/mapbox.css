@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    background-color: lightslategrey;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#map {
+    width: 90%;
+    height: 200%;
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width:768px) {
+    .container{
+        width: 80%;
+    }
+
+    #map {
+        width: 50%;
+        height: 300%;
+    }
+}
