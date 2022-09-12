@@ -38,7 +38,7 @@ map.on('load', () => {
                     'type': 'Feature',
                     'properties': {
                         'description':
-                            '<strong>Dallas Farmers Market</strong><br>Mon-Sun 10AM-7PM<p>Located at 1010 S. Pearl Expressway in downtown Dallas, the Dallas Farmers Market features: produce dealers, wholesale dealers and local farmers.</p>'
+                            '<img src="https://cdn.vox-cdn.com/thumbor/V9lWCBiFFsbu09hfqYNxBeu4FP8=/0x0:750x600/1200x900/filters:focal(315x240:435x360):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/65219478/Dallas_Farmers_Market_Allen_Sheffield.0.jpg" alt="Dallas Farmers Market"><strong>Dallas Farmers Market</strong><br>Hours: Mon-Sun 10AM-7PM<p>Located at 1010 S. Pearl Expressway in downtown Dallas, the Dallas Farmers Market features: produce dealers, wholesale dealers and local farmers.</p>'
                     },
                     'geometry': {
                         'type': 'Point',
@@ -48,11 +48,21 @@ map.on('load', () => {
                 {
                     'type': 'Feature',
                     'properties': {
-                        'description': '<strong>Lockhart Smokehouse BBQ</strong><br>Mon-Sun 11AM-9PM<p>Lively counter-serve BBQ joint offering a variety of smoked meats & sausages, plus a full bar.</p>'
+                        'description': '<img src="https://bbqrevolt.com/wp-content/uploads/2021/04/Lockhart-Smokehouse.jpg.webp" alt="Lockhart BBQ"><strong>Lockhart Smokehouse BBQ</strong><br>Hours: Mon-Sun 11AM-9PM<p>Lively counter-serve BBQ joint offering a variety of smoked meats & sausages, plus a full bar.</p>'
                     },
                     'geometry': {
                         'type': 'Point',
                         'coordinates': [ -96.8285753673907, 32.74946367211865]
+                    }
+                },
+                {
+                    'type': 'Feature',
+                    'properties': {
+                        'description': '<img src="https://duyt4h9nfnj50.cloudfront.net/resized/21556b19c8ef7b7e32f076e8f8f8b0d2-w2880-ac.jpg" alt="Roti Grill"><strong>Roti Grill</strong><br>Hours: Mon-Sun 11AM-10PM<p>Tasty Indian comfort food in a relaxed setting! How good does it get? The restaurant is clean and service friendly. The food tastes fresh and you can watch the cooks work in the kitchen that opens onto the dining room.</p>'
+                    },
+                    'geometry': {
+                        'type': 'Point',
+                        'coordinates': [ -96.7884116378177, 32.82067779426571 ]
                     }
                 },
             ]

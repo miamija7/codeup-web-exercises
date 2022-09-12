@@ -9,6 +9,9 @@ body {
     max-width: 400px;
     font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
+.mapboxgl-popup img {
+    width: 100%;
+}
 
 /* My CSS */
 html{
