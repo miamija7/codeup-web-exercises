@@ -6,8 +6,8 @@ const loadJSON = async () => {
     try {
         const res = await fetch(`../data/inventory.json`);
         const data = await res.json();
-        updateHTML(localProducts.reverse(),data.reverse());
-        updateCards(localProducts.reverse(),data.reverse());
+        updateHTML(data,localProducts);
+        updateCards(localProducts.slice().reverse(), data.slice().reverse());
     } catch (e) {
         console.log("ERROR:", e);
     }
@@ -36,7 +36,7 @@ const updateHTML = (array1, array2) => {
 
 // FUNCTION: CREATE NEW ITEM
 // PROTOTYPE: createItem(itemData)
-const createItem = async (itemData) => {
+const createItem = (itemData) => {
     if (isEmptyInput(itemData)) {
         itemData.forEach(item=>{
             (item.value === "") ? item.classList.add('is-danger') : item.classList.remove('is-danger');
@@ -56,7 +56,7 @@ const createItem = async (itemData) => {
             item.classList.remove('is-danger');
         })
         // UPDATE PAGE
-        await loadJSON();
+        loadJSON();
         closeModal(document.querySelector('.modal'));
     }
 }
@@ -68,8 +68,8 @@ const isEmptyInput = (inputs) => {
 }
 
 // ONLOAD
-(async ()=>{
-    await loadJSON();
+(()=>{
+    loadJSON();
 })();
 
 // VARIABLES
@@ -81,9 +81,9 @@ const addItemBtn = document.querySelector('#add');
 const itemData = document.querySelectorAll('input');
 
 //EVENT LISTENERS
-addItemBtn.addEventListener('click', async (e) => {
+addItemBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    await createItem(itemData);
+    createItem(itemData);
 })
 
 // SYNC DATA EVERY MINUTE
