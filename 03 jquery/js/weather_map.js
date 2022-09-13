@@ -35,21 +35,20 @@ const map = new mapboxgl.Map({
     style: 'mapbox://styles/mapbox/dark-v10', // style URL
     center: [-96.777, 32.777], // starting position [lng, lat]
     zoom: 10, // starting zoom
-    projection: 'globe',  // display the map as a 3D globe
+    projection: 'globe'  // display the map as a 3D globe
 });
 
-// Mapbox Map Background
-map.on('style.load', () => {
-    map.setFog({});
-});
+// // Mapbox Map Background
+// map.on('style.load', () => {
+//     map.setFog({});
+// });
 
 // Mapbox Search
-map.addControl(
-    new MapboxGeocoder({
-        accessToken: mapboxgl.accessToken,
-        mapboxgl: mapboxgl
-    })
-);
+const geocoder = new MapboxGeocoder({
+    accessToken: mapboxgl.accessToken,
+    mapboxgl: mapboxgl
+})
+map.addControl(geocoder);
 
 
 // Mapbox Markers
@@ -81,5 +80,10 @@ marker.on('dragend', async (e) => {
     } catch (e) {
         console.log(e);
     }
-
 })
+
+geocoder.on('results', async (results)=>{
+    let res = await results;
+    console.log(geocoder);
+})
+//mapboxgl-ctrl-geocoder--input
