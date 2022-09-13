@@ -12,7 +12,7 @@ window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
 window.myWidgetParam.push({
     id: 21,
     cityid: '2643743',
-    appid: 'bdd7146a61152b7ff3662650d34c0fb7',
+    appid: OPEN_WEATHER_KEY,
     units: 'imperial',
     containerid: 'openweathermap-widget-21',
 });
@@ -48,17 +48,23 @@ map.addControl(
 );
 
 // Mapbox Markers
-const createMarker = (query) => {
-    const marker = new mapboxgl.Marker({
-        color: "lightskyblue",
-        draggable: true
-    }).setLngLat(query.location)
-        .addTo(map);
-}
+const marker = new mapboxgl.Marker({
+    color: "lightskyblue",
+    draggable: true
+}).setLngLat(queries[0].location)
+    .addTo(map);
 
+marker.on('dragend', (e)=> {
+    console.log(e);
+    console.log(e.target._lngLat.lng, e.target._lngLat.lat);
+    queries.unshift({ location: [e.target._lngLat.lng, e.target._lngLat.lat]});
+    getGeoCode(queries[0]);
+})
 
 //-------------- FUNCTIONALITY --------------
 
-queries.forEach(query => {
-    createMarker(query);
-})
+const getGeoCode = async (query)=>{
+    const res = await fetch(`http://api.openweathermap.org/geo/1.0/reverse?lat=${query.location[1]}&lon=${query.location[0]}&limit=5&appid=bdd7146a61152b7ff3662650d34c0fb7`);
+    const data = res.json();
+    console.log(data);
+}
