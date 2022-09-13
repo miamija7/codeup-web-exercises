@@ -38,6 +38,11 @@ const map = new mapboxgl.Map({
     projection: 'globe',  // display the map as a 3D globe
 });
 
+// Mapbox Map Background
+map.on('style.load', () => {
+    map.setFog({});
+});
+
 // Mapbox Search
 map.addControl(
     new MapboxGeocoder({
@@ -45,6 +50,7 @@ map.addControl(
         mapboxgl: mapboxgl
     })
 );
+
 
 // Mapbox Markers
 const marker = new mapboxgl.Marker({
@@ -68,7 +74,12 @@ const getGeoCode = async (pin) => {
 
 // EVENT LISTENER
 marker.on('dragend', async (e) => {
-    pinInfo.location = [e.target._lngLat.lng, e.target._lngLat.lat];
-    await getGeoCode(pinInfo);
-    await updateWidget(pinInfo);
+    try {
+        pinInfo.location = [e.target._lngLat.lng, e.target._lngLat.lat];
+        await getGeoCode(pinInfo);
+        await updateWidget(pinInfo);
+    } catch (e) {
+        console.log(e);
+    }
+
 })
