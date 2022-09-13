@@ -1,32 +1,29 @@
 //-------------- VARIABLES --------------
 
-
-const queries = [
-    {
-        id: '4684888',
-        location: [-96.797, 32.777]
-    },
-]
+let pinInfo = { id: '4684888', location: [-96.797, 32.777] }
 
 //-------------- WEATHER MAP --------------
 
 // Weather Widget
-const updateWidget = (query) => {
-    window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
+const appendWidget = document.querySelector('.appendWidget');
 
-    window.myWidgetParam.push({
-        id: 21,
-        cityid: query.id,
-        appid: OPEN_WEATHER_KEY,
-        units: 'imperial',
-        containerid: 'openweathermap-widget-21',
-    })
-    var script = document.createElement('script');
+const updateWidget = async (pin) => {
+    const script = document.createElement('script');
     script.async = true;
     script.charset = "utf-8";
     script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
-    var s = document.getElementsByTagName('script')[0];
+    const s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(script, s);
+
+    window.myWidgetParam = [];
+    appendWidget.innerHTML = `<div id="openweathermap-widget-21"></div>`;
+    window.myWidgetParam.push({
+        id: 21,
+        cityid: pin.id,
+        appid: OPEN_WEATHER_KEY,
+        units: 'imperial',
+        containerid: 'openweathermap-widget-21',
+    });
 }
 
 
@@ -54,30 +51,25 @@ map.addControl(
 const marker = new mapboxgl.Marker({
     color: "lightskyblue",
     draggable: true
-}).setLngLat(queries[0].location)
+}).setLngLat(pinInfo.location)
     .addTo(map);
 
-marker.on('dragend', (e) => {
-    console.log(e);
-    console.log(e.target._lngLat.lng, e.target._lngLat.lat);
-    queries.unshift({location: [e.target._lngLat.lng, e.target._lngLat.lat]});
-    getGeoCode(queries[0]);
-})
 
 //-------------- FUNCTIONALITY --------------
 
-const getGeoCode = async (query) => {
+const getGeoCode = async (pin) => {
     try {
-        const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${query.location[1]}&lon=${query.location[0]}&appid=${OPEN_WEATHER_KEY}`);
+        const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${pin.location[1]}&lon=${pin.location[0]}&appid=${OPEN_WEATHER_KEY}`);
         const data = await res.json();
-        console.log(data);
-        console.log(data.id.toString());
-        queries[0].id = data.id.toString();
-        updateWidget(queries[0]);
+        pin.id = data.id.toString();
     } catch (e) {
         console.log('ERROR:', e);
     }
 }
 
-// `http://api.openweathermap.org/geo/1.0/reverse?lat=${query.location[1]}&lon=${query.location[0]}&limit=5&appid=${OPEN_WEATHER_KEY}`
-// `https://api.openweathermap.org/data/2.5/weather?lat=${query.location[1]}&lon=${query.location[0]}&appid=${OPEN_WEATHER_KEY}`
+// EVENT LISTENER
+marker.on('dragend', async (e) => {
+    pinInfo.location = [e.target._lngLat.lng, e.target._lngLat.lat];
+    await getGeoCode(pinInfo);
+    await updateWidget(pinInfo);
+})
