@@ -216,3 +216,13 @@ GET & POST shorthand:
     }).done(function(data) {
         // do something with the response
     });
+
+
+KEYS:
+- most APIs will require the use of an App ID or API Key
+- good practice to avoid pushing confidential information like API Keys
+- create a separate keys.js file, for API keys
+- add to.gitignore file that way it never gets pushed to a public repository
+    const MAPBOX_KEY = 'pk.ASDQWE@#$';
+    const OPEN_WEATHER_APPID = "2344ZXCERWETA";
+    const LINKEDIN_KEY = "34234ASDAD45";
