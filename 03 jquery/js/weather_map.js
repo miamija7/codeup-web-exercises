@@ -1,13 +1,12 @@
-//-------------- VARIABLES --------------
+//-------------- PIN --------------
 
 let pinInfo = { id: '4684888', location: [-96.797, 32.777] }
 
 //-------------- WEATHER MAP --------------
 
-// Weather Widget
 const appendWidget = document.querySelector('.appendWidget');
-
-const updateWidget = async (pin) => {
+// Weather Widget
+const updateWidget = (pin) => {
     const script = document.createElement('script');
     script.async = true;
     script.charset = "utf-8";
@@ -36,7 +35,7 @@ const map = new mapboxgl.Map({
     style: 'mapbox://styles/mapbox/dark-v10', // style URL
     center: [-96.777, 32.777], // starting position [lng, lat]
     zoom: 10, // starting zoom
-    projection: 'globe' // display the map as a 3D globe
+    projection: 'globe',  // display the map as a 3D globe
 });
 
 // Mapbox Search
