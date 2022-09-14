@@ -38,10 +38,10 @@ const map = new mapboxgl.Map({
     projection: 'globe'  // display the map as a 3D globe
 });
 
-// // Mapbox Map Background
-// map.on('style.load', () => {
-//     map.setFog({});
-// });
+// Mapbox Map Background
+map.on('style.load', () => {
+    map.setFog({});
+});
 
 // Mapbox Search
 const geocoder = new MapboxGeocoder({
@@ -81,9 +81,3 @@ marker.on('dragend', async (e) => {
         console.log(e);
     }
 })
-
-geocoder.on('results', async (results)=>{
-    let res = await results;
-    console.log(geocoder);
-})
-//mapboxgl-ctrl-geocoder--input
