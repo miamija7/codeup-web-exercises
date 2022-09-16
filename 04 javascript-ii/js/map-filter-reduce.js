@@ -73,7 +73,6 @@
             return accumulator += curr.name + ", ";
         else
             return accumulator += curr.name + ".";
-
     }, 'Your instructors are: ');
     console.log("TODO 5 check:\n",names);
 

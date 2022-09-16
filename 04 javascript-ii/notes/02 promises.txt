@@ -1,0 +1,22 @@
+
+*** JAVASCRIPT II - PROMISES NOTES ***
+
+Promises:
+- a tool for handling asynchronous events in JavaScript
+- a promise represents an event that might not yet have happened
+- three states:
+
+pending         the event has not yet happened
+resolved        the event has happened successfully
+rejected        the event has happened, and an error condition occurred
+
+
+Fetch API:
+then            accepts a callback that will run when the promise is resolved.
+catch           accepts a callback that will run when the promise is rejected.
+    fetch('https://api.github.com/users')
+    .then(response => console.log(response))
+    .catch(error => console.error(error));
+
+
+
