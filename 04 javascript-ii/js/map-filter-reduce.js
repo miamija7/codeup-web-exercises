@@ -44,4 +44,10 @@
     const experiencedUsers = users.filter(user => user.languages.length >= 3);
     console.log("TODO 1 check:\n", experiencedUsers);
 
+    //Todo: Use .map to create an array of strings where each element is a user's email address
+    const emails = users.map(({ email }) => email);
+    console.log("TODO 2 check:\n", emails);
+
+
+
 })();
