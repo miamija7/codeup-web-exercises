@@ -77,16 +77,10 @@
     console.log("TODO 5 check:\n",names);
 
     //Todo: BONUS: Use .reduce to get the unique list of languages from the list of users.
-    const languages =  users.reduce((previousValue, currentValue) => {
-            return [...previousValue, ...currentValue.languages];
+    const uniqueLanguages =  users.reduce((previousValue, currentValue) => {
+            return [...new Set([...previousValue, ...currentValue.languages])];
         },[]
     );
-
-    const uniqueLanguages = languages.reduce((prev, curr) => {
-            if (!prev.includes(curr)) return [...prev, curr];
-            else return [...prev];
-        },[]
-    );
-    console.log("TODO 6 check:\n", languages, uniqueLanguages)
+    console.log("TODO 6 check:\n", uniqueLanguages);
 
 })();
