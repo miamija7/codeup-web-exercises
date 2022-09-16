@@ -55,4 +55,10 @@
     console.log("TODO 3 check:\n", totalYearsOfExperience);
     console.log("TODO 3 check:\n", avgYearsOfExperience);
 
+    //Todo: Use .reduce to get the longest email from the list of users
+    const longestEmail = users.reduce((longest, user) => {
+        return (longest.length < user.email.length) ? user.email : longest;
+    }, users[0].email);
+    console.log(longestEmail);
+
 })();
