@@ -1,5 +1,5 @@
 
-*** JAVASCRIPT II - INTRO  NOTES ***
+*** JAVASCRIPT II - ES6  NOTES ***
 
 Es6:
 - ECMAScript2015
@@ -62,5 +62,3 @@ Array Destructuring:
     const [x, y] = myArray;
     console.log(x); // 1
     console.log(y); // 2
-
-

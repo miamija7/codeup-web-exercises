@@ -1,0 +1,68 @@
+
+*** JAVASCRIPT II - MAP, FILTER, REDUCE NOTES ***
+
+
+Functional Idioms:
+- all operate on collections
+- all will not modify the original array
+- return a copy
+
+.map        transforms each element in the collection
+.filter      filters our values, makes sure each element in the collection meets some criteria or passes some test
+.reduce     reduces a collection to a single value
+
+
+Filter:
+- accepts a callback function that is applied to each element in the collection
+- true/false check
+- returns a copy of array
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let evens = numbers.filter(num => num % 2 === 0);
+    console.log(evens); // [2, 4, 6, 8, 10];
+
+
+Map:
+- accepts a callback function that is applied to each element in the collection
+- new value check
+- returns a copy of array
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    var incremented = numbers.map(num =>  num + 1);
+    console.log(incremented); // [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+
+
+Reduce:
+- reduce a collection to a single value
+- transform a collection into a primitive value
+
+    .reduce((param, param) => { ...callback function }, initial value of accumulator);
+
+- 2 parameters: accumulator & item
+- a callback function
+- an initial value for accumulator
+
+    const numbers = [1, 2, 3, 4, 5];
+    const sum = numbers.reduce((accumulation, currentNumber) => {
+        return accumulation + currentNumber;
+    }, 0);
+
+- we can use reduce to transform the shape of a collection
+
+    function countWords(sentence) {
+        const words = sentence.split(' '); // transform a sentence into an array of words
+        const wordCountObject = words.reduce((wordCounts, word) => {
+            if (typeof wordCounts[word] === 'undefined') {
+                // if the word is not yet present in our object, set it's value to 1
+                wordCounts[word] = 1;
+            } else {
+                // otherwise increment the existing count
+                wordCounts[word] += 1;
+            }
+            return wordCounts;
+        }, {}); // start with an empty object
+        return wordCountObject;
+    }
+
+    countWords('Mary had a little lamb little lamb little lamb');
+    // {Mary: 1, had: 1, a: 1, little: 3, lamb: 3}
+
+
