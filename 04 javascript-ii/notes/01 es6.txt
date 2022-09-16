@@ -1,0 +1,66 @@
+
+*** JAVASCRIPT II - INTRO  NOTES ***
+
+Es6:
+- ECMAScript2015
+- the newest version of JavaScript
+- syntactical sugar (convenience shorthand)
+
+
+Examples:
+2 ** 8              Math.pow(2, 8);             256
+
+
+Block Scope Variable:
+- let               block scope
+- const             block scope
+- var               not block scope
+
+
+Template Strings:
+    `Hello, ${name}!`
+
+
+For .. Of:
+    for (let element of iterable) { ... }
+
+
+Arrow Functions:
+    const sayHello = (name) => `Hello, ${name}!`;
+
+
+Default Parameters:
+    const sayHello = (name = 'World') => `Hello, ${name}!`;
+
+    sayHello()                  "Hello, World!"
+    sayHello('codeup')          "Hello, codeup!"
+
+
+Object Property Variable Assignment Shorthand:
+    const name = 'codeup';
+    const person = {
+        name,
+        age: 4,
+    };
+
+
+Object Destructuring:
+    const person = { name: 'codeup', age: 4 };
+    const { name, age } = person;
+    console.log(name); //'codeup'
+    console.log(age);  // 4
+
+    function tellMeAbout({ name, age }) {
+         console.log(name); // 'codeup'
+         console.log(age); // 4
+    }
+    const person = { name: 'codeup', age: 4 };
+    tellMeAbout(person);
+
+Array Destructuring:
+    const myArray = [1, 2, 3, 4, 5];
+    const [x, y] = myArray;
+    console.log(x); // 1
+    console.log(y); // 2
+
+
