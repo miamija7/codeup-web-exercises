@@ -36,3 +36,7 @@ const users = [
         yearsOfExperience: 9
     }
 ];
+
+//Todo: Use .filter to create an array of user objects, each user object has at least 3 languages in the languages array.
+const experiencedUsers = users.filter(user => user.languages.length >= 3);
+
