@@ -65,7 +65,7 @@
         //       parameter definition
 
         // TODO: rewrite the assignment below to use template strings
-        developers.push(`${name}'s email is ${email}${name} and knows ${languages.join(', ')}`)
+        developers.push(`${name}'s email is ${email}, and ${name} knows ${languages.join(', ')}.`);
     });
     console.log("TODO 7 check:", developers);
 
