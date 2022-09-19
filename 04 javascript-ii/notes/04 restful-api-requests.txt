@@ -1,0 +1,24 @@
+
+*** JAVASCRIPT II - RESTFUL API REQUESTS NOTES ***
+
+
+Example of routes for a Blog site:
+    route	        method	            description
+    /posts	        GET	                Fetch a (paginated) list of all the posts
+    /posts	        POST	            Create a new post
+    /posts/{id}	    GET	                View the information about a specific post
+    /posts/{id}	    PUT or PATCH	    Modify the existing post
+    /posts/{id}	    DELETE	            Delete a post
+
+- PUT would be used to update an entire resource at once
+- PATCH should be used to just modify a specific attribute of a resource
+- most RESTful APIs requests translate to URLs
+
+
+POSTing Data:
+- we have only used fetch for GET requests...
+- we also need:
+    + POST - send requests that create new data
+    + PUT/PATCH - update existing data
+
+

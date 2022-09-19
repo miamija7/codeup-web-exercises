@@ -22,13 +22,6 @@
         map.setFog({});
     });
 
-// MAP SEARCH
-    const geocoder = new MapboxGeocoder({
-        accessToken: mapboxgl.accessToken,
-        mapboxgl: mapboxgl
-    })
-    map.addControl(geocoder);
-
 // MAP MARKER
     const marker = new mapboxgl.Marker({
         color: "lightskyblue",

@@ -90,7 +90,7 @@ Resolving Values:
     request.catch(message => console.log('Promise rejected!', message));
     // if rejected, will log "Promise rejected!" and "Network Connection Error!"
 
-    ^^
+    ^
     Here we have a function that returns a promise that will either resolve or reject after one and a half seconds. Most of the time it will resolve, but one out of ten times it will "fail." (Hopefully the API you are talking to doesn't have such a high failure response rate!)
 
     Notice here that both the resolve and reject functions are being passed a value, and the callback functions supplied to .then and .catch will be passed the values that were passed to resolve and reject, respectively.
