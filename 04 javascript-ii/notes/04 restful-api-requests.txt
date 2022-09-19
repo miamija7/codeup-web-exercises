@@ -20,5 +20,50 @@ POSTing Data:
 - we also need:
     + POST - send requests that create new data
     + PUT/PATCH - update existing data
+    + DELETE - delete data
 
+- we will need to include several more pieces of data with fetch...
+- include all the below in our requests by passing a second argument to fetch, an object
+    + A Content-Type header:
+      This tells the server what type of data we are sending with our request.
+      When interacting with a JSON API, this will usually be application/json.
+    + A request body:
+      Additional content that is included along with our request, typically a JSON string
+      that represents the resource(s) being created / modified.
+    + A Method:
+      We need to tell fetch which HTTP method we want to use.
 
+- Example:
+    const blogPost = {title: 'Ajax Requests', body: 'Are a fun way to use JS!'};
+    const url = '/posts';
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(blogPost),
+    };
+    fetch(url, options)
+        .then(/* post was created successfully */)
+        .catch(/* handle errors */);
+
+- Online Example (https://codeup-restful-example.glitch.me/reviews):
+- submit a new review to the restaurant with the ID of 1
+- verify if it was posted successfully here (https://codeup-restful-example.glitch.me/reviews?restaurant_id=1)
+    const reviewObj = {
+        restaurant_id: 1,
+        name: 'Codey',
+        rating: 5,
+        comments: "This is a really good place for coding and eating"
+    };
+    const url = 'https://codeup-restful-example.glitch.me/reviews';
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(reviewObj),
+    };
+    fetch(url, options)
+        .then( response => console.log(response) ) /* review was created successfully */
+        .catch( error => console.error(error) ); /* handle errors */

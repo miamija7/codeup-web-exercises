@@ -1,0 +1,9 @@
+
+============= 19 Sep ============
+
+INTELLIJ:
+variable.log                console.log(variable);
+string.substring(0,1);      string.[0];
+
+
+
