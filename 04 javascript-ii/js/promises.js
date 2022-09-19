@@ -14,7 +14,9 @@
             console.log("ERROR: ", e);
         }
     };
-    console.log('Handle An API Promise Results:', handleApiPromise("miamija7"));
+    const latestPush = handleApiPromise("miamija7");
+
+    console.log('Handle An API Promise Results:', );
 
 
     //Todo: Write a function named wait that accepts a number as a parameter, and returns a promise that resolves after the passed number of milliseconds.

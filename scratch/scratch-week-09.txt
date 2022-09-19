@@ -5,5 +5,13 @@ INTELLIJ:
 variable.log                console.log(variable);
 string.substring(0,1);      string.[0];
 
+BRANCHES:
+- it is not good practice to push to main
+- push to your own branch, go to GitHub
+- pull request/merge
+- return to local machine and update your main (branch is updated, main is behind)
+git checkout main
+git fetch                   looks at all of your trunks (not commonly used)
+git pull origin main
 
 
