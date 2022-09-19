@@ -9,14 +9,16 @@
         try{
             let res = await fetch(`https://api.github.com/users/${username}/events/public`, {headers: {'Authorization': GITHUB_KEY}});
             let data = await res.json();
+            const { payload: { commits: [ { message: myCommit } ] } } = data[2];
+            // console.log(payload.commits[0].message);
+            console.log(myCommit);
             return data[0];
         } catch (e) {
             console.log("ERROR: ", e);
         }
     };
-    const latestPush = handleApiPromise("miamija7");
 
-    console.log('Handle An API Promise Results:', );
+    console.log('Handle An API Promise Results:', handleApiPromise('miamija7'));
 
 
     //Todo: Write a function named wait that accepts a number as a parameter, and returns a promise that resolves after the passed number of milliseconds.

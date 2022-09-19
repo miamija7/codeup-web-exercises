@@ -5,6 +5,7 @@ INTELLIJ:
 variable.log                console.log(variable);
 string.substring(0,1);      string.[0];
 
+
 BRANCHES:
 - it is not good practice to push to main
 - push to your own branch, go to GitHub
@@ -15,3 +16,14 @@ git fetch                   looks at all of your trunks (not commonly used)
 git pull origin main
 
 
+LIFECYCLE OF BRANCHES:
+- production branch and development branch
+- git checkout for phases of project
+- "abandon" branches as you go
+- "hoard" branches
+
+
+DESTRUCTURING! :)
+const { payload: { commits: [ { message: myCommit } ] } } = data[2];
+// console.log(payload.commits[0].message);
+console.log(myCommit);
