@@ -1,6 +1,5 @@
 # <img src="https://199lj33nqk3p88xz03dvn481-wpengine.netdna-ssl.com/wp-content/uploads/2021/06/webdev_icon.png" alt="codeup" width="25" height="25"/>  Mia's Full Stack Web Exercises
 
-## Summary
 This is a collection of personal web dev exercises, test-driven developments, and scratch notes. I'm a member of the Haskell Cohort at Codeup Dallas, and this repository reflects my progress with the Full Stack course curriculum and contributes to my overall grade in the course.
 
 ## Recent Projects
@@ -22,10 +21,12 @@ This is a collection of personal web dev exercises, test-driven developments, an
 - TDD
 - Web Design
 - jQuery
-- Java I, II, & III
+- Java
 - MySQL
 - Spring
 
+## Related Repositories
+[Codeup Java Exercises](https://github.com/miamija7/codeup-java-exercises)
 
 ## Timeline
 
