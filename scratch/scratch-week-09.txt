@@ -27,3 +27,18 @@ DESTRUCTURING! :)
 const { payload: { commits: [ { message: myCommit } ] } } = data[2];
 // console.log(payload.commits[0].message);
 console.log(myCommit);
+
+
+JSON SERVER:
+fetch("https://grass-orchid-breath.glitch.me/books").then(res => res.json());
+
+CRUD:
+- Create        POST
+- Read          GET
+- Update        PUT/PATCH
+- Delete        DELETE
+
+
+PUT vs PATCH:
+- PUT will replace the whole with the provided information
+- PATCH will replace/add the provided fields
