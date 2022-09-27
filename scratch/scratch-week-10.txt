@@ -1,0 +1,17 @@
+============= 26 Sep ============
+
+INTELLIJ:
+File -> New -> Project...
+    Language: Java
+    Build System: Intellij
+    JDK: Download JDK... -> Select Version
+
+GITHUB:
+Create a new repository -> copy first block of code
+
+INTELLIJ:
+Paste block of code in location of directory -> run in cmdline
+
+JAVA:
+- File name and class must be the same!
+- every class has a main function
