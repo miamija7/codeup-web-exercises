@@ -27,3 +27,16 @@ System.out.format("%s is %d years old.%n", name, age);
 %s      string
 %d      decimal
 %n      new line
+
+In Java default values of floats are doubles, so we have to cast a float with the explicit cast of "F" of (float).
+float percent = 99.99F;
+float percent = (float) 99.99;
+
+float vs double:
+- double is double the precision of float.
+
+
+Java Shortcuts:
+psvm        public static void main(String[] args){...}
+sout        System.out.print("");
+souf        System.out.printf("");
