@@ -15,3 +15,15 @@ Paste block of code in location of directory -> run in cmdline
 JAVA:
 - File name and class must be the same!
 - every class has a main function
+
+
+============= 28 Sep ============
+
+INTELLIJ:
+Option + Shift + Up     Move line up
+
+JAVA:
+System.out.format("%s is %d years old.%n", name, age);
+%s      string
+%d      decimal
+%n      new line
