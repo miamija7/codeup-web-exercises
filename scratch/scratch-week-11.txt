@@ -1,0 +1,13 @@
+============= 3 Oct ============
+
+Sass
+- Syntactically Awesome Style Sheets
+- Preprocessing
+- stylesheets are getting larger, more complex, and harder to maintain
+- Sass has features that don't exist in CSS yet, like nesting, mixins, inheritance,
+- help you write robust, maintainable CSS
+
+
+============= 5 Oct ============
+
+Java!
