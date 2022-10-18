@@ -1,0 +1,4 @@
+
+============= 17 Oct ============
+git commit --amend --date="YYYY-MM-DD HH:MM:SS"
+
