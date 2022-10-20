@@ -2,3 +2,25 @@
 ============= 17 Oct ============
 git commit --amend --date="YYYY-MM-DD HH:MM:SS"
 
+============= 20 Oct ============
+
+Creating a Maven Project!
+new reop -> maven-exercises -> Build: Maven
+
+group id        org.example = example.org (domain you will host your application on)
+group id        name of project
+version         version of app
+
+
+Or 3rd party Library : Apache Commons Lang
+pomxml needs to know dependenc(ies) for multiple dependency(s)
+
+
+Intellij -> preferences -> build, execution, deployment -> build tools -> maven -> [X] use plugin registry
+Maven(far right) -> Reload all maven projects
+Java folder -> new class => "StringUtil" -> create main -> type "StringUtils" (org.apache.commons.lang3)
+
+
+
+
+
