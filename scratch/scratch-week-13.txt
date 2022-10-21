@@ -35,6 +35,33 @@ mysql -u root -p [codeup]
 (Verify server version is 8+)
 
 
+============= 21 Oct ============
+
+mySQL
+> mysql.server status           get status
+> mysql.server start            start server
+> mysql.server stop             stop server
+> mysql -u root -p              connect to server
+> \c                            clear
+> pager less -~SFX;             less
+    d: go down a half page
+    u: go up a half page
+    j: scroll down one line
+    k: scroll up one line
+    /: search for a term
+    q: exit
+> nopager                       undo "pager less -~SFX;"
+
+
+> SELECT * FROM mysql.user;     (ouch)
+> SELECT * FROM mysql.user\G
+> SELECT user, host FROM mysql.user;
+> SELECT * FROM mysql.help_topic;
+> SELECT help_topic_id, help_category_id, url FROM mysql.help_topic;
+
+
+
+
 
 
 
