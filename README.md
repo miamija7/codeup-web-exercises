@@ -28,6 +28,7 @@ This is a collection of personal web dev exercises, test-driven developments, an
 
 ## Related Repositories
 [Codeup Java Exercises](https://github.com/miamija7/codeup-java-exercises)
+[Codeup Maven Exercises](https://github.com/miamija7/maven-exercises)
 
 ## Timeline
 
