@@ -27,8 +27,12 @@ This is a collection of personal web dev exercises, test-driven developments, an
 - Spring
 
 ## Related Repositories
-[Codeup Java Exercises](https://github.com/miamija7/codeup-java-exercises)
-[Codeup Maven Exercises](https://github.com/miamija7/maven-exercises)
+[Java Exercises](https://github.com/miamija7/codeup-java-exercises)
+
+[Maven Exercises](https://github.com/miamija7/maven-exercises)
+
+[Database Exercises](https://github.com/miamija7/database-exercises)
+
 
 ## Timeline
 
