@@ -1,0 +1,6 @@
+
+============= 2 Nov ============
+
+Intellij & server issues:
+% npx kill-port 1099
+% sudo xcode-select --install
