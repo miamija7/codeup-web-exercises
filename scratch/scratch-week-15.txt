@@ -5,4 +5,6 @@ Intellij & server issues:
 % npx kill-port 1099
 % sudo xcode-select --install
 
+
+If you're missing branches...
 % git fetch
