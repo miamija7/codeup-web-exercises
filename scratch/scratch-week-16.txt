@@ -1,0 +1,12 @@
+
+============= 7 Nov ============
+
+Hacking
+1. make a new private repo in github
+2. create a new project from version control -> use ssh key
+3. make an edit
+4. git add .
+5. git commit --amend --no-edit --date=“Fri Nov 6 20:00:00 2015 -0600”
+6. git push origin main
+7. ***delete your local repo by dragging folder to trashcan
+8. repeat steps 2-7
