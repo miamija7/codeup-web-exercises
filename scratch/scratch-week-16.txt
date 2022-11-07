@@ -1,7 +1,6 @@
 
 ============= 7 Nov ============
 
-Hacking
 1. make a new private repo in github
 2. create a new project from version control -> use ssh key
 3. make an edit
