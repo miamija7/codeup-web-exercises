@@ -1,0 +1,26 @@
+
+============= 14 Nov ============
+
+
+# Adlister Project
+
+It's time to finish up our Adlister Project! Now that you have your project teams, you will need to complete a few steps before diving into the code.
+
+1. Create an organization for you and your team, and add each member.
+2. Fork the `java-adlister` project to your newly created Github organization.
+	> NOTE: You will need to checkout to `master` to begin your project. The `master` branch has all of the code we have completed, including the solution to the passwords lesson.
+
+3. Create a Trello Kanban board, and add each member of your team to the board. Make sure to add the instructors to your Trello boards as well.
+4. Begin planning what features/tasks need to be completed in order to finish the Adlister project.
+	> HINT: Use the items listed in the `Finish The Adlister` portion of the curriculum, and double check the Project Rubric that is pinned to the Haskell Slack channel.
+
+5. After you have discuss with your team about what items need to be completed, assign tasks and begin working!
+
+
+Helpful Links:
+- Adlister Trello Board Template
+	- https://trello.com/invite/b/Z1fHcDBq/ATTI7bb566d30e2887aec5737b339727cdafE863A995/adlister-project-kanban
+- Adlister Project Page
+	- https://java.codeup.com/java-iii/finish-the-adlister/
+- Adlister Github
+    - https://github.com/gocodeup/java-adlister
