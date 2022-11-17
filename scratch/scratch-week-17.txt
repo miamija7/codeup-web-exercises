@@ -24,3 +24,62 @@ Helpful Links:
 	- https://java.codeup.com/java-iii/finish-the-adlister/
 - Adlister Github
     - https://github.com/gocodeup/java-adlister
+
+
+
+
+CREATE DATABASE IF NOT EXISTS adlister_db;
+USE adlister_db;
+
+CREATE TABLE users (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    username VARCHAR(240) NOT NULL,
+    email VARCHAR(240) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE ads (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    user_id INT UNSIGNED NOT NULL,
+    title VARCHAR(240) NOT NULL,
+    description TEXT NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (user_id) REFERENCES users(id)
+        ON DELETE CASCADE
+);
+
+
+
+
+============= 15 Nov ============
+
+git reset --hard master
+
+
+
+============= 17 Nov ============
+
+new project
+-> spring initalizr -> Name: haskell-springblog
+				    JDK: current version
+				    Jar
+				    -> next
+Developer Tools: Spring Boot DevTools
+Web: Spring Web
+
+FIX ACTIONS:
+preferences -> Build, execution, deployment -> maven -> [x] use plugin registry
+…
+<plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>${parent.version}</version>
+</plugin>
+...
+preferences -> languages and frameworks ->
+TERMINAL:
+% brew install java
+% brew upgrade java
+…
+file -> project structure -> SDK: 18 -> add SDK -> download JDK -> Amazon Coredo 17
