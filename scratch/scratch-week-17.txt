@@ -98,7 +98,7 @@ git push -u origin main
 ============= 18 Nov ============
 
 preferences -> editor -> file and code templates -> + ->
-    "ThymleafHTML"      "HTML"
+    "ThymeleafHTML"      "HTML"
     <!DOCTYPE html>
     <html xmlns:th="http://www.thymeleaf.org">
     <head>
