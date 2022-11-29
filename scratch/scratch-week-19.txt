@@ -1,0 +1,91 @@
+
+============= 28 Nov ============
+
+ __________________
+|       Wing       |
+ ------------------
+| id     | int     |            184 Wing
+| name   | varchar |
+|________|_________|
+
+
+ __________________
+|       Unit       |            184 HQ
+ ------------------             127 COS
+| id     | int     |            184 COG
+| wing_id| int     |            184 IW
+| name   | varchar |            184 NOS
+|________|_________|
+
+
+ ____________________
+|       Member       |
+ --------------------
+| id       | int     |           ID#
+| unit_id  | int     |           ID#
+| first_name| varchar |           Mia
+| last_name| varchar |           Evans
+| username | varchar |           mia.evans
+| password | varchar |           #$%^&*03434RT
+| email    | varchar |           mia.evans.1@us.af.mil
+| phone    | varchar |           1234567890
+|__________|_________|
+
+
+ __________________
+|      Hotel       |
+ ------------------
+| id     | int     |
+| wing_id| int     |
+| name   | varchar |
+| address| varchar |
+| hours  | varchar |
+| phone  | varchar |
+| email  | varchar |
+|________|_________|
+
+
+ __________________
+|      Drill       |
+ ------------------
+| id     | int     |
+| wing_id| int     |
+| month  | varchar |
+| dates  | date    |
+|________|_________|
+
+
+ _____________________
+|     Reservation     |
+ ---------------------
+| hotel_id  | int     |
+| member_id | int     |
+| drill_id  | int     |
+| res_num   | varchar |
+|___________|_________|
+
+
+ _____________________
+|        Admin        |
+ ---------------------
+| id        | int     |
+| unit_id   | int     |
+| first_name | varchar |
+| last_name | varchar |
+| username  | varchar |
+| password  | varchar |
+| email     | varchar |
+| phone     | varchar |
+|___________|_________|
+
+
+
+
+
+
+
+
+
+
+
+
