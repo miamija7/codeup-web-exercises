@@ -8,3 +8,9 @@ Spring + Git Steps!
 % git branch -M main
 % git remote add origin git@github.com:miamija7/blog.git
 % git push -u origin main
+
+
+============= 29 Nov ============
+
+***** Issues with killing mysql instance *****
+% brew services stop mysql
