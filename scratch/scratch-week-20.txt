@@ -1,0 +1,10 @@
+
+============= 5 Dec ============
+
+Spring + Git Steps!
+% git init
+% git add .gitignore
+% git commit -m "adding git ignore"
+% git branch -M main
+% git remote add origin git@github.com:miamija7/blog.git
+% git push -u origin main

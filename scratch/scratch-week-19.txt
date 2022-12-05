@@ -36,10 +36,11 @@
 |      Hotel       |
  ------------------
 | id     | int     |
-| wing_id| int     |
 | name   | varchar |
 | address| varchar |
-| hours  | varchar |
+| city   | varchar |
+| state  | varchar |
+| zip    | varchar |
 | phone  | varchar |
 | email  | varchar |
 |________|_________|
@@ -69,7 +70,7 @@
 |        Admin        |
  ---------------------
 | id        | int     |
-| unit_id   | int     |
+| wing_id   | int     |
 | first_name | varchar |
 | last_name | varchar |
 | username  | varchar |
@@ -83,9 +84,10 @@
 
 
 
+============= 29 Nov ============
 
-
-
+***** ERROR! The MySQL server quit without updating PID file *****
+SOLUTION: npx kill-port 3306
 
 
 
