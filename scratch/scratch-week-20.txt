@@ -14,3 +14,8 @@ Spring + Git Steps!
 
 ***** Issues with killing mysql instance *****
 % brew services stop mysql
+
+
+***** Issues with port 8080 *****
+% lsof -t -i :8080
+% kill -9 PID
