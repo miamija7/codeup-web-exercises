@@ -10,7 +10,7 @@ Spring + Git Steps!
 % git push -u origin main
 
 
-============= 29 Nov ============
+============= 6 Nov ============
 
 ***** Issues with killing mysql instance *****
 % brew services stop mysql

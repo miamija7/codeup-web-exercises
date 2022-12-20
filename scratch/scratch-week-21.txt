@@ -1,0 +1,67 @@
+============= 15 Dec ============
+
+Capstone Hub
+https://docs.google.com/spreadsheets/d/1mcBCKKb_ip9ku2vfb2UgAoSVVBoK5DbUAD7j3QYxtWg/edit?usp=sharing
+
+Capstone Overview
+    - During this first two days every team has these goals:
+    - Capstone Proposal Approval
+    - A list of features for your capstone
+    - The database design of your application (a diagram of it)
+    - Create a project management board (trello)
+    - You’ll only be allowed to start coding if an instructor approves your feature list, project management task board, and your database design
+    - Set up your GitHub organization
+    - Complete the deployment setup and have a home page (a 404 is Ok for these first 2 days, ideally an index page with a title is better)
+        + We will be doing deployment together, 2 days before the first Sprint Review.
+    - We will skip the daily demos during the first 2-3 days and sprint review days.
+For the next two weeks
+    - Daily demos for each team starting on day 3 or 4
+    - Demos consist of:
+        + Demonstration of completed features in your production server (first few demos will be on localhost since we won’t be deployed yet).
+    - Progress on features are ok on your own computer, but they won’t be considered as completed until we see them in production
+It’s OK to work on elsewhere (in the study room), so long as you are here for your checkins and at the beginning and end of the day (for attendance)
+And remember
+    - Everybody needs to ask for help at some point. When you do, make sure that you do these 4 things:
+        + Communicate details that you see.
+        + Explain exactly what you think should be happening.
+        + Explain exactly what is actually happening.
+        + Explain why you think it should be working differently.
+    - Be excellent to each other!!
+
+PROPOSALS:
+- Feature List
+- User Stories
+- Database Design
+- Wifeframes
+
+SPRINT ONE:
+- Presented in Production
+- Landing page
+- All models are complete
+- SQL Seeder file created
+- Login and Signup
+
+SPRINT TWO:
+- Presented in Production
+- Fully Navigable (I can navigate to every page without having to type in a URL)
+- Outside API Integration
+- Full CRUD functionality for all applicable entities
+- Mobile Responsiveness
+- Demonstrate how your API(s) is/are being implemented
+- Error messages, form validation, ect
+- Logout
+
+SPRINT THREE:
+- Presented in Production
+- Fully Navigable
+- Intended Redirects
+- Custom Error Pages (No Whitelabel Errors)
+- Finished Styling
+- Full CRUD Functionality
+- Login/Logout functionality
+- Mobile Responsive
+
+AWS DEPLOYMENT
+- Delete your schema and ensure that the schema is built for you when you run the application
+- Make sure you have a working version of your application all merged to the main branch
+- Bring your Gift Card

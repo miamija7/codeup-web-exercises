@@ -1,5 +1,5 @@
 // Mapbox API - Exercise 2
-mapboxgl.accessToken = MAPBOX_KEY;
+mapboxgl.accessToken = pk.eyJ1IjoibWlhbWlqYTciLCJhIjoiY2w3ejBmazd2MTFqMTNycDdpanFxb2RycCJ9.vdXYFQybqjp0FrkRw5Zfkw;
 const map = new mapboxgl.Map({
     container: 'map', // container ID
     style: 'mapbox://styles/mapbox/dark-v10', // style URL
