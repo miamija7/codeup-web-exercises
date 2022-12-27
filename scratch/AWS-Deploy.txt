@@ -1,0 +1,266 @@
+========== AMAZON WEB SERVICES ========== 
+
+
+/// CREATE AWS ACCOUNT ///
+Link: https://portal.aws.amazon.com/billing/signup?nc2=h_ct&src=header_signup&refid=fce796e8-4ceb-48e0-9767-89f7873fac3d&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start/email
+
+-> create account: basic support (free)
+-> sign in as Root User
+
+
+
+
+/// SETUP EC2 INSTANCE ///
+Link: https://us-east-2.console.aws.amazon.com/ec2/home?region=us-east-2#ImageDetails:imageId=ami-050f2cbccf5dd7fff
+
+-> Verify Owner ID: 609461422141
+-> [Launch instance from AMI]
+
+	Name: Haskell-Service-Lodge
+	Instance Type: t2.small
+	Key Pair(SSH): 
+		Name: codeup-aws
+		Type: rsa
+		Format: .pem
+		-> [create key pair]
+	*** NOTE: do not open file yet *** 
+
+-> [LAUNCH]
+-> [View All Instances]
+
+
+
+
+/// SETUP SECURITY GROUP ///
+
+-> Network & Security 
+-> Security Groups 
+-> [Create Security Group]
+
+
+
+
+/// CONNECT SECURITY GROUP & INSTANCE ///
+-> EC2 Dashboard 
+-> Instances 
+-> Instances 
+-> [X] Your instance
+
+-> Actions 
+-> Security 
+-> Change Security Group 
+-> Select Security Groups 
+-> "external-capstone" 
+-> [save]
+ 
+-> Instance IPv4 Address: 
+   [COPY IPv4 ADDR] 3.17.156.98
+
+
+
+
+
+
+========== NAMECHEAP ========== 
+
+
+/// ADD DNS RECORD ///
+-> Domain List 
+-> Advanced DNS 
+-> (+)Add New Record
+
+	Type: A Record 
+	Hots: @ 
+	Value: [PASTE IPv4 ADDR]
+	TTL: Automatic
+
+*** NOTE: may need to wait 5+ minutes for it to register ***
+
+
+
+
+
+
+========== AMAZON WEB SERVICES ========== 
+
+
+/// CHECK STATUS ///
+-> Refresh Instance 
+-> Status Check: "(√) 2/2 checks passed"
+
+
+
+
+
+
+========== TERMINAL ========== 
+
+
+/// SSH TO AWS SERVER ///
+% cd ~
+% chmod 400 downloads/codeup-aws.pem
+% ssh -i downloads/codeup-aws.pem ubuntu@3.17.156.98
+> Are you sure you want to continue connecting (yes/no/[fingerprint])? Yes
+
+(NOTE: successful connection should look like this)
+$ ubuntu@ip-172-31-5-106:~$ 		
+
+
+
+/// CONNECT SERVER TO GITHUB ///
+$ cd .ssh/
+$ ssh-keygen -t rsa
+$ ec2-to-github 
+  [enter] 
+  [enter] 
+  [enter] 
+$ cat ec2-to-github.pub
+  [COPY SSH KEY]
+
+
+
+
+
+
+========== GITHUB ========== 
+
+
+/// CONNECT GITHUB TO SERVER ///
+-> Repo 
+-> Settings 
+-> Deploy keys 
+-> [Add deploy key]
+
+	Title: github-to-ec3
+	Key: [PASTE SSH KEY]
+
+
+
+
+
+
+========== TERMINAL ========== 
+
+
+/// CLONE REPO TO AWS SERVER ///
+$ git clone git@github.com:ServiceLodge/service-lodge-capstone.git
+$ ls
+$ cd service-lodge-capstone
+
+
+
+
+
+
+========== INTELLIJ ========== 
+
+/// GET APPLICATION PROPERTIES ///
+-> Open Project
+-> Navigate to src/main/resources/application.properties
+-> [COPY CONFIGURATION]
+
+
+
+
+
+
+========== TERMINAL ========== 
+
+
+/// UPLOAD APPLICATION PROPERTIES ///
+$ vi src/main/resources/application.properties
+----------- vi ----------
+-> i
+~ [COPY/PASTE application.properties] & MAKE UPDATES
+
+	spring.datasource.url=jdbc:mysql://emp.fulgentcorp.com/service_lodge?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+	spring.datasource.username=service_lodge
+	spring.datasource.password=93Vaw1W7HPfTenHE
+	spring.jpa.hibernate.ddl-auto=update
+	spring.jpa.show-sql=true spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+
+~ [esc]
+~ :wq [enter]
+--------------------------
+$ cat src/main/resources/application.properties
+
+
+
+/// RUN APPLICATION ///
+$ mvn package spring-boot:run			(NOTE: run)
+$ control + c (stop application)		(NOTE: stop)
+$ vi run_capstone.sh				
+
+~ i
+~ [COPY/PASTE application.properties]
+
+$ chmod +x ./run_capstone.sh 	(NOTE: give execution privileges)
+$ pm2 start ./run_capstone.sh 	(NOTE: run in background)
+$ pm2 list
+$ pm2 startup			(NOTE: run on reboot)
+$ sudo env PATH=$PATH:/usr/bin /usr/local/lib/node_modules/pm2/bin/pm2 startup systemd -u ubuntu --hp /home/ubuntu
+$ pm2 save			
+
+
+ ===== TERMINAL: INSTALLING Nginx =====
+
+$ sudo apt install nginx -y
+$ sudo apt install snapd
+$ sudo snap install core; sudo snap refresh core
+$ sudo snap install --classic certbot
+$ sudo ln -s /snap/bin/certbot /usr/bin/certbot
+$ sudo certbot --nginx	
+
+
+
+[COPY Certificate is saved at location] 
+/etc/letsencrypt/live/servicelodge.net/fullchain.pem
+ 
+
+$ sudo openssl pkcs12 -export -out ./springboot.p12 -in /etc/letsencrypt/live/servicelodge.net/fullchain.pem -inkey /etc/letsencrypt/live/servicelodge.net/privkey.pem -passout pass:password
+
+$ ls				(NOTE: look for springbot.p12)
+
+
+
+
+
+
+$ sudo chown ubuntu:ubuntu springboot.p12
+$ vi src/main/resources/application.properties
+$ pm2 reload all
+$ pm2 log			(NOTE: good for error checking)
+
+
+
+MAKING CHANGES
+ssh into server -> cd into project -> git pull origin main -> pm2 reload all
+
+
+
+
+
+
+
+
+
+
+Remote Database
+https://emp.fulgentcorp.com/adminer/
+
+
+spring.datasource.url=jdbc:mysql://emp.fulgentcorp.com/service_lodge?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+spring.datasource.username=service_lodge
+spring.datasource.password=93Vaw1W7HPfTenHE
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+server.ssl.key-store=springboot.p12
+server.ssl.key-store-password=password
+server.ssl.key-store-type=pkcs12
+
+
+
+
+
+
