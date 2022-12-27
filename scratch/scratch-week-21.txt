@@ -65,3 +65,33 @@ AWS DEPLOYMENT
 - Delete your schema and ensure that the schema is built for you when you run the application
 - Make sure you have a working version of your application all merged to the main branch
 - Bring your Gift Card
+
+
+
+
+============= 16 Dec ============
+
+
+src/main/java
+└── com
+    └── codeup
+        ├── controllers
+        │   ├── UserController.java
+        │   └── AuthenticationController.java
+        ├── models
+        │   ├── User.java
+        │   └── UserWithRoles.java
+        ├── repositories
+        │   └── UserRepository.java
+        ├── SecurityConfiguration.java
+        └── services
+            └── UserDetailsLoader.java
+
+two models (User, UserWithRoles)
+two controllers (AuthenticationController, UserController)
+one repository (UserRepository)
+one service (UserDetailsLoader)
+a configuration class (SecurityConfiguration)
+	•	a sign up page
+	•	a login page
+	•	and a logout form
